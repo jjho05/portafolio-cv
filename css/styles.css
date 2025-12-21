@@ -523,6 +523,7 @@ a:hover {
     border-left: 1px solid var(--glass-border);
     gap: var(--spacing-sm);
     align-items: flex-start;
+    z-index: 999;
   }
 
   .nav-menu.active {
