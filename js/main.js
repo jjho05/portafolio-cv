@@ -225,33 +225,44 @@ if ('IntersectionObserver' in window) {
 }
 
 // ===== Mobile Menu Toggle =====
-const navToggle = document.getElementById('navToggle');
-const navMenu = document.getElementById('navMenu');
+document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
 
-if (navToggle) {
-    // Toggle menu on button click
-    navToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        const icon = navToggle.querySelector('i');
-        icon.className = navMenu.classList.contains('active') ? 'fas fa-times' : 'fas fa-bars';
-    });
+    if (navToggle && navMenu) {
+        console.log('Mobile menu initialized');
 
-    // Close menu when clicking a link
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            navToggle.querySelector('i').className = 'fas fa-bars';
+        // Toggle menu on button click
+        navToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navMenu.classList.toggle('active');
+            const icon = navToggle.querySelector('i');
+            icon.className = navMenu.classList.contains('active') ? 'fas fa-times' : 'fas fa-bars';
+            console.log('Menu toggled:', navMenu.classList.contains('active'));
         });
-    });
 
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
-            navMenu.classList.remove('active');
-            navToggle.querySelector('i').className = 'fas fa-bars';
-        }
-    });
-}
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                const icon = navToggle.querySelector('i');
+                if (icon) icon.className = 'fas fa-bars';
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+                navMenu.classList.remove('active');
+                const icon = navToggle.querySelector('i');
+                if (icon) icon.className = 'fas fa-bars';
+            }
+        });
+    } else {
+        console.error('Mobile menu elements not found');
+    }
+});
+
 
 console.log('%c✨ Portfolio loaded successfully!', 'font-size: 12px; color: #4299e1;');
 
