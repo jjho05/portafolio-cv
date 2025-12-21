@@ -224,31 +224,15 @@ if ('IntersectionObserver' in window) {
     lazyImages.forEach(img => imageObserver.observe(img));
 }
 
-// ===== Mobile Menu Toggle (for future responsive enhancement) =====
-const createMobileMenu = () => {
-    const nav = document.querySelector('.nav');
-    const navMenu = document.querySelector('.nav-menu');
+// ===== Mobile Menu Toggle =====
+const navToggle = document.getElementById('navToggle');
+const navMenu = document.getElementById('navMenu');
 
-    // Create hamburger button
-    const hamburger = document.createElement('button');
-    hamburger.className = 'hamburger';
-    hamburger.innerHTML = '<i class="fas fa-bars"></i>';
-    hamburger.style.cssText = `
-        display: none;
-        background: transparent;
-        border: none;
-        color: var(--text-primary);
-        font-size: 1.5rem;
-        cursor: pointer;
-    `;
-
-    // Insert hamburger before nav menu
-    nav.insertBefore(hamburger, navMenu);
-
-    // Toggle menu on click
-    hamburger.addEventListener('click', () => {
+if (navToggle) {
+    // Toggle menu on button click
+    navToggle.addEventListener('click', () => {
         navMenu.classList.toggle('active');
-        const icon = hamburger.querySelector('i');
+        const icon = navToggle.querySelector('i');
         icon.className = navMenu.classList.contains('active') ? 'fas fa-times' : 'fas fa-bars';
     });
 
@@ -256,26 +240,18 @@ const createMobileMenu = () => {
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
             navMenu.classList.remove('active');
-            hamburger.querySelector('i').className = 'fas fa-bars';
+            navToggle.querySelector('i').className = 'fas fa-bars';
         });
     });
 
-    // Show hamburger on mobile
-    const mediaQuery = window.matchMedia('(max-width: 768px)');
-    const handleMobile = (e) => {
-        if (e.matches) {
-            hamburger.style.display = 'block';
-        } else {
-            hamburger.style.display = 'none';
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
             navMenu.classList.remove('active');
+            navToggle.querySelector('i').className = 'fas fa-bars';
         }
-    };
-
-    mediaQuery.addListener(handleMobile);
-    handleMobile(mediaQuery);
-};
-
-// Initialize mobile menu
-createMobileMenu();
+    });
+}
 
 console.log('%c✨ Portfolio loaded successfully!', 'font-size: 12px; color: #4299e1;');
+
