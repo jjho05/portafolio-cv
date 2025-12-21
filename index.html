@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Jesús Olvera - Estudiante de Ingeniería en Sistemas Computacionales especializado en IA, Python y Análisis de Datos">
+    <meta name="keywords" content="Jesús Olvera, IA, Python, Análisis de Datos, Desarrollo Web, Programación">
+    <meta name="author" content="Jesús Olvera">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Jesús Olvera - Portfolio">
+    <meta property="og:description" content="Estudiante especializado en IA, Python y Análisis de Datos">
+    <meta property="og:type" content="website">
+
+    <title>Jesús Olvera - Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/animations.css">
+</head>
+
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav-logo">JO</a>
+
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link" data-i18n="nav.about">Sobre Mí</a></li>
+                <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Proyectos</a></li>
+                <li><a href="#games" class="nav-link" data-i18n="nav.games">Juegos</a></li>
+                <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Habilidades</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contacto</a></li>
+
+                <li class="lang-toggle">
+                    <button data-lang="es" onclick="i18n.changeLanguage('es')">ES</button>
+                    <button data-lang="en" onclick="i18n.changeLanguage('en')">EN</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <!-- Animated Particles Background -->
+        <div class="hero-particles" id="particles"></div>
+
+        <!-- Animated Blobs -->
+        <div class="blob" style="position: absolute; width: 400px; height: 400px; top: 10%; left: 10%; z-index: 0;">
+        </div>
+        <div class="blob" style="position: absolute; width: 300px; height: 300px; bottom: 20%; right: 15%; z-index: 0;">
+        </div>
+
+        <div class="hero-content">
+            <p class="hero-greeting" data-i18n="hero.greeting">Hola, soy</p>
+            <h1 class="hero-name gradient-text" data-i18n="hero.name">Jesús Olvera</h1>
+            <h2 class="hero-title" data-i18n="hero.title">Estudiante de Ingeniería en Sistemas Computacionales</h2>
+
+            <!-- ITCM Badge -->
+            <div class="institution-badge"
+                style="display: inline-flex; align-items: center; gap: 0.5rem; margin: 1rem 0; padding: 0.75rem 1.5rem; background: var(--glass-bg); backdrop-filter: blur(10px); border: 1px solid var(--glass-border); border-radius: var(--radius-lg);">
+                <i class="fas fa-graduation-cap" style="color: var(--primary);"></i>
+                <div style="text-align: left;">
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);" data-i18n="hero.institution">
+                        Instituto Tecnológico de Ciudad Madero</p>
+                    <p style="margin: 0; font-size: 0.85rem; color: var(--primary); font-weight: 600;"
+                        data-i18n="hero.status">Próximo a Egresar</p>
+                </div>
+            </div>
+
+            <p class="hero-subtitle" data-i18n="hero.subtitle">Especializado en Inteligencia Artificial, Python y
+                Análisis de Datos</p>
+
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary btn-magnetic ripple">
+                    <i class="fas fa-code"></i>
+                    <span data-i18n="hero.cta1">Ver Proyectos</span>
+                </a>
+                <a href="#contact" class="btn btn-secondary btn-magnetic ripple">
+                    <i class="fas fa-envelope"></i>
+                    <span data-i18n="hero.cta2">Contactar</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2 data-i18n="about.title">Sobre Mí</h2>
+            </div>
+
+            <div class="about-content reveal">
+                <p class="about-description" data-i18n="about.description">
+                    Estudiante apasionado por la tecnología con enfoque en Inteligencia Artificial y desarrollo de
+                    software.
+                    Me especializo en crear soluciones innovadoras utilizando Python, análisis de datos y tecnologías de
+                    IA como Google Gemini.
+                    Disfruto construyendo desde juegos interactivos hasta aplicaciones educativas con IA.
+                </p>
+
+                <div class="stats-grid grid grid-3" style="margin-top: 2rem;">
+                    <div class="stat-card card">
+                        <h3>15+</h3>
+                        <p data-i18n="about.stats.projects">Proyectos</p>
+                    </div>
+                    <div class="stat-card card">
+                        <h3>10+</h3>
+                        <p data-i18n="about.stats.technologies">Tecnologías</p>
+                    </div>
+                    <div class="stat-card card">
+                        <h3>3+</h3>
+                        <p data-i18n="about.stats.experience">Años Programando</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2 data-i18n="projects.title">Proyectos Destacados</h2>
+                <p class="section-subtitle" data-i18n="projects.subtitle">Aplicaciones y sistemas que he desarrollado
+                </p>
+            </div>
+
+            <div class="projects-grid grid grid-3 reveal">
+                <!-- BRAINY2 -->
+                <div class="project-card card card-3d stagger-item">
+                    <div class="project-icon">
+                        <i class="fas fa-brain" style="font-size: 3rem; color: var(--primary);"></i>
+                    </div>
+                    <h3>BRAINY2</h3>
+                    <p>Laboratorio Dimensional de Álgebra Lineal con IA - Visualizaciones interactivas 3D con PyVista y
+                        Gemini AI</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">IA</span>
+                        <span class="tag">PyVista</span>
+                        <span class="tag">Gemini</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/jjho05/BRAINY2" target="_blank" class="btn btn-secondary btn-sm">
+                            <i class="fab fa-github"></i>
+                            <span data-i18n="projects.viewCode">Ver Código</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- VEXEL -->
+                <div class="project-card card card-3d stagger-item">
+                    <div class="project-icon">
+                        <i class="fas fa-cube" style="font-size: 3rem; color: var(--secondary);"></i>
+                    </div>
+                    <h3>VEXEL</h3>
+                    <p>Laboratorio Virtual Interactivo con IA - Generador automático de visualizaciones científicas 3D
+                        usando Gemini AI</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">IA</span>
+                        <span class="tag">PyVista</span>
+                        <span class="tag">3D</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/jjho05/VEXEL" target="_blank" class="btn btn-secondary btn-sm">
+                            <i class="fab fa-github"></i>
+                            <span data-i18n="projects.viewCode">Ver Código</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- AURA APP -->
+                <div class="project-card card card-3d stagger-item">
+                    <div class="project-icon">
+                        <i class="fas fa-heart" style="font-size: 3rem; color: var(--accent);"></i>
+                    </div>
+                    <h3>AURA APP</h3>
+                    <p>Asistente Emocional con IA - Compañero de bienestar emocional con Gemini AI y síntesis de voz
+                        ElevenLabs</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">IA</span>
+                        <span class="tag">Gemini</span>
+                        <span class="tag">ElevenLabs</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/jjho05/AURA-APP" target="_blank" class="btn btn-secondary btn-sm">
+                            <i class="fab fa-github"></i>
+                            <span data-i18n="projects.viewCode">Ver Código</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PROMPTS IA -->
+                <div class="project-card card card-3d stagger-item">
+                    <div class="project-icon">
+                        <i class="fas fa-wand-magic-sparkles" style="font-size: 3rem; color: var(--primary);"></i>
+                    </div>
+                    <h3>PROMPTS IA</h3>
+                    <p>Generador Inteligente de Prompts con Gemini 2.5 Flash - Optimiza tus prompts para mejores
+                        resultados</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">IA</span>
+                        <span class="tag">Gemini</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/jjho05/PROMPTS-IA" target="_blank" class="btn btn-secondary btn-sm">
+                            <i class="fab fa-github"></i>
+                            <span data-i18n="projects.viewCode">Ver Código</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sistema Salones ISC -->
+                <div class="project-card card card-3d stagger-item">
+                    <div class="project-icon">
+                        <i class="fas fa-calendar-alt" style="font-size: 3rem; color: var(--secondary);"></i>
+                    </div>
+                    <h3>Sistema Salones ISC</h3>
+                    <p>Sistema inteligente de optimización de horarios con múltiples algoritmos - Solución eficiente
+                        para asignación de aulas</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Algoritmos</span>
+                        <span class="tag">Optimización</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/jjho05/Sistema-Salones-ISC" target="_blank"
+                            class="btn btn-secondary btn-sm">
+                            <i class="fab fa-github"></i>
+                            <span data-i18n="projects.viewCode">Ver Código</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- SuperTiendaProMax -->
+                <div class="project-card card card-3d stagger-item">
+                    <div class="project-icon">
+                        <i class="fas fa-cash-register" style="font-size: 3rem; color: var(--accent);"></i>
+                    </div>
+                    <h3>SuperTiendaProMax</h3>
+                    <p>Sistema POS completo con JavaFX y MySQL - Gestión de inventario, ventas y reportes con
+                        exportación PDF/Excel</p>
+                    <div class="project-tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">JavaFX</span>
+                        <span class="tag">MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/jjho05/SuperTiendaProMax" target="_blank"
+                            class="btn btn-secondary btn-sm">
+                            <i class="fab fa-github"></i>
+                            <span data-i18n="projects.viewCode">Ver Código</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section class="section" id="games">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2 data-i18n="games.title">Juegos Interactivos</h2>
+                <p class="section-subtitle" data-i18n="games.subtitle">Proyectos de desarrollo de juegos web con
+                    JavaScript y Three.js</p>
+            </div>
+
+            <div class="games-grid grid grid-2 reveal">
+                <!-- SON CARRERAS NO CARRERITAS -->
+                <div class="game-card card card-3d stagger-item">
+                    <div class="game-icon">
+                        <i class="fas fa-car" style="font-size: 4rem; color: var(--primary);"></i>
+                    </div>
+                    <h3>Son Carreras, No Carreritas</h3>
+                    <p>Juego de carreras 3D endless runner con versiones web (Three.js) y desktop (Pygame) - ¡Esquiva
+                        obstáculos y colecta monedas!</p>
+                    <div class="project-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Three.js</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Pygame</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://jjho05.github.io/SON-CARRERAS-NO-CARRERITAS/" target="_blank"
+                            class="btn btn-primary btn-sm">
+                            <i class="fas fa-play"></i>
+                            <span data-i18n="games.playNow">Jugar Ahora</span>
+                        </a>
+                        <a href="https://github.com/jjho05/SON-CARRERAS-NO-CARRERITAS" target="_blank"
+                            class="btn btn-secondary btn-sm">
+                            <i class="fab fa-github"></i>
+                            <span data-i18n="games.viewCode">Ver Código</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ESFERA 3D -->
+                <div class="game-card card card-3d stagger-item">
+                    <div class="game-icon">
+                        <i class="fas fa-circle" style="font-size: 4rem; color: var(--secondary);"></i>
+                    </div>
+                    <h3>Esfera 3D - Neon Runner</h3>
+                    <p>Endless runner 3D con estética neon cyberpunk - Controla una esfera luminosa a través de un túnel
+                        infinito</p>
+                    <div class="project-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Three.js</span>
+                        <span class="tag">WebGL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://jjho05.github.io/ESFERA-3D/app.html" target="_blank"
+                            class="btn btn-primary btn-sm">
+                            <i class="fas fa-play"></i>
+                            <span data-i18n="games.playNow">Jugar Ahora</span>
+                        </a>
+                        <a href="https://github.com/jjho05/ESFERA-3D" target="_blank" class="btn btn-secondary btn-sm">
+                            <i class="fab fa-github"></i>
+                            <span data-i18n="games.viewCode">Ver Código</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- BLOCK BUILDER -->
+                <div class="game-card card card-3d stagger-item">
+                    <div class="game-icon">
+                        <i class="fas fa-cubes" style="font-size: 4rem; color: var(--accent);"></i>
+                    </div>
+                    <h3>Block Builder - LEGO Edition</h3>
+                    <p>Constructor 3D interactivo estilo LEGO - Construye creaciones ilimitadas con bloques de colores
+                        vibrantes</p>
+                    <div class="project-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Three.js</span>
+                        <span class="tag">3D</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://jjho05.github.io/BLOCK-BUILDER/app.html" target="_blank"
+                            class="btn btn-primary btn-sm">
+                            <i class="fas fa-play"></i>
+                            <span data-i18n="games.playNow">Jugar Ahora</span>
+                        </a>
+                        <a href="https://github.com/jjho05/BLOCK-BUILDER" target="_blank"
+                            class="btn btn-secondary btn-sm">
+                            <i class="fab fa-github"></i>
+                            <span data-i18n="games.viewCode">Ver Código</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- WINDOWS 95 -->
+                <div class="game-card card card-3d stagger-item">
+                    <div class="game-icon">
+                        <i class="fab fa-windows" style="font-size: 4rem; color: var(--primary);"></i>
+                    </div>
+                    <h3>Simulador Windows 95</h3>
+                    <p>Recreación nostálgica de Windows 95 con HTML, CSS y JavaScript - Interfaz auténtica con
+                        aplicaciones funcionales</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://jjho05.github.io/WINDOWS-95/" target="_blank" class="btn btn-primary btn-sm">
+                            <i class="fas fa-play"></i>
+                            <span data-i18n="games.playNow">Jugar Ahora</span>
+                        </a>
+                        <a href="https://github.com/jjho05/WINDOWS-95" target="_blank" class="btn btn-secondary btn-sm">
+                            <i class="fab fa-github"></i>
+                            <span data-i18n="games.viewCode">Ver Código</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- TETRIS -->
+                <div class="game-card card card-3d stagger-item">
+                    <div class="game-icon">
+                        <i class="fas fa-gamepad" style="font-size: 4rem; color: var(--secondary);"></i>
+                    </div>
+                    <h3>Tetris Clásico</h3>
+                    <p>Implementación del clásico Tetris en Python con Pygame - Juego retro con mecánicas auténticas</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Pygame</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/jjho05/TETRIS" target="_blank" class="btn btn-secondary btn-sm">
+                            <i class="fab fa-github"></i>
+                            <span data-i18n="games.viewCode">Ver Código</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2 data-i18n="skills.title">Habilidades Técnicas</h2>
+                <p class="section-subtitle" data-i18n="skills.subtitle">Tecnologías y herramientas que domino</p>
+            </div>
+
+            <div class="skills-grid grid grid-4 reveal">
+                <!-- IA -->
+                <div class="skill-category card">
+                    <h3><i class="fas fa-robot"></i> <span data-i18n="skills.categories.ai">Inteligencia
+                            Artificial</span></h3>
+                    <ul class="skill-list">
+                        <li>Google Gemini API</li>
+                        <li>Machine Learning</li>
+                        <li>Procesamiento de Lenguaje Natural</li>
+                        <li>Computer Vision</li>
+                    </ul>
+                </div>
+
+                <!-- Programación -->
+                <div class="skill-category card">
+                    <h3><i class="fas fa-code"></i> <span data-i18n="skills.categories.programming">Programación</span>
+                    </h3>
+                    <ul class="skill-list">
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>Java</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+
+                <!-- Análisis de Datos -->
+                <div class="skill-category card">
+                    <h3><i class="fas fa-chart-line"></i> <span data-i18n="skills.categories.data">Análisis de
+                            Datos</span></h3>
+                    <ul class="skill-list">
+                        <li>NumPy & Pandas</li>
+                        <li>Matplotlib & Seaborn</li>
+                        <li>Data Visualization</li>
+                        <li>Statistical Analysis</li>
+                    </ul>
+                </div>
+
+                <!-- Desarrollo Web -->
+                <div class="skill-category card">
+                    <h3><i class="fas fa-globe"></i> <span data-i18n="skills.categories.web">Desarrollo Web</span></h3>
+                    <ul class="skill-list">
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript ES6+</li>
+                        <li>Three.js</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+
+                <!-- Frameworks -->
+                <div class="skill-category card">
+                    <h3><i class="fas fa-layer-group"></i> Frameworks</h3>
+                    <ul class="skill-list">
+                        <li>Pygame</li>
+                        <li>CustomTkinter</li>
+                        <li>JavaFX</li>
+                        <li>PyVista</li>
+                    </ul>
+                </div>
+
+                <!-- Bases de Datos -->
+                <div class="skill-category card">
+                    <h3><i class="fas fa-database"></i> Bases de Datos</h3>
+                    <ul class="skill-list">
+                        <li>MySQL</li>
+                        <li>SQLite</li>
+                        <li>Database Design</li>
+                    </ul>
+                </div>
+
+                <!-- Herramientas -->
+                <div class="skill-category card">
+                    <h3><i class="fas fa-tools"></i> <span data-i18n="skills.categories.tools">Herramientas</span></h3>
+                    <ul class="skill-list">
+                        <li>Git & GitHub</li>
+                        <li>VS Code</li>
+                        <li>Jupyter Notebook</li>
+                        <li>GitHub Pages</li>
+                    </ul>
+                </div>
+
+                <!-- Otros -->
+                <div class="skill-category card">
+                    <h3><i class="fas fa-star"></i> Otros</h3>
+                    <ul class="skill-list">
+                        <li>Algoritmos</li>
+                        <li>Estructuras de Datos</li>
+                        <li>OOP</li>
+                        <li>API Integration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2 data-i18n="contact.title">Contacto</h2>
+                <p class="section-subtitle" data-i18n="contact.subtitle">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+            </div>
+
+            <div class="contact-grid grid grid-3 reveal">
+                <!-- Email -->
+                <a href="mailto:jjho.reivaj05@gmail.com" class="contact-card card">
+                    <i class="fas fa-envelope" style="font-size: 3rem; color: var(--primary);"></i>
+                    <h3 data-i18n="contact.email">Email</h3>
+                    <p>jjho.reivaj05@gmail.com</p>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/jjho05" target="_blank" class="contact-card card">
+                    <i class="fab fa-github" style="font-size: 3rem; color: var(--secondary);"></i>
+                    <h3 data-i18n="contact.github">GitHub</h3>
+                    <p>@jjho05</p>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://instagram.com/jesus_117z" target="_blank" class="contact-card card">
+                    <i class="fab fa-instagram" style="font-size: 3rem; color: var(--accent);"></i>
+                    <h3 data-i18n="contact.instagram">Instagram</h3>
+                    <p>@jesus_117z</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" style="background: var(--bg-secondary); padding: 2rem 0; text-align: center;">
+        <div class="container">
+            <p>
+                © 2024 Jesús Olvera. <span data-i18n="footer.rights">Todos los derechos reservados</span>
+            </p>
+            <p style="margin-top: 0.5rem; color: var(--text-muted);">
+                <span data-i18n="footer.madeWith">Hecho con</span> <i class="fas fa-heart"
+                    style="color: var(--accent);"></i>
+                <span data-i18n="footer.by">por</span> Jesús Olvera
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./js/i18n.js"></script>
+    <script src="./js/interactive.js"></script>
+    <script src="./js/deepwiki.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
+```

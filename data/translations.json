@@ -1,0 +1,147 @@
+{
+  "es": {
+    "nav": {
+      "about": "Sobre Mí",
+      "projects": "Proyectos",
+      "games": "Juegos",
+      "skills": "Habilidades",
+      "contact": "Contacto"
+    },
+    "hero": {
+      "greeting": "Hola, soy",
+      "name": "Jesús Olvera",
+      "title": "Estudiante de Ingeniería en Sistemas Computacionales",
+      "institution": "Instituto Tecnológico de Ciudad Madero",
+      "status": "Próximo a Egresar",
+      "subtitle": "Especializado en Inteligencia Artificial, Python y Análisis de Datos",
+      "cta1": "Ver Proyectos",
+      "cta2": "Contactar"
+    },
+    "about": {
+      "title": "Sobre Mí",
+      "description": "Estudiante del Instituto Tecnológico de Ciudad Madero, próximo a egresar. Apasionado por la tecnología con enfoque en Inteligencia Artificial y desarrollo de software. Me especializo en crear soluciones innovadoras utilizando Python, análisis de datos y tecnologías de IA como Google Gemini. Disfruto construyendo desde juegos interactivos hasta aplicaciones educativas con IA.",
+      "stats": {
+        "projects": "Proyectos",
+        "technologies": "Tecnologías",
+        "experience": "Años Programando"
+      }
+    },
+    "projects": {
+      "title": "Proyectos Destacados",
+      "subtitle": "Aplicaciones y sistemas que he desarrollado",
+      "viewCode": "Ver Código",
+      "viewDocs": "Ver Docs",
+      "viewDemo": "Ver Demo",
+      "categories": {
+        "all": "Todos",
+        "ai": "Inteligencia Artificial",
+        "web": "Aplicaciones Web",
+        "desktop": "Aplicaciones Desktop",
+        "data": "Análisis de Datos"
+      }
+    },
+    "games": {
+      "title": "Juegos Interactivos",
+      "subtitle": "Proyectos de desarrollo de juegos web con JavaScript y Three.js",
+      "playNow": "Jugar Ahora",
+      "viewCode": "Ver Código",
+      "viewDocs": "Ver Docs"
+    },
+    "skills": {
+      "title": "Habilidades Técnicas",
+      "subtitle": "Tecnologías y herramientas que domino",
+      "categories": {
+        "ai": "Inteligencia Artificial",
+        "programming": "Programación",
+        "data": "Análisis de Datos",
+        "web": "Desarrollo Web",
+        "tools": "Herramientas"
+      }
+    },
+    "contact": {
+      "title": "Contacto",
+      "subtitle": "¿Tienes un proyecto en mente? ¡Hablemos!",
+      "email": "Email",
+      "github": "GitHub",
+      "instagram": "Instagram",
+      "sendMessage": "Enviar Mensaje"
+    },
+    "footer": {
+      "rights": "Todos los derechos reservados",
+      "madeWith": "Hecho con",
+      "by": "por"
+    }
+  },
+  "en": {
+    "nav": {
+      "about": "About",
+      "projects": "Projects",
+      "games": "Games",
+      "skills": "Skills",
+      "contact": "Contact"
+    },
+    "hero": {
+      "greeting": "Hi, I'm",
+      "name": "Jesús Olvera",
+      "title": "Computer Systems Engineering Student",
+      "institution": "Technological Institute of Ciudad Madero",
+      "status": "Soon to Graduate",
+      "subtitle": "Specialized in Artificial Intelligence, Python and Data Analysis",
+      "cta1": "View Projects",
+      "cta2": "Contact Me"
+    },
+    "about": {
+      "title": "About Me",
+      "description": "Student at the Technological Institute of Ciudad Madero, soon to graduate. Technology-passionate with a focus on Artificial Intelligence and software development. I specialize in creating innovative solutions using Python, data analysis, and AI technologies like Google Gemini. I enjoy building everything from interactive games to AI-powered educational applications.",
+      "stats": {
+        "projects": "Projects",
+        "technologies": "Technologies",
+        "experience": "Years Coding"
+      }
+    },
+    "projects": {
+      "title": "Featured Projects",
+      "subtitle": "Applications and systems I've developed",
+      "viewCode": "View Code",
+      "viewDemo": "View Demo",
+      "categories": {
+        "all": "All",
+        "ai": "Artificial Intelligence",
+        "web": "Web Applications",
+        "desktop": "Desktop Applications",
+        "data": "Data Analysis"
+      }
+    },
+    "games": {
+      "title": "Interactive Games",
+      "subtitle": "Web game development projects with JavaScript and Three.js",
+      "playNow": "Play Now",
+      "viewCode": "View Code",
+      "viewDocs": "View Docs"
+    },
+    "skills": {
+      "title": "Technical Skills",
+      "subtitle": "Technologies and tools I master",
+      "categories": {
+        "ai": "Artificial Intelligence",
+        "programming": "Programming",
+        "data": "Data Analysis",
+        "web": "Web Development",
+        "tools": "Tools"
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Have a project in mind? Let's talk!",
+      "email": "Email",
+      "github": "GitHub",
+      "instagram": "Instagram",
+      "sendMessage": "Send Message"
+    },
+    "footer": {
+      "rights": "All rights reserved",
+      "madeWith": "Made with",
+      "by": "by"
+    }
+  }
+}
