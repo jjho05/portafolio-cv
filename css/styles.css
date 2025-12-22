@@ -270,6 +270,7 @@ a:hover {
   position: relative;
   background: var(--gradient-hero);
   overflow: hidden;
+  padding: 100px var(--spacing-md) var(--spacing-xl);
 }
 
 .hero::before {
@@ -302,6 +303,7 @@ a:hover {
   z-index: 1;
   text-align: center;
   max-width: 800px;
+  padding: 0 var(--spacing-sm);
 }
 
 .hero-greeting {
