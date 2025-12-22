@@ -138,8 +138,13 @@ a:hover {
 .section {
   padding: var(--spacing-xl) 0;
   position: relative;
+  padding-top: 80px;
+  /* Restored to normal */
+}
+
+#about {
   padding-top: 150px;
-  /* Aggressive fix for overlap */
+  /* Targeted fix for hero overlap */
 }
 
 .section-title {
