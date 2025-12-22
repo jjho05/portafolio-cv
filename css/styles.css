@@ -83,7 +83,6 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   max-width: 100vw;
-  /* Prevent any horizontal overflow */
 }
 
 /* --- Tipografía --- */
@@ -140,11 +139,7 @@ a:hover {
 .section {
   padding: var(--spacing-xl) 0;
   position: relative;
-  padding-top: 80px;
-  /* Restored to normal */
 }
-
-/* #about padding removed - handled by natural flow */
 
 .section-title {
   text-align: center;
@@ -227,11 +222,13 @@ a:hover {
   transition: width var(--transition-fast);
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link.active::after {
   width: 80%;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
   color: var(--primary-light);
 }
 
@@ -267,42 +264,16 @@ a:hover {
   background: rgba(255, 255, 255, 0.05);
 }
 
-/* --- Main Wrapper (ISC-ITCM Style Fix) --- */
-.main-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 100vw;
-  /* Prevent horizontal overflow */
-  min-height: 100vh;
-  overflow-x: hidden;
-  /* Critical fix for sliding */
-}
-
-/* Ensure all direct children respect width */
-.main-wrapper>* {
-  max-width: 100%;
-}
-
 /* --- Hero Section --- */
 .hero {
-  min-height: 100dvh;
-  /* Dynamic viewport height for modern mobile */
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
   background: var(--gradient-hero);
   overflow: hidden;
-  padding: 150px var(--spacing-md) 100px;
-  height: auto;
-  /* Allow content clarity */
-}
-
-@media (max-width: 768px) {
-  .hero {
-    padding: 120px 1rem 80px;
-  }
+  padding: var(--spacing-lg) var(--spacing-md);
 }
 
 .hero::before {
@@ -331,18 +302,14 @@ a:hover {
 }
 
 .hero-content {
-  position: relative;
-  z-index: 1;
   text-align: center;
   max-width: 800px;
-  padding: 0 var(--spacing-sm);
 }
 
 .hero-greeting {
   font-size: 1.5rem;
   color: var(--text-secondary);
   margin-bottom: var(--spacing-xs);
-  animation: fadeInDown 0.8s ease;
 }
 
 .hero-name {
@@ -353,7 +320,6 @@ a:hover {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: var(--spacing-md);
-  animation: fadeInUp 0.8s ease 0.2s both;
   line-height: 1.1;
 }
 
@@ -361,7 +327,6 @@ a:hover {
   font-size: clamp(1rem, 3vw, 1.5rem);
   color: var(--text-primary);
   margin-bottom: var(--spacing-md);
-  animation: fadeInUp 0.8s ease 0.4s both;
   line-height: 1.4;
 }
 
@@ -370,7 +335,6 @@ a:hover {
   color: var(--text-secondary);
   margin-bottom: var(--spacing-md);
   margin-top: var(--spacing-md);
-  animation: fadeInUp 0.8s ease 0.6s both;
   line-height: 1.6;
 }
 
@@ -379,7 +343,6 @@ a:hover {
   gap: var(--spacing-sm);
   justify-content: center;
   flex-wrap: wrap;
-  animation: fadeInUp 0.8s ease 0.8s both;
   margin-top: var(--spacing-lg);
 }
 
@@ -436,26 +399,10 @@ a:hover {
   overflow: hidden;
 }
 
-.card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: var(--gradient-primary);
-  transform: scaleX(0);
-  transition: transform var(--transition-normal);
-}
-
 .card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-lg);
   border-color: var(--primary);
-}
-
-.card:hover::before {
-  transform: scaleX(1);
 }
 
 /* --- Grid Layouts --- */
@@ -473,56 +420,7 @@ a:hover {
 }
 
 .grid-4 {
-  grid-template-columns: repeat(2, 1fr);
-  /* Force 2 columns */
-}
-
-
-/* --- Animations --- */
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-/* Scroll reveal */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 /* --- Mobile Menu Toggle --- */
@@ -533,13 +431,7 @@ a:hover {
   color: var(--text-primary);
   font-size: 1.5rem;
   cursor: pointer;
-  padding: 0.5rem;
-  transition: color var(--transition-fast);
   z-index: calc(var(--z-header) + 1);
-}
-
-.nav-toggle:hover {
-  color: var(--primary);
 }
 
 /* --- Responsive --- */
@@ -548,13 +440,19 @@ a:hover {
     display: block;
   }
 
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
   .nav-menu {
     position: fixed;
-    top: 70px;
+    top: 0;
     right: -100%;
     width: 75%;
     max-width: 300px;
-    height: calc(100vh - 70px);
+    height: 100vh;
     background: rgba(17, 24, 39, 0.98);
     backdrop-filter: blur(20px);
     flex-direction: column;
@@ -564,7 +462,6 @@ a:hover {
     border-left: 1px solid var(--glass-border);
     gap: var(--spacing-sm);
     align-items: flex-start;
-    z-index: 999;
   }
 
   .nav-menu.active {
@@ -579,32 +476,6 @@ a:hover {
     display: block;
     padding: var(--spacing-sm);
     width: 100%;
-    border-radius: var(--radius-sm);
-  }
-
-  .nav-link:hover {
-    background: var(--glass-bg);
-  }
-
-  .lang-toggle {
-    width: 100%;
-    justify-content: center;
-    margin-top: var(--spacing-sm);
-    padding: 0.5rem;
-  }
-
-  .hero {
-    padding: var(--spacing-lg) var(--spacing-sm);
-  }
-
-  .section {
-    padding: var(--spacing-lg) 0;
-  }
-
-  .grid-2,
-  .grid-3,
-  .grid-4 {
-    grid-template-columns: 1fr;
   }
 }
 
@@ -622,6 +493,20 @@ a:hover {
   border-radius: 5px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-dark);
+/* ===================================
+   ✅ FIX: PARALLAX HERO BACKGROUND
+   =================================== */
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
 }
