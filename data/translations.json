@@ -41,9 +41,9 @@
           "title": "🎓 Alumno Destacado",
           "subtitle": "Ing. Sistemas Computacionales"
         },
-        "dev": {
-          "title": "💻 Desarrollador Full Stack",
-          "subtitle": "Web & Mobile"
+        "ai": {
+          "title": "🤖 Desarrollo IA & Data Science",
+          "subtitle": "LLMs, Python & Analytics"
         }
       },
       "stats": {
@@ -140,9 +140,9 @@
           "title": "🎓 Outstanding Student",
           "subtitle": "Computer Systems Engineering"
         },
-        "dev": {
-          "title": "💻 Full Stack Developer",
-          "subtitle": "Web & Mobile"
+        "ai": {
+          "title": "🤖 AI & Data Science Dev",
+          "subtitle": "LLMs, Python & Analytics"
         }
       },
       "stats": {

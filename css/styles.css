@@ -274,6 +274,14 @@ a:hover {
   overflow: hidden;
   padding: 120px var(--spacing-md) var(--spacing-2xl);
   margin-bottom: var(--spacing-xl);
+  height: auto;
+  /* Allow content to dictate height */
+}
+
+@media (min-width: 768px) {
+  .hero {
+    min-height: 100vh;
+  }
 }
 
 .hero::before {
