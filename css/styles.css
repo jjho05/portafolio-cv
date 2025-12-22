@@ -82,6 +82,8 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
+  max-width: 100vw;
+  /* Prevent any horizontal overflow */
 }
 
 /* --- Tipografía --- */
@@ -142,10 +144,7 @@ a:hover {
   /* Restored to normal */
 }
 
-#about {
-  padding-top: 150px;
-  /* Targeted fix for hero overlap */
-}
+/* #about padding removed - handled by natural flow */
 
 .section-title {
   text-align: center;
@@ -268,24 +267,41 @@ a:hover {
   background: rgba(255, 255, 255, 0.05);
 }
 
+/* --- Main Wrapper (ISC-ITCM Style Fix) --- */
+.main-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
+  /* Prevent horizontal overflow */
+  min-height: 100vh;
+  overflow-x: hidden;
+  /* Critical fix for sliding */
+}
+
+/* Ensure all direct children respect width */
+.main-wrapper>* {
+  max-width: 100%;
+}
+
 /* --- Hero Section --- */
 .hero {
-  min-height: 100vh;
+  min-height: 100dvh;
+  /* Dynamic viewport height for modern mobile */
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
   background: var(--gradient-hero);
   overflow: hidden;
-  padding: 120px var(--spacing-md) var(--spacing-2xl);
-  margin-bottom: var(--spacing-xl);
+  padding: 150px var(--spacing-md) 100px;
   height: auto;
-  /* Allow content to dictate height */
+  /* Allow content clarity */
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .hero {
-    min-height: 100vh;
+    padding: 120px 1rem 80px;
   }
 }
 
