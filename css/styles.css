@@ -138,7 +138,8 @@ a:hover {
 .section {
   padding: var(--spacing-xl) 0;
   position: relative;
-  padding-top: 80px;
+  padding-top: 150px;
+  /* Aggressive fix for overlap */
 }
 
 .section-title {
@@ -271,7 +272,8 @@ a:hover {
   position: relative;
   background: var(--gradient-hero);
   overflow: hidden;
-  padding: 100px var(--spacing-md) var(--spacing-xl);
+  padding: 120px var(--spacing-md) var(--spacing-2xl);
+  margin-bottom: var(--spacing-xl);
 }
 
 .hero::before {
@@ -442,8 +444,10 @@ a:hover {
 }
 
 .grid-4 {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
+  /* Force 2 columns */
 }
+
 
 /* --- Animations --- */
 @keyframes fadeInDown {
