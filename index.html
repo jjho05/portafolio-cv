@@ -114,18 +114,72 @@
 
             <div class="about-content reveal">
                 <p class="about-description" data-i18n="about.description">
-                    Estudiante del Instituto Tecnológico de Ciudad Madero, próximo a egresar. Apasionado por la tecnología con enfoque en Inteligencia Artificial y desarrollo de software. Me especializo en crear soluciones innovadoras utilizando Python, análisis de datos y tecnologías de IA como Google Gemini. Disfruto construyendo desde juegos interactivos hasta aplicaciones educativas con IA.
+                    Estudiante del Instituto Tecnológico de Ciudad Madero, próximo a egresar. Apasionado por la
+                    tecnología con enfoque en Inteligencia Artificial y desarrollo de software. Me especializo en crear
+                    soluciones innovadoras utilizando Python, análisis de datos y tecnologías de IA como Google Gemini.
+                    Disfruto construyendo desde juegos interactivos hasta aplicaciones educativas con IA.
                 </p>
 
-                <!-- Achievement Badge -->
-                <div class="achievement-badge" style="display: inline-flex; align-items: center; gap: 0.75rem; margin: 1.5rem 0; padding: 1rem 1.5rem; background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 140, 0, 0.1)); backdrop-filter: blur(10px); border: 2px solid rgba(255, 215, 0, 0.3); border-radius: var(--radius-lg); box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);">
-                    <i class="fas fa-trophy" style="color: #FFD700; font-size: 2rem;"></i>
-                    <div style="text-align: left;">
-                        <p style="margin: 0; font-size: 1rem; color: var(--text-primary); font-weight: 700;" data-i18n="about.achievement.title">
-                            🏆 Ganador Feria de Videojuegos ISC 2024</p>
-                        <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);" data-i18n="about.achievement.subtitle">
-                            Instituto Tecnológico de Ciudad Madero</p>
+                <!-- Achievements Section -->
+                <div class="achievements-grid"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 2rem 0;">
+
+                    <!-- Winner Badge -->
+                    <div class="achievement-badge"
+                        style="display: flex; align-items: center; gap: 0.75rem; padding: 1rem 1.25rem; background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 140, 0, 0.1)); backdrop-filter: blur(10px); border: 2px solid rgba(255, 215, 0, 0.3); border-radius: var(--radius-lg); box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);">
+                        <i class="fas fa-trophy" style="color: #FFD700; font-size: 1.75rem; flex-shrink: 0;"></i>
+                        <div style="text-align: left; min-width: 0;">
+                            <p style="margin: 0; font-size: 0.95rem; color: var(--text-primary); font-weight: 700;"
+                                data-i18n="about.achievements.winner.title">
+                                🏆 Ganador Feria ISC 2024</p>
+                            <p style="margin: 0; font-size: 0.85rem; color: var(--text-secondary);"
+                                data-i18n="about.achievements.winner.subtitle">
+                                ITCM - Videojuegos</p>
+                        </div>
                     </div>
+
+                    <!-- InnovaTec 2025 -->
+                    <div class="achievement-badge"
+                        style="display: flex; align-items: center; gap: 0.75rem; padding: 1rem 1.25rem; background: linear-gradient(135deg, rgba(66, 153, 225, 0.1), rgba(159, 122, 234, 0.1)); backdrop-filter: blur(10px); border: 2px solid rgba(66, 153, 225, 0.3); border-radius: var(--radius-lg); box-shadow: 0 4px 15px rgba(66, 153, 225, 0.2);">
+                        <i class="fas fa-lightbulb" style="color: #4299e1; font-size: 1.75rem; flex-shrink: 0;"></i>
+                        <div style="text-align: left; min-width: 0;">
+                            <p style="margin: 0; font-size: 0.95rem; color: var(--text-primary); font-weight: 700;"
+                                data-i18n="about.achievements.innovatec.title">
+                                💡 Participante InnovaTec 2025</p>
+                            <p style="margin: 0; font-size: 0.85rem; color: var(--text-secondary);"
+                                data-i18n="about.achievements.innovatec.subtitle">
+                                Innovación Tecnológica</p>
+                        </div>
+                    </div>
+
+                    <!-- ExpoCiencias 2025 -->
+                    <div class="achievement-badge"
+                        style="display: flex; align-items: center; gap: 0.75rem; padding: 1rem 1.25rem; background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.1)); backdrop-filter: blur(10px); border: 2px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-lg); box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);">
+                        <i class="fas fa-flask" style="color: #10b981; font-size: 1.75rem; flex-shrink: 0;"></i>
+                        <div style="text-align: left; min-width: 0;">
+                            <p style="margin: 0; font-size: 0.95rem; color: var(--text-primary); font-weight: 700;"
+                                data-i18n="about.achievements.expociencias.title">
+                                🔬 Participante ExpoCiencias 2025</p>
+                            <p style="margin: 0; font-size: 0.85rem; color: var(--text-secondary);"
+                                data-i18n="about.achievements.expociencias.subtitle">
+                                Proyectos Científicos</p>
+                        </div>
+                    </div>
+
+                    <!-- Future Potential -->
+                    <div class="achievement-badge"
+                        style="display: flex; align-items: center; gap: 0.75rem; padding: 1rem 1.25rem; background: linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(219, 39, 119, 0.1)); backdrop-filter: blur(10px); border: 2px solid rgba(236, 72, 153, 0.3); border-radius: var(--radius-lg); box-shadow: 0 4px 15px rgba(236, 72, 153, 0.2);">
+                        <i class="fas fa-rocket" style="color: #ec4899; font-size: 1.75rem; flex-shrink: 0;"></i>
+                        <div style="text-align: left; min-width: 0;">
+                            <p style="margin: 0; font-size: 0.95rem; color: var(--text-primary); font-weight: 700;"
+                                data-i18n="about.achievements.potential.title">
+                                🚀 Proyectos con Potencial</p>
+                            <p style="margin: 0; font-size: 0.85rem; color: var(--text-secondary);"
+                                data-i18n="about.achievements.potential.subtitle">
+                                Innovación y Futuro</p>
+                        </div>
+                    </div>
+
                 </div>
 
                 <div class="stats-grid grid grid-3" style="margin-top: 2rem;">

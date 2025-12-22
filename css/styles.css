@@ -138,6 +138,7 @@ a:hover {
 .section {
   padding: var(--spacing-xl) 0;
   position: relative;
+  padding-top: 80px;
 }
 
 .section-title {
