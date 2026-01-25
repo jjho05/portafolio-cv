@@ -709,3 +709,54 @@ a:hover {
     padding: 1.5rem;
   }
 }
+/* --- Apple Redesign Overrides --- */
+:root {
+  /* Apple Palette Override */
+  --bg-primary: #000000 !important;
+  --bg-secondary: #050507 !important;
+  --text-primary: #f5f5f7 !important;
+  --text-secondary: #86868b !important;
+  --primary: #2997ff !important;
+  --glass-bg: rgba(255, 255, 255, 0.05) !important;
+  --card-bg: rgba(21, 21, 23, 0.6) !important;
+  --radius-lg: 24px !important;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif !important;
+  background-color: var(--bg-primary) !important;
+}
+
+/* Header Frosted Glass */
+.header {
+    background: rgba(0, 0, 0, 0.7) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Section Titles Giant */
+.section-title h2 {
+    font-size: 3.5rem !important;
+    letter-spacing: -0.015em !important;
+    background: none !important;
+    -webkit-text-fill-color: var(--text-primary) !important;
+    font-weight: 600 !important;
+}
+
+/* Unified Cards */
+.card {
+    background: var(--card-bg) !important;
+    border: 1px solid rgba(255,255,255,0.08) !important;
+    box-shadow: none !important;
+}
+.card:hover {
+    transform: scale(1.02) !important;
+    border-color: rgba(255,255,255,0.2) !important;
+}
+
+/* Buttons Pill */
+.btn {
+    border-radius: 999px !important;
+    font-weight: 500 !important;
+}

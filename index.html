@@ -61,39 +61,27 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
+    <!-- Hero Section (Apple Minimalist) -->
+    <section class="hero" id="home" style="background: radial-gradient(circle at 50% 100%, #1a1a2e 0%, #000000 60%);">
 
-        <!-- ✅ ESTE ES EL NUEVO CONTENEDOR PARA EL FONDO QUE ARREGLA EL ERROR -->
-        <div class="hero-background">
-            <div class="hero-particles" id="particles"></div>
-            <div class="blob" style="position: absolute; width: 400px; height: 400px; top: 10%; left: 10%; z-index: 0;">
-            </div>
-            <div class="blob"
-                style="position: absolute; width: 300px; height: 300px; bottom: 20%; right: 15%; z-index: 0;"></div>
+        <!-- Subtle Glow instead of busy particles -->
+        <div class="glow-effect"
+            style="position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(41,151,255,0.08) 0%, transparent 70%); top: -20%; left: 50%; transform: translateX(-50%); filter: blur(80px); z-index: 0;">
         </div>
 
-        <div class="hero-content">
-            <p class="hero-greeting reveal" data-i18n="hero.greeting">Hola, soy</p>
-            <h1 class="hero-name gradient-text reveal" data-i18n="hero.name">Jesús Olvera</h1>
-            <h2 class="hero-title reveal" data-i18n="hero.title">Estudiante de Ingeniería en Sistemas Computacionales
-            </h2>
+        <div class="hero-content" style="z-index: 2;">
+            <p class="hero-greeting reveal" data-i18n="hero.greeting" style="font-size: 1.5rem; color: var(--primary);">
+                Hola, soy</p>
+            <h1 class="hero-name reveal"
+                style="font-size: 5rem; letter-spacing: -0.03em; background: linear-gradient(180deg, #fff 0%, #aaa 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                Jesús Olvera</h1>
+            <h2 class="hero-title reveal" style="font-weight: 400; color: #86868b; font-size: 2rem;">Ingeniero en
+                Sistemas & AI Developer</h2>
 
-            <div class="institution-badge reveal"
-                style="display: inline-flex; align-items: center; gap: 0.5rem; margin: 1rem 0; padding: 0.75rem 1.5rem; background: var(--glass-bg); backdrop-filter: blur(10px); border: 1px solid var(--glass-border); border-radius: var(--radius-lg);">
-                <i class="fas fa-graduation-cap" style="color: var(--primary);"></i>
-                <div style="text-align: left;">
-                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);" data-i18n="hero.institution">
-                        Instituto Tecnológico de Ciudad Madero</p>
-                    <p style="margin: 0; font-size: 0.85rem; color: var(--primary); font-weight: 600;"
-                        data-i18n="hero.status">Próximo a Egresar</p>
-                </div>
-            </div>
+            <p class="hero-subtitle reveal" data-i18n="hero.subtitle" style="margin-top: 2rem;">Especializado en
+                Inteligencia Artificial, Python y Análisis de Datos</p>
 
-            <p class="hero-subtitle reveal" data-i18n="hero.subtitle">Especializado en Inteligencia Artificial, Python y
-                Análisis de Datos</p>
-
-            <div class="hero-cta reveal">
+            <div class="hero-cta reveal" style="margin-top: 3rem;">
                 <a href="#projects" class="btn btn-primary btn-magnetic ripple stagger-item">
                     <i class="fas fa-code"></i>
                     <span data-i18n="hero.cta1">Ver Proyectos</span>
