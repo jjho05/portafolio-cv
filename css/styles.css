@@ -760,3 +760,64 @@ body {
     border-radius: 999px !important;
     font-weight: 500 !important;
 }
+
+/* --- FORCE REDESIGN OVERRIDES (Final Polish) --- */
+
+/* 1. Global Typography Fix */
+h1, h2, h3, h4, h5, h6, p, a, span, li, button, .btn {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", Inter, sans-serif !important;
+  letter-spacing: -0.01em;
+}
+
+/* 2. Unified Card Design (Projects, Games, Skills, Contact) */
+.card, .project-card, .game-card, .bento-card, .contact-card, .skill-category {
+    background: rgba(21, 21, 23, 0.7) !important;
+    backdrop-filter: blur(25px) !important;
+    -webkit-backdrop-filter: blur(25px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.2) !important;
+    border-radius: 24px !important;
+    transition: transform 0.3s ease, border-color 0.3s ease !important;
+}
+
+.card:hover, .project-card:hover, .game-card:hover, .bento-card:hover, .contact-card:hover {
+    transform: translateY(-6px) !important;
+    border-color: rgba(255, 255, 255, 0.25) !important;
+    background: rgba(30, 30, 35, 0.8) !important;
+}
+
+/* 3. Button Standardization (Pill Shape) */
+.btn {
+    border-radius: 9999px !important; /* Pill absolut */
+    padding: 10px 24px !important;
+    font-weight: 500 !important;
+    text-transform: none !important; /* No uppercase */
+    letter-spacing: 0 !important;
+    box-shadow: none !important; /* Flat design style Apple */
+}
+
+/* 4. Section Titles Clean Up */
+.section-title h2 {
+    font-size: 3rem !important;
+    font-weight: 700 !important;
+    color: #f5f5f7 !important;
+    background: none !important;
+    -webkit-text-fill-color: #f5f5f7 !important;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    margin-bottom: 0.5rem !important;
+}
+
+.section-subtitle {
+    font-size: 1.25rem !important;
+    color: #86868b !important; /* Apple Grey */
+    font-weight: 400 !important;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 5. Navbar Refinement */
+.navbar {
+    border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+    background: rgba(0,0,0,0.8) !important; 
+}
