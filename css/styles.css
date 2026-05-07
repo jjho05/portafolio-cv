@@ -4,25 +4,27 @@
 
 /* --- Variables CSS --- */
 :root {
-  /* Colores Principales */
-  --primary: hsl(210, 100%, 60%);
-  --primary-dark: hsl(210, 100%, 45%);
-  --primary-light: hsl(210, 100%, 70%);
+  /* Colores Principales - Deep Navy & Azure */
+  --primary: hsl(210, 100%, 65%);
+  --primary-dark: hsl(210, 100%, 40%);
+  --primary-light: hsl(210, 100%, 75%);
 
-  --secondary: hsl(280, 100%, 65%);
-  --secondary-dark: hsl(280, 100%, 50%);
+  --secondary: hsl(260, 80%, 65%);
+  --secondary-dark: hsl(260, 80%, 45%);
 
-  --accent: hsl(340, 100%, 60%);
+  --accent: hsl(38, 100%, 55%); /* Gold accent for Tech Lead feel */
 
-  /* Gradientes */
-  --gradient-primary: linear-gradient(135deg, hsl(210, 100%, 60%), hsl(280, 100%, 65%));
-  --gradient-hero: linear-gradient(135deg, hsl(210, 100%, 15%), hsl(280, 100%, 20%));
-  --gradient-card: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  /* Gradientes Premium */
+  --gradient-primary: linear-gradient(135deg, var(--primary), var(--secondary));
+  --gradient-hero: radial-gradient(circle at 50% 100%, #10101a 0%, #000000 70%);
+  --gradient-mesh: radial-gradient(at 0% 0%, hsla(210, 100%, 65%, 0.15) 0, transparent 50%),
+                   radial-gradient(at 50% 0%, hsla(260, 80%, 65%, 0.1) 0, transparent 50%),
+                   radial-gradient(at 100% 0%, hsla(340, 100%, 60%, 0.05) 0, transparent 50%);
 
   /* Colores de Fondo */
-  --bg-primary: hsl(220, 20%, 10%);
-  --bg-secondary: hsl(220, 20%, 14%);
-  --bg-tertiary: hsl(220, 20%, 18%);
+  --bg-primary: #000000;
+  --bg-secondary: #0a0a0c;
+  --bg-tertiary: #121214;
 
   /* Glassmorphism */
   --glass-bg: rgba(255, 255, 255, 0.05);
@@ -147,16 +149,66 @@ a:hover {
 }
 
 .section-title h2 {
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  letter-spacing: -0.03em;
+  font-weight: 800;
+  color: var(--text-primary);
   margin-bottom: var(--spacing-xs);
 }
 
 .section-subtitle {
   color: var(--text-secondary);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Timeline Components */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing-md) 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: var(--glass-border);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 10px var(--primary);
+}
+
+.timeline-date {
+  font-size: 0.9rem;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
 }
 
 /* --- Header --- */
