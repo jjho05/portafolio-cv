@@ -20,9 +20,9 @@
       "ctaContact": "Contacto",
       "stats": {
         "hackathons": "Hackatones 2026",
-        "projects": "Proyectos públicos en GitHub",
-        "latency": "Inferencia en edge",
-        "search": "Combinaciones exploradas"
+        "projects": "Proyectos en GitHub",
+        "certifications": "Certificaciones Oficiales",
+        "courses": "Cursos Acreditados"
       },
       "scroll": "Desliza"
     },
@@ -627,8 +627,8 @@
       "stats": {
         "hackathons": "Hackathons 2026",
         "projects": "Public GitHub Projects",
-        "latency": "Edge inference",
-        "search": "Search space solved"
+        "certifications": "Official Certifications",
+        "courses": "Accredited Courses"
       },
       "scroll": "Scroll"
     },
