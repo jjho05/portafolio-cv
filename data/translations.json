@@ -2,9 +2,11 @@
   "es": {
     "nav": {
       "about": "Sobre Mí",
-      "distinctions": "Distinciones",
+      "experience": "Trayectoria",
       "projects": "Proyectos",
       "lab": "Laboratorio",
+      "education": "Educación",
+      "distinctions": "Distinciones",
       "stack": "Tecnologías",
       "contact": "Contacto"
     },
@@ -12,16 +14,214 @@
       "status": "Disponible para proyectos & roles técnicos",
       "greeting": "Hola, soy",
       "name": "Jesús Olvera",
-      "role": "Full-Stack & AI Architect",
-      "bio": "Arquitecto de Software y Especialista en Ciencia de Datos. Diseño sistemas de inteligencia artificial de alto rendimiento, flujos agénticos autónomos y arquitecturas web/móviles escalables.",
+      "role": "Full-Stack & AI Systems Architect",
+      "bio": "Arquitecto de Software y Especialista en Ciencia de Datos. Diseño sistemas de inteligencia artificial de alto rendimiento, flujos agénticos autónomos, deep learning y arquitecturas web/móviles escalables.",
       "ctaProjects": "Ver Proyectos",
       "ctaGitHub": "GitHub",
       "ctaContact": "Contacto"
     },
     "about": {
-      "label": "TRAYECTORIA",
+      "label": "PERFIL PROFESIONAL",
       "title": "Perfil de Ingeniería",
-      "desc": "Con una base sólida en Ciencia de Datos y Desarrollo de Sistemas, me especializo en resolver problemas complejos mediante modelos fundacionales (Gemini 3, Claude 3.7, Llama 3), deep learning en PyTorch y arquitecturas full-stack modernas (Next.js 15, FastAPI, Supabase). Cuento con una trayectoria demostrada en certámenes de innovación tecnológica de alto nivel."
+      "desc": "Arquitecto de Software y Desarrollador Full-Stack especializado en orquestación de Inteligencia Artificial de vanguardia, sistemas agénticos autónomos (Google Antigravity SDK, Vercel AI SDK) y optimización algorítmica de alto rendimiento. Con probada experiencia en certámenes de innovación tecnológica de élite (Ganador Hackatón IEST 2026, Ganador Fase Local y Representante Regional HackaTec 2026), diseño soluciones escalables integrando modelos fundacionales (Gemini 3, Claude 3.5/3.7, Meta Llama 3), Deep Learning en PyTorch y visión artificial edge. Mi formación en Ciencia de Datos me permite transformar requerimientos complejos en arquitecturas seguras, eficientes y con experiencias de usuario de grado de producción."
+    },
+    "experience": {
+      "label": "TRAYECTORIA PROFESIONAL",
+      "title": "Experiencia & Liderazgo Técnico",
+      "desc": "Roles de arquitectura, dirección técnica y desarrollo en certámenes nacionales, plataformas institucionales e industria.",
+      "items": {
+        "build_with_ai": {
+          "role": "Lead Software Architect | Colaboración ITCM & Google",
+          "period": "2026",
+          "title": "Ecosistema Build with AI (Gira Oficial Google 2026)",
+          "desc": "Liderazgo en el diseño y despliegue de la plataforma oficial de registro y evaluación de propuestas para el evento organizado por el ITCM en colaboración directa con Google. Pipeline RAG serverless sobre Vercel KV (<200ms) y módulos de acreditación masiva con credenciales QR dinámicas."
+        },
+        "apyo4all": {
+          "role": "Lead Full-Stack Architect | Ganador Hackatón IEST 2026",
+          "period": "2026",
+          "title": "Apyo4All — Coordinación Humanitaria y Centros de Acopio",
+          "desc": "Diseño multiplataforma (Web React 19 + Desktop Electron) para gestión logística humanitaria ante desastres naturales. Motor reactivo de inventario con trazabilidad estricta en Supabase, balanceo entre sedes, cálculo de stock y generación automatizada de manifiestos oficiales en PDF y Excel con Leaflet."
+        },
+        "ecoeye": {
+          "role": "Lead Edge AI & Ubiquitous Architect | Representante Regional HackaTec 2026",
+          "period": "2026",
+          "title": "EcoEye — Computación Ubicua e Inteligencia Asistencial",
+          "desc": "Arquitectura asistencial bajo la filosofía 'Edge Computing + Zero-Camera Indoors'. Detección pionera de caídas sin cámaras mediante análisis de perturbaciones de radiofrecuencia WiFi CSI (64 subportadoras OFDM, filtros Butterworth y PCA) y radar peatonal en tiempo real con TensorFlow.js (<50ms)."
+        },
+        "bloodcare": {
+          "role": "Machine Learning Engineer | Ganador Fase Local HackaTec 2026",
+          "period": "2026",
+          "title": "BloodCare / GLUCOGEN — Deep Learning Biomédico (Diabetes Tipo 1)",
+          "desc": "Red neuronal profunda (Bi-LSTM apilado de 2 capas en PyTorch) para predicción continua de glucosa a 30 y 60 min sobre OhioT1DM. Modelado de incertidumbre médica mediante Quantile Regression con Pinball Loss e ingeniería de características temporales (splines cúbicos y derivadas)."
+        },
+        "siie": {
+          "role": "Full-Stack AI Developer | Entornos Industriales",
+          "period": "2025 — 2026",
+          "title": "S.I.I.E. — RegTech AI (Inspección Eléctrica NOM-001)",
+          "desc": "Sistema inteligente de auditoría técnica conforme a la NOM-001-SEDE-2012 para instalaciones de alta tensión. Modelos NLP con Transformers de Hugging Face para extracción técnica de planos, contenerizado en Docker on-premise, reduciendo el ciclo de dictamen de 5 días a horas."
+        },
+        "salones": {
+          "role": "Lead Algorithms & Optimization Engineer",
+          "period": "2025",
+          "title": "Sistema de Salones ISC — Optimización NP-Completo",
+          "desc": "Resolución del problema de asignación de 680 sesiones semanales en 21 aulas (espacio de búsqueda 21^680 ≈ 10^900 combinaciones). Implementación de 4 motores: Heurístico, Greedy + Hill Climbing, Random Forest y Algoritmo Genético evolutivo con visualización 3D en PyVista."
+        },
+        "edunova": {
+          "role": "Full-Stack AI Engineer",
+          "period": "2025",
+          "title": "EduNova AI — Suite Educativa y Analítica Predictiva",
+          "desc": "Backend con 42 endpoints REST en FastAPI y cliente móvil en Flutter para digitalización de retículas académicas por OCR multimodal con Gemini Vision. Generación de módulos y analítica predictiva para detección temprana de estudiantes en riesgo académico."
+        },
+        "cres": {
+          "role": "Lead Developer & UI/UX Designer",
+          "period": "2024 — 2025",
+          "title": "CRES — Plataforma Web Institucional & CMS",
+          "desc": "Desarrollo integral de la plataforma web oficial para el Centro Regional de Estudios Superiores con Next.js 14, TypeScript y Tailwind CSS. CMS modular dinámico a medida y puntuación perfecta de 100/100 en auditorías Lighthouse (Performance, SEO, Accesibilidad)."
+        }
+      }
+    },
+    "projects": {
+      "label": "INGENIERÍA & SISTEMAS",
+      "title": "Catálogo Completo de Proyectos",
+      "desc": "Sistemas de grado de producción, modelos de aprendizaje profundo y arquitecturas desplegadas.",
+      "codeLink": "Código",
+      "demoLink": "Demo",
+      "filters": {
+        "all": "Todos",
+        "ai": "IA & Agentes",
+        "deeplearning": "Deep Learning & Salud",
+        "fullstack": "Full-Stack & Sistemas",
+        "hackathon": "Hackathons"
+      },
+      "items": {
+        "apyo4all": {
+          "pill": "Ganador Hackatón · Full-Stack",
+          "title": "Apyo4All",
+          "role": "Lead Full-Stack Architect",
+          "desc": "Plataforma multiplataforma (Web & Electron) para la logística humanitaria y balance reactivo de inventarios entre centros de acopio ante desastres naturales con Supabase y Leaflet."
+        },
+        "ecoeye": {
+          "pill": "Edge AI · Computación Ubicua",
+          "title": "EcoEye",
+          "role": "Lead Edge AI Architect",
+          "desc": "Ecosistema asistencial sin cámaras: detección de caídas analizando radiofrecuencia WiFi CSI (64 subportadoras OFDM) y radar peatonal con TensorFlow.js (<50ms)."
+        },
+        "bloodcare": {
+          "pill": "Deep Learning · Salud",
+          "title": "BloodCare / GLUCOGEN",
+          "role": "Machine Learning Engineer",
+          "desc": "Red neuronal profunda (Bi-LSTM en PyTorch con Pinball Loss) para predicción continua de glucosa e intervalos de confianza médica sobre el dataset OhioT1DM."
+        },
+        "olvera_ai_suite": {
+          "pill": "AI Platform · Producción",
+          "title": "Olvera AI Suite",
+          "role": "Lead AI Architect",
+          "desc": "Dashboard premium con Next.js y Vercel AI SDK, streaming unificado de LLMs vía OpenRouter, transcripción de voz con Groq Whisper y Studio Mode v2 para contextos multi-archivo."
+        },
+        "build_with_ai": {
+          "pill": "Google Tour 2026 · Edge RAG",
+          "title": "Build with AI ITCM",
+          "role": "Lead Software Architect",
+          "desc": "Plataforma oficial con pipeline RAG serverless sobre Vercel KV (<200ms) para evaluación en tiempo real de cientos de propuestas y generación masiva de credenciales QR."
+        },
+        "siie": {
+          "pill": "RegTech · NLP Industrial",
+          "title": "S.I.I.E. (NOM-001)",
+          "role": "Full-Stack AI Developer",
+          "desc": "Auditoría eléctrica industrial conforme a la NOM-001-SEDE-2012 mediante Transformers de Hugging Face y Docker on-premise, reduciendo tiempos de dictamen de 5 días a horas."
+        },
+        "salones": {
+          "pill": "Optimización NP-Completo",
+          "title": "Sistema de Salones ISC",
+          "role": "Algorithms Engineer",
+          "desc": "Resolvedor multi-algoritmo (Genético, Random Forest, Hill Climbing) para 680 clases semanales en 21 aulas (21^680 combinaciones) con visualización 3D en PyVista."
+        },
+        "edunova": {
+          "pill": "EdTech · Multiplataforma",
+          "title": "EduNova AI",
+          "role": "Full-Stack AI Engineer",
+          "desc": "Suite educativa con backend FastAPI (42 endpoints) y app Flutter. Digitalización de retículas académicas por OCR multimodal con Gemini Vision y analítica de riesgo estudiantil."
+        },
+        "sephora": {
+          "pill": "Transformers · Data Science",
+          "title": "DistilRoBERTa Analytics",
+          "role": "Data Scientist",
+          "desc": "Fine-tuning de DistilRoBERTa sobre +340,000 reseñas para clasificar 7 emociones humanas finas, desplegado en contenedor Docker vinculado a Shiny y Power BI."
+        },
+        "cres": {
+          "pill": "Web Production · CMS",
+          "title": "CRES Institutional",
+          "role": "Lead Developer & UI/UX",
+          "desc": "Plataforma web oficial para el Centro Regional de Estudios Superiores con Next.js 14, CMS modular dinámico a medida y 100/100 en todas las auditorías Lighthouse."
+        },
+        "llama": {
+          "pill": "Model Router · LLMs",
+          "title": "Meta Llama Labs",
+          "role": "NLP & Benchmarking Engineer",
+          "desc": "Pipelines de ingeniería con Meta Llama 3, desarrollo de Model Router inteligente para costo/calidad y benchmarking automatizado en Jupyter Notebooks."
+        },
+        "olvera_ai_shiny": {
+          "pill": "Python AI · Web Search",
+          "title": "Olvera AI (Shiny Python)",
+          "role": "Backend & AI Developer",
+          "desc": "Interfaz reactiva en Shiny for Python con LiteLLM (OpenRouter, Groq, Cerebras), búsqueda web en tiempo real con Tavily API y galería interactiva con zoom en JS."
+        },
+        "aura_app": {
+          "pill": "Empatía Artificial · Voz",
+          "title": "AURA APP",
+          "role": "Full-Stack Developer",
+          "desc": "Asistente de bienestar emocional con interfaz en CustomTkinter, motor conversacional con Gemini API y síntesis de voz natural ultra-rápida mediante ElevenLabs SDK."
+        },
+        "olvera_food_ai": {
+          "pill": "Especializado · Gastronomía",
+          "title": "Olvera Food AI",
+          "role": "Backend Developer",
+          "desc": "Asistente inteligente especializado en investigación culinaria, balance nutricional y sustitución de ingredientes con Shiny for Python y Tavily."
+        }
+      }
+    },
+    "lab": {
+      "label": "INVESTIGACIÓN, 3D & GRÁFICOS",
+      "title": "Laboratorio Interactivo & Simuladores",
+      "desc": "Motores gráficos, simuladores matemáticos y recreaciones interactivas ejecutables.",
+      "runLink": "Abrir",
+      "codeLink": "Código",
+      "items": {
+        "fourier": {
+          "title": "Lab Fourier",
+          "desc": "Simulador interactivo para descomposición armónica, síntesis de señales de Fourier y osciloscopio en tiempo real con WebGL y Canvas."
+        },
+        "vexel": {
+          "title": "VEXEL & BRAINY2",
+          "desc": "Laboratorios de física y álgebra dimensional 3D con PyVista y Gemini AI: generación y renderizado dinámico guiado por lenguaje natural."
+        },
+        "blockbuilder": {
+          "title": "Block Builder (Three.js)",
+          "desc": "Constructor 3D interactivo en el navegador estilo voxel: colocación dinámica de geometría, físicas de colisión y shaders personalizados."
+        },
+        "neon": {
+          "title": "Neon Runner 3D",
+          "desc": "Simulador interactivo en túnel infinito con WebGL y Three.js, demostrando iluminación reactiva y cálculo espacial de aceleraciones."
+        },
+        "win95": {
+          "title": "Windows 95 Web OS",
+          "desc": "Recreación fiel del gestor de ventanas, sistema de archivos simulado y aplicaciones ejecutables utilizando JavaScript puro sin dependencias."
+        },
+        "tetris": {
+          "title": "Tetris Engine (Python)",
+          "desc": "Implementación del sistema clásico de tetrominós con rotación Super Rotation System (SRS), matrices lógicas y loop con Pygame."
+        }
+      }
+    },
+    "education": {
+      "label": "FORMACIÓN ACADÉMICA",
+      "title": "Educación Superior",
+      "desc": "Fundamentos teóricos, matemáticas discretas y especialización en Ciencia de Datos.",
+      "degree": "Ingeniería en Sistemas Computacionales",
+      "specialty": "Especialidad: Aplicaciones en Ciencia de Datos",
+      "institution": "Instituto Tecnológico de Ciudad Madero (ITCM)",
+      "period": "2023 – Presente",
+      "courses": "Áreas de Dominio: Inteligencia Artificial, Ciencia de Datos, Algoritmos Avanzados, Deep Learning, Arquitectura de Software, Computación Distribuida y Bases de Datos Relacionales/NoSQL."
     },
     "distinctions": {
       "label": "RECONOCIMIENTOS",
@@ -63,104 +263,6 @@
           "title": "Alumno Destacado ITCM",
           "desc": "Reconocimiento institucional por alto desempeño académico, liderazgo técnico y representación.",
           "year": "2024 — 2026"
-        }
-      }
-    },
-    "projects": {
-      "label": "INGENIERÍA",
-      "title": "Proyectos Seleccionados",
-      "desc": "Sistemas de grado industrial, modelos biomédicos y plataformas de alta escala.",
-      "codeLink": "Código",
-      "demoLink": "Demo",
-      "filters": {
-        "all": "Todos",
-        "ai": "IA & Deep Learning",
-        "fullstack": "Full-Stack & Cloud",
-        "hackathon": "Hackathons"
-      },
-      "items": {
-        "apyo4all": {
-          "pill": "Ganador Hackatón · Full-Stack",
-          "title": "Apyo4All",
-          "desc": "Plataforma multiplataforma (Web & Electron) para la logística humanitaria y balance reactivo de centros de acopio ante desastres naturales."
-        },
-        "ecoeye": {
-          "pill": "Edge AI · Computación Ubicua",
-          "title": "EcoEye",
-          "desc": "Ecosistema asistencial sin cámaras: detección de caídas analizando perturbaciones de radiofrecuencia WiFi CSI y radar peatonal con TensorFlow.js (<50ms)."
-        },
-        "bloodcare": {
-          "pill": "Deep Learning · Salud",
-          "title": "BloodCare / GLUCOGEN",
-          "desc": "Red neuronal profunda (Bi-LSTM en PyTorch con Pinball Loss) para predicción continua de glucosa e intervalos de incertidumbre sobre OhioT1DM."
-        },
-        "build_with_ai": {
-          "pill": "Google Tour 2026 · Edge RAG",
-          "title": "Build with AI ITCM",
-          "desc": "Plataforma oficial con pipeline RAG serverless sobre Vercel KV para evaluación de propuestas en tiempo real y acreditación masiva con QR."
-        },
-        "siie": {
-          "pill": "RegTech · NLP Industrial",
-          "title": "S.I.I.E. (NOM-001)",
-          "desc": "Auditoría eléctrica industrial automatizada conforme a la NOM-001-SEDE-2012 mediante Transformers de Hugging Face y Docker on-premise."
-        },
-        "salones": {
-          "pill": "Optimización NP-Completo",
-          "title": "Sistema de Salones ISC",
-          "desc": "Resolvedor multi-algoritmo (Genético, Random Forest, Hill Climbing) para 680 clases semanales en 21 aulas con visualización 3D en PyVista."
-        },
-        "edunova": {
-          "pill": "EdTech · Multiplataforma",
-          "title": "EduNova AI",
-          "desc": "Suite educativa en Flutter y FastAPI. Digitalización de retículas académicas por OCR multimodal con Gemini Vision y alertas de riesgo estudiantil."
-        },
-        "sephora": {
-          "pill": "Transformers · Data Science",
-          "title": "DistilRoBERTa Analytics",
-          "desc": "Clasificación de 7 emociones finas sobre +340,000 opiniones con DistilRoBERTa, contenedor Docker, Shiny Server y Power BI."
-        },
-        "cres": {
-          "pill": "Producción Web · CMS",
-          "title": "CRES Institutional",
-          "desc": "Plataforma web oficial para el Centro Regional de Estudios Superiores con Next.js 14, CMS modular dinámico y puntuación de 100/100 en Lighthouse."
-        },
-        "llama": {
-          "pill": "Model Router · LLMs",
-          "title": "Meta Llama Labs",
-          "desc": "Pipelines de ingeniería con Meta Llama 3, enrutador inteligente de costo/calidad y benchmarking automatizado en Jupyter Notebooks."
-        }
-      }
-    },
-    "lab": {
-      "label": "INVESTIGACIÓN & SIMULADORES",
-      "title": "Laboratorio Interactivo & Gráficos",
-      "desc": "Simuladores matemáticos, motores 3D interactivos y proyectos experimentales ejecutables.",
-      "runLink": "Abrir",
-      "codeLink": "Código",
-      "items": {
-        "fourier": {
-          "title": "Lab Fourier",
-          "desc": "Simulador interactivo para descomposición armónica, síntesis de señales de Fourier y osciloscopio en tiempo real con WebGL y Canvas."
-        },
-        "vexel": {
-          "title": "VEXEL & BRAINY2",
-          "desc": "Laboratorios de física y álgebra dimensional 3D con PyVista y Gemini AI: generación y renderizado dinámico guiado por prompts en lenguaje natural."
-        },
-        "blockbuilder": {
-          "title": "Block Builder (Three.js)",
-          "desc": "Constructor 3D interactivo en el navegador estilo voxel: colocación dinámica de geometría, físicas de colisión y shaders personalizados."
-        },
-        "neon": {
-          "title": "Neon Runner 3D",
-          "desc": "Simulador interactivo en túnel infinito con WebGL y Three.js, demostrando iluminación reactiva y cálculo espacial de aceleraciones."
-        },
-        "win95": {
-          "title": "Windows 95 Web OS",
-          "desc": "Recreación fiel del gestor de ventanas, sistema de archivos simulado y aplicaciones ejecutables utilizando JavaScript puro sin dependencias."
-        },
-        "tetris": {
-          "title": "Tetris Engine (Python)",
-          "desc": "Implementación del sistema clásico de tetrominós con rotación Super Rotation System (SRS), matrices lógicas y loop con Pygame."
         }
       }
     },
@@ -207,9 +309,11 @@
   "en": {
     "nav": {
       "about": "About",
-      "distinctions": "Honors",
+      "experience": "Trajectory",
       "projects": "Projects",
       "lab": "Lab",
+      "education": "Education",
+      "distinctions": "Honors",
       "stack": "Stack",
       "contact": "Contact"
     },
@@ -217,16 +321,214 @@
       "status": "Available for select engineering roles & projects",
       "greeting": "Hello, I'm",
       "name": "Jesús Olvera",
-      "role": "Full-Stack & AI Architect",
-      "bio": "Software Architect and Data Science Specialist. I build high-performance artificial intelligence systems, autonomous agentic workflows, and scalable web/mobile architectures.",
+      "role": "Full-Stack & AI Systems Architect",
+      "bio": "Software Architect and Data Science Specialist. I build high-performance artificial intelligence systems, autonomous agentic workflows, deep learning, and scalable web/mobile architectures.",
       "ctaProjects": "Explore Work",
       "ctaGitHub": "GitHub",
       "ctaContact": "Contact"
     },
     "about": {
-      "label": "BACKGROUND",
+      "label": "PROFESSIONAL SUMMARY",
       "title": "Engineering Profile",
-      "desc": "Backed by a solid foundation in Data Science and Systems Architecture, I specialize in solving complex engineering challenges with foundational models (Gemini 3, Claude 3.7, Llama 3), PyTorch deep learning, and modern full-stack frameworks (Next.js 15, FastAPI, Supabase). Proven track record in elite technology innovation competitions."
+      "desc": "Software Architect and Full-Stack Developer specializing in state-of-the-art Artificial Intelligence orchestration, autonomous agentic workflows (Google Antigravity SDK, Vercel AI SDK), and high-performance algorithmic optimization. Backed by proven success in elite technology hackathons (IEST Hackathon Winner 2026, Local Stage Winner and Regional Representative at HackaTec 2026), I architect scalable solutions combining foundational LLMs (Gemini 3, Claude 3.5/3.7, Meta Llama 3), PyTorch Deep Learning, and edge computer vision. My Data Science background allows me to translate complex business and technical requirements into resilient, secure, and production-grade software architectures."
+    },
+    "experience": {
+      "label": "CAREER TRAJECTORY",
+      "title": "Experience & Technical Leadership",
+      "desc": "Architectural leadership, engineering direction, and production deployments across national competitions, institutions, and industry.",
+      "items": {
+        "build_with_ai": {
+          "role": "Lead Software Architect | ITCM & Google Collaboration",
+          "period": "2026",
+          "title": "Build with AI Ecosystem (Official Google Tour 2026)",
+          "desc": "Led design and deployment of official platform for registration and evaluation of hackathon proposals. Engineered serverless RAG pipeline over Vercel KV (<200ms latency) and dynamic mass QR credentialing modules."
+        },
+        "apyo4all": {
+          "role": "Lead Full-Stack Architect | Winner IEST Hackathon 2026",
+          "period": "2026",
+          "title": "Apyo4All — Humanitarian Relief & Logistics Platform",
+          "desc": "Cross-platform architecture (Web React 19 + Desktop Electron) for emergency humanitarian logistics. Reactive inventory engine with strict traceability in Supabase, automated stock rebalancing, and official PDF/Excel delivery manifests via Leaflet."
+        },
+        "ecoeye": {
+          "role": "Lead Edge AI & Ubiquitous Architect | Regional Representative HackaTec 2026",
+          "period": "2026",
+          "title": "EcoEye — Ubiquitous Assisted-Living Computing",
+          "desc": "Camera-free assisted-living ecosystem under the 'Edge Computing + Zero-Camera Indoors' philosophy. Fall detection analyzing WiFi CSI radio perturbations (64 OFDM subcarriers, Butterworth filtering, PCA) and pedestrian radar in TensorFlow.js (<50ms)."
+        },
+        "bloodcare": {
+          "role": "Machine Learning Engineer | Local Winner HackaTec 2026",
+          "period": "2026",
+          "title": "BloodCare / GLUCOGEN — Biomedical Deep Learning (Type 1 Diabetes)",
+          "desc": "Stacked 2-layer Bi-LSTM recurrent neural network in PyTorch predicting 30- and 60-min glucose trajectories on OhioT1DM dataset. Modeled medical uncertainty using Quantile Regression with Pinball Loss and temporal feature engineering."
+        },
+        "siie": {
+          "role": "Full-Stack AI Developer | Industrial On-Premise",
+          "period": "2025 — 2026",
+          "title": "S.I.I.E. — RegTech AI (Industrial Electrical Auditing NOM-001)",
+          "desc": "Intelligent auditing system ensuring compliance with official standard NOM-001-SEDE-2012. Integrated Hugging Face Transformer NLP models for technical blueprint extraction, containerized in Docker on-premise, reducing audit cycles from 5 days to hours."
+        },
+        "salones": {
+          "role": "Lead Algorithms & Optimization Engineer",
+          "period": "2025",
+          "title": "ISC Classroom Assignment — NP-Complete Optimization",
+          "desc": "Solved academic scheduling for 680 weekly classes across 21 venues (search space 21^680 ≈ 10^900 combinations). Implemented 4 solver engines: Baseline Heuristic, Greedy + Hill Climbing, Random Forest, and Genetic Algorithm with 3D PyVista visualization."
+        },
+        "edunova": {
+          "role": "Full-Stack AI Engineer",
+          "period": "2025",
+          "title": "EduNova AI — Educational Suite & Predictive Analytics",
+          "desc": "FastAPI backend (42 REST endpoints) and Flutter mobile client for automated curriculum digitization via multimodal OCR with Gemini Vision. Dynamic course generation and predictive analytics for at-risk student early warning."
+        },
+        "cres": {
+          "role": "Lead Developer & UI/UX Designer",
+          "period": "2024 — 2025",
+          "title": "CRES — Institutional Web Ecosystem & Custom CMS",
+          "desc": "Complete engineering of official platform for Centro Regional de Estudios Superiores with Next.js 14, TypeScript, and Tailwind CSS. Built custom modular CMS and achieved perfect 100/100 Lighthouse scores across Performance, SEO, and Accessibility."
+        }
+      }
+    },
+    "projects": {
+      "label": "ENGINEERING & SYSTEMS",
+      "title": "Complete Project Portfolio",
+      "desc": "Industrial-grade systems, deep learning models, and production-deployed software architectures.",
+      "codeLink": "Code",
+      "demoLink": "Demo",
+      "filters": {
+        "all": "All",
+        "ai": "AI & Agents",
+        "deeplearning": "Deep Learning & Health",
+        "fullstack": "Full-Stack & Systems",
+        "hackathon": "Hackathons"
+      },
+      "items": {
+        "apyo4all": {
+          "pill": "Hackathon Winner · Full-Stack",
+          "title": "Apyo4All",
+          "role": "Lead Full-Stack Architect",
+          "desc": "Cross-platform system (Web & Electron) for humanitarian disaster relief logistics and real-time donation inventory tracking with Supabase and Leaflet."
+        },
+        "ecoeye": {
+          "pill": "Edge AI · Ubiquitous Computing",
+          "title": "EcoEye",
+          "role": "Lead Edge AI Architect",
+          "desc": "Camera-free assistive ecosystem: fall detection analyzing WiFi CSI radio frequency perturbations (64 OFDM subcarriers) and sub-50ms obstacle radar with TensorFlow.js."
+        },
+        "bloodcare": {
+          "pill": "Deep Learning · Healthcare",
+          "title": "BloodCare / GLUCOGEN",
+          "role": "Machine Learning Engineer",
+          "desc": "Deep stacked Bi-LSTM in PyTorch with Pinball Loss for continuous glucose trajectory prediction and clinical confidence intervals on OhioT1DM dataset."
+        },
+        "olvera_ai_suite": {
+          "pill": "AI Platform · Production",
+          "title": "Olvera AI Suite",
+          "role": "Lead AI Architect",
+          "desc": "High-performance AI dashboard with Next.js and Vercel AI SDK, unified LLM streaming via OpenRouter, Groq Whisper voice transcription, and Studio Mode v2 for multi-file contexts."
+        },
+        "build_with_ai": {
+          "pill": "Google Tour 2026 · Edge RAG",
+          "title": "Build with AI ITCM",
+          "role": "Lead Software Architect",
+          "desc": "Official platform with serverless RAG over Vercel KV (<200ms) for real-time hackathon proposal evaluation and dynamic mass QR credentialing."
+        },
+        "siie": {
+          "pill": "RegTech · Industrial NLP",
+          "title": "S.I.I.E. (NOM-001)",
+          "role": "Full-Stack AI Developer",
+          "desc": "Automated industrial electrical auditing under official standard NOM-001-SEDE-2012 with Hugging Face Transformers and Docker on-premise."
+        },
+        "salones": {
+          "pill": "NP-Complete Optimization",
+          "title": "ISC Classroom Assignment",
+          "role": "Algorithms Engineer",
+          "desc": "Multi-algorithm solver (Genetic, Random Forest, Hill Climbing) optimizing 680 weekly sessions in 21 venues (21^680 search space) with PyVista 3D analytics."
+        },
+        "edunova": {
+          "pill": "EdTech · Multiplatform",
+          "title": "EduNova AI",
+          "role": "Full-Stack AI Engineer",
+          "desc": "Educational suite built with Flutter and FastAPI (42 endpoints). Multimodal OCR with Gemini Vision for curriculum digitization and at-risk student telemetry."
+        },
+        "sephora": {
+          "pill": "Transformers · Data Science",
+          "title": "DistilRoBERTa Analytics",
+          "role": "Data Scientist",
+          "desc": "Fine-grained 7-emotion classification on 340,000+ reviews using DistilRoBERTa, Docker container, Shiny Server, and Power BI."
+        },
+        "cres": {
+          "pill": "Web Production · CMS",
+          "title": "CRES Institutional",
+          "role": "Lead Developer & UI/UX",
+          "desc": "Official platform for Centro Regional de Estudios Superiores with Next.js 14, dynamic custom CMS, and a perfect 100/100 Lighthouse score."
+        },
+        "llama": {
+          "pill": "Model Router · LLMs",
+          "title": "Meta Llama Labs",
+          "role": "NLP & Benchmarking Engineer",
+          "desc": "Engineering pipelines with Meta Llama 3, cost-quality intelligent routing, and automated benchmarks in Jupyter Notebooks."
+        },
+        "olvera_ai_shiny": {
+          "pill": "Python AI · Web Search",
+          "title": "Olvera AI (Shiny Python)",
+          "role": "Backend & AI Developer",
+          "desc": "Reactive Python Shiny interface with LiteLLM (OpenRouter, Groq, Cerebras), real-time web retrieval via Tavily API, and custom zoom gallery in JavaScript."
+        },
+        "aura_app": {
+          "pill": "Artificial Empathy · Voice",
+          "title": "AURA APP",
+          "role": "Full-Stack Developer",
+          "desc": "Interactive desktop wellness companion with CustomTkinter, Gemini API cognitive support prompts, and low-latency voice synthesis via ElevenLabs SDK."
+        },
+        "olvera_food_ai": {
+          "pill": "Domain-Specific · Food AI",
+          "title": "Olvera Food AI",
+          "role": "Backend Developer",
+          "desc": "Specialized culinary research and recipe intelligence bot with Shiny for Python, LiteLLM, and real-time ingredient validation via Tavily API."
+        }
+      }
+    },
+    "lab": {
+      "label": "RESEARCH, 3D & GRAPHICS",
+      "title": "Interactive Lab & Simulators",
+      "desc": "Mathematical engines, WebGL 3D graphics, and experimental executable applications.",
+      "runLink": "Launch",
+      "codeLink": "Code",
+      "items": {
+        "fourier": {
+          "title": "Lab Fourier",
+          "desc": "Interactive simulator for harmonic decomposition, Fourier signal synthesis, and real-time oscilloscope using WebGL and Canvas."
+        },
+        "vexel": {
+          "title": "VEXEL & BRAINY2",
+          "desc": "Physics and 3D dimensional algebra labs using PyVista and Gemini AI: dynamic prompt-guided generation and rendering."
+        },
+        "blockbuilder": {
+          "title": "Block Builder (Three.js)",
+          "desc": "Interactive browser voxel 3D builder: dynamic geometry placement, collision physics, and custom GPU shaders."
+        },
+        "neon": {
+          "title": "Neon Runner 3D",
+          "desc": "Infinite tunnel simulator in WebGL and Three.js demonstrating reactive lighting and spatial acceleration calculation."
+        },
+        "win95": {
+          "title": "Windows 95 Web OS",
+          "desc": "Faithful recreation of window manager, simulated file system, and executable applications in pure vanilla JavaScript."
+        },
+        "tetris": {
+          "title": "Tetris Engine (Python)",
+          "desc": "Classic tetromino system with Super Rotation System (SRS), matrix logic, and game loop implemented in Pygame."
+        }
+      }
+    },
+    "education": {
+      "label": "ACADEMIC BACKGROUND",
+      "title": "Higher Education",
+      "desc": "Theoretical foundation, discrete mathematics, and specialization in Data Science.",
+      "degree": "B.S. in Computer Systems Engineering",
+      "specialty": "Specialization: Applications in Data Science",
+      "institution": "Instituto Tecnológico de Ciudad Madero (ITCM)",
+      "period": "2023 – Present",
+      "courses": "Key Focus Areas: Artificial Intelligence, Data Science, Advanced Algorithms, Deep Learning, Software Architecture, Distributed Systems, Relational & NoSQL Databases."
     },
     "distinctions": {
       "label": "ACHIEVEMENTS",
@@ -268,104 +570,6 @@
           "title": "Distinguished Student Award ITCM",
           "desc": "Institutional recognition for exceptional academic record, technical leadership, and student representation.",
           "year": "2024 — 2026"
-        }
-      }
-    },
-    "projects": {
-      "label": "ENGINEERING",
-      "title": "Selected Projects",
-      "desc": "Industrial-grade systems, biomedical models, and high-scale architectures.",
-      "codeLink": "Code",
-      "demoLink": "Demo",
-      "filters": {
-        "all": "All",
-        "ai": "AI & Deep Learning",
-        "fullstack": "Full-Stack & Cloud",
-        "hackathon": "Hackathons"
-      },
-      "items": {
-        "apyo4all": {
-          "pill": "Hackathon Winner · Full-Stack",
-          "title": "Apyo4All",
-          "desc": "Cross-platform system (Web & Electron) for humanitarian disaster relief logistics and real-time donation inventory tracking."
-        },
-        "ecoeye": {
-          "pill": "Edge AI · Ubiquitous Computing",
-          "title": "EcoEye",
-          "desc": "Camera-free assistive ecosystem: fall detection analyzing WiFi CSI radio frequency perturbations and sub-50ms obstacle radar with TensorFlow.js."
-        },
-        "bloodcare": {
-          "pill": "Deep Learning · Healthcare",
-          "title": "BloodCare / GLUCOGEN",
-          "desc": "Deep stacked Bi-LSTM in PyTorch with Pinball Loss for continuous glucose trajectory prediction and clinical confidence intervals on OhioT1DM."
-        },
-        "build_with_ai": {
-          "pill": "Google Tour 2026 · Edge RAG",
-          "title": "Build with AI ITCM",
-          "desc": "Official platform with serverless RAG over Vercel KV for sub-200ms proposal evaluation and dynamic mass QR credentialing."
-        },
-        "siie": {
-          "pill": "RegTech · Industrial NLP",
-          "title": "S.I.I.E. (NOM-001)",
-          "desc": "Automated industrial electrical auditing under official standard NOM-001-SEDE-2012 with Hugging Face Transformers and Docker on-premise."
-        },
-        "salones": {
-          "pill": "NP-Complete Optimization",
-          "title": "ISC Classroom Assignment",
-          "desc": "Multi-algorithm solver (Genetic, Random Forest, Hill Climbing) optimizing 680 weekly sessions in 21 venues with PyVista 3D spatial analytics."
-        },
-        "edunova": {
-          "pill": "EdTech · Multiplatform",
-          "title": "EduNova AI",
-          "desc": "Educational suite built with Flutter and FastAPI. Multimodal OCR with Gemini Vision for curriculum digitization and at-risk student telemetry."
-        },
-        "sephora": {
-          "pill": "Transformers · Data Science",
-          "title": "DistilRoBERTa Analytics",
-          "desc": "Fine-grained 7-emotion classification on 340,000+ reviews using DistilRoBERTa, Docker container, Shiny Server, and Power BI."
-        },
-        "cres": {
-          "pill": "Web Production · CMS",
-          "title": "CRES Institutional",
-          "desc": "Official platform for Centro Regional de Estudios Superiores with Next.js 14, dynamic custom CMS, and a perfect 100/100 Lighthouse score."
-        },
-        "llama": {
-          "pill": "Model Router · LLMs",
-          "title": "Meta Llama Labs",
-          "desc": "Engineering pipelines with Meta Llama 3, cost-quality intelligent routing, and automated benchmarks in Jupyter Notebooks."
-        }
-      }
-    },
-    "lab": {
-      "label": "RESEARCH & SIMULATION",
-      "title": "Interactive Lab & 3D Systems",
-      "desc": "Mathematical simulators, interactive 3D engines, and experimental executable projects.",
-      "runLink": "Launch",
-      "codeLink": "Code",
-      "items": {
-        "fourier": {
-          "title": "Lab Fourier",
-          "desc": "Interactive simulator for harmonic decomposition, Fourier signal synthesis, and real-time oscilloscope using WebGL and Canvas."
-        },
-        "vexel": {
-          "title": "VEXEL & BRAINY2",
-          "desc": "Physics and 3D dimensional algebra labs using PyVista and Gemini AI: dynamic prompt-guided generation and rendering."
-        },
-        "blockbuilder": {
-          "title": "Block Builder (Three.js)",
-          "desc": "Interactive browser voxel 3D builder: dynamic geometry placement, collision physics, and custom GPU shaders."
-        },
-        "neon": {
-          "title": "Neon Runner 3D",
-          "desc": "Infinite tunnel simulator in WebGL and Three.js demonstrating reactive lighting and spatial acceleration calculation."
-        },
-        "win95": {
-          "title": "Windows 95 Web OS",
-          "desc": "Faithful recreation of window manager, simulated file system, and executable applications in pure vanilla JavaScript."
-        },
-        "tetris": {
-          "title": "Tetris Engine (Python)",
-          "desc": "Classic tetromino system with Super Rotation System (SRS), matrix logic, and game loop implemented in Pygame."
         }
       }
     },
