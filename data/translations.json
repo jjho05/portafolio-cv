@@ -19,7 +19,7 @@
       "ctaContact": "Contacto",
       "stats": {
         "hackathons": "Hackatones 2026",
-        "projects": "Proyectos",
+        "projects": "Proyectos públicos en GitHub",
         "latency": "Inferencia en edge",
         "search": "Combinaciones exploradas"
       },
@@ -103,85 +103,217 @@
           "pill": "Ganador Hackatón · Full-Stack",
           "title": "Apyo4All",
           "role": "Lead Full-Stack Architect",
-          "desc": "Plataforma multiplataforma (Web & Electron) para la logística humanitaria y balance reactivo de inventarios entre centros de acopio ante desastres naturales con Supabase y Leaflet."
+          "desc": "Plataforma multiplataforma (Web & Desktop Electron) para logística humanitaria reactiva y balance dinámico de inventarios entre centros de acopio ante emergencias naturales."
         },
         "ecoeye": {
-          "pill": "Edge AI · Computación Ubicua",
+          "pill": "Representante Regional · Edge AI",
           "title": "EcoEye",
           "role": "Lead Edge AI Architect",
-          "desc": "Ecosistema asistencial sin cámaras: detección de caídas analizando radiofrecuencia WiFi CSI (64 subportadoras OFDM) y radar peatonal con TensorFlow.js (<50ms)."
+          "desc": "Computación ubicua e inteligencia ambiental asistencial sin cámaras: detección de caídas analizando radiofrecuencia WiFi CSI (64 subportadoras OFDM) con inferencia en borde (<50ms)."
         },
         "bloodcare": {
-          "pill": "Deep Learning · Salud",
+          "pill": "Ganador Local · Deep Learning",
           "title": "BloodCare / GLUCOGEN",
           "role": "Machine Learning Engineer",
-          "desc": "Red neuronal profunda (Bi-LSTM en PyTorch con Pinball Loss) para predicción continua de glucosa e intervalos de confianza médica sobre el dataset OhioT1DM."
+          "desc": "Red neuronal profunda (Bi-LSTM de 2 capas en PyTorch con Pinball Loss) para predicción continua de glucosa a 30 y 60 min sobre el dataset OhioT1DM con modelado de incertidumbre médica."
         },
-        "olvera_ai_suite": {
-          "pill": "AI Platform · Producción",
-          "title": "Olvera AI Suite",
-          "role": "Lead AI Architect",
-          "desc": "Dashboard premium con Next.js y Vercel AI SDK, streaming unificado de LLMs vía OpenRouter, transcripción de voz con Groq Whisper y Studio Mode v2 para contextos multi-archivo."
+        "siie": {
+          "pill": "RegTech · Auditoría Industrial",
+          "title": "S.I.I.E. (NOM-001-SEDE)",
+          "role": "Full-Stack AI Developer",
+          "desc": "Auditoría eléctrica técnica automatizada conforme a la NOM-001-SEDE-2012. Extracción técnica mediante Transformers de Hugging Face y entorno contenerizado en Docker on-premise."
+        },
+        "salones": {
+          "pill": "1er Lugar Feria ISC · Optimización",
+          "title": "Sistema de Salones ISC",
+          "role": "Lead Algorithms & Optimization Engineer",
+          "desc": "Resolución del problema NP-completo de asignación para 680 sesiones semanales en 21 aulas (espacio 21^680 ≈ 10^900 combinaciones) con algoritmos genéticos y visualización 3D en PyVista."
         },
         "build_with_ai": {
           "pill": "Google Tour 2026 · Edge RAG",
           "title": "Build with AI ITCM",
           "role": "Lead Software Architect",
-          "desc": "Plataforma oficial con pipeline RAG serverless sobre Vercel KV (<200ms) para evaluación en tiempo real de cientos de propuestas y generación masiva de credenciales QR."
+          "desc": "Plataforma oficial para la gira Build with AI en ITCM: pipeline RAG serverless sobre Vercel KV (<200ms) para arbitraje de ponencias, evaluación automatizada y credencialización QR."
         },
-        "siie": {
-          "pill": "RegTech · NLP Industrial",
-          "title": "S.I.I.E. (NOM-001)",
-          "role": "Full-Stack AI Developer",
-          "desc": "Auditoría eléctrica industrial conforme a la NOM-001-SEDE-2012 mediante Transformers de Hugging Face y Docker on-premise, reduciendo tiempos de dictamen de 5 días a horas."
-        },
-        "salones": {
-          "pill": "Optimización NP-Completo",
-          "title": "Sistema de Salones ISC",
-          "role": "Algorithms Engineer",
-          "desc": "Resolvedor multi-algoritmo (Genético, Random Forest, Hill Climbing) para 680 clases semanales en 21 aulas (21^680 combinaciones) con visualización 3D en PyVista."
+        "sephora": {
+          "pill": "NLP · Ekman Emotion Model",
+          "title": "DistilRoBERTa Sephora Analytics",
+          "role": "Data Scientist & ML Engineer",
+          "desc": "Análisis de sentimientos y clasificación de 7 emociones humanas finas sobre +340k reseñas de clientes con DistilRoBERTa, servidor reactivo Shiny y dashboard analítico en Power BI."
         },
         "edunova": {
           "pill": "EdTech · Multiplataforma",
           "title": "EduNova AI",
           "role": "Full-Stack AI Engineer",
-          "desc": "Suite educativa con backend FastAPI (42 endpoints) y app Flutter. Digitalización de retículas académicas por OCR multimodal con Gemini Vision y analítica de riesgo estudiantil."
-        },
-        "sephora": {
-          "pill": "Transformers · Data Science",
-          "title": "DistilRoBERTa Analytics",
-          "role": "Data Scientist",
-          "desc": "Fine-tuning de DistilRoBERTa sobre +340,000 reseñas para clasificar 7 emociones humanas finas, desplegado en contenedor Docker vinculado a Shiny y Power BI."
-        },
-        "cres": {
-          "pill": "Web Production · CMS",
-          "title": "CRES Institutional",
-          "role": "Lead Developer & UI/UX",
-          "desc": "Plataforma web oficial para el Centro Regional de Estudios Superiores con Next.js 14, CMS modular dinámico a medida y 100/100 en todas las auditorías Lighthouse."
+          "desc": "Suite educativa inteligente: backend FastAPI con 42 endpoints, cliente móvil en Flutter, digitalización de retículas académicas por OCR multimodal y analítica predictiva de riesgo estudiantil."
         },
         "llama": {
-          "pill": "Model Router · LLMs",
-          "title": "Meta Llama Labs",
+          "pill": "Model Engineering · Open LLMs",
+          "title": "Meta Llama Engineering Labs",
           "role": "NLP & Benchmarking Engineer",
-          "desc": "Pipelines de ingeniería con Meta Llama 3, desarrollo de Model Router inteligente para costo/calidad y benchmarking automatizado en Jupyter Notebooks."
+          "desc": "Laboratorio de experimentación, optimización y benchmarking cuantitativo para modelos abiertos de la familia Meta LLaMA 3 con orquestación de enrutamiento inteligente."
         },
-        "olvera_ai_shiny": {
-          "pill": "Python AI · Web Search",
-          "title": "Olvera AI (Shiny Python)",
-          "role": "Backend & AI Developer",
-          "desc": "Interfaz reactiva en Shiny for Python con LiteLLM (OpenRouter, Groq, Cerebras), búsqueda web en tiempo real con Tavily API y galería interactiva con zoom en JS."
+        "ia_llama": {
+          "pill": "Sistemas de IA · Modelos Abiertos",
+          "title": "IA Aplicada con LLaMA",
+          "role": "AI Engineer",
+          "desc": "Plataforma web de demostración e integración de casos de uso empresariales empleando modelos abiertos de Meta LLaMA con interfaces responsivas y consumo de APIs de inferencia."
+        },
+        "agentes_ciclo_vida": {
+          "pill": "Sistemas Agénticos · Diagnóstico",
+          "title": "Agentes de Diagnóstico de Obsolescencia",
+          "role": "Agentic Systems Architect",
+          "desc": "Sistema multi-agente en Python para evaluación de ciclo de vida tecnológico y diagnóstico predictivo de obsolescencia de componentes de hardware y software corporativo."
+        },
+        "cyclistic": {
+          "pill": "Data Analytics · Movilidad",
+          "title": "Cyclistic Mobility Dashboard",
+          "role": "Data Analyst & Dashboard Engineer",
+          "desc": "Dashboard interactivo reactivo en Shiny for Python para análisis geoespacial y de comportamiento de usuarios en redes de micromovilidad compartida con visualización de flujos."
         },
         "aura_app": {
-          "pill": "Empatía Artificial · Voz",
+          "pill": "Empatía Artificial · Voz Neuronal",
           "title": "AURA APP",
-          "role": "Full-Stack Developer",
-          "desc": "Asistente de bienestar emocional con interfaz en CustomTkinter, motor conversacional con Gemini API y síntesis de voz natural ultra-rápida mediante ElevenLabs SDK."
+          "role": "AI Full-Stack Developer",
+          "desc": "Compañero inteligente de bienestar emocional con interfaz de escritorio moderna en CustomTkinter, motor cognitivo con Gemini API y síntesis de voz neuronal con ElevenLabs."
         },
-        "olvera_food_ai": {
-          "pill": "Especializado · Gastronomía",
-          "title": "Olvera Food AI",
-          "role": "Backend Developer",
-          "desc": "Asistente inteligente especializado en investigación culinaria, balance nutricional y sustitución de ingredientes con Shiny for Python y Tavily."
+        "prompts_ia": {
+          "pill": "Herramientas de IA · Prompt Studio",
+          "title": "PROMPTS-IA Studio",
+          "role": "Prompt Engineer & Developer",
+          "desc": "Generador y evaluador estructurado de prompts para desarrollo de software e ingeniería de requerimientos optimizado para modelos Google Gemini 3 Flash."
+        },
+        "vexel": {
+          "pill": "Gráficos 3D · Computación Científica",
+          "title": "VEXEL 3D Visualizer",
+          "role": "3D & AI Developer",
+          "desc": "Laboratorio virtual interactivo para renderizado y análisis volumétrico 3D de modelos matemáticos y científicos combinando PyVista y generación asistida por Gemini AI."
+        },
+        "brainy2": {
+          "pill": "Matemáticas Computacionales · 3D",
+          "title": "BRAINY2 Linear Lab",
+          "role": "Algorithm & Math Developer",
+          "desc": "Laboratorio dimensional interactivo para exploración de transformaciones lineales, autovectores y proyecciones espaciales en 3D con asistencia explicativa mediante IA."
+        },
+        "censo_isc": {
+          "pill": "Sistemas Web · Capítulo ACM",
+          "title": "Censo Estudiantil ACM ITCM",
+          "role": "Frontend & Systems Architect",
+          "desc": "Plataforma web de censo y métricas demográficas de la comunidad estudiantil de Ingeniería en Sistemas Computacionales para el capítulo profesional ACM."
+        },
+        "supertienda": {
+          "pill": "Desktop POS · Arquitectura MVC",
+          "title": "SuperTienda ProMax POS",
+          "role": "Java Software Engineer",
+          "desc": "Sistema de Punto de Venta (POS) empresarial completo en JavaFX y MySQL con control de inventarios, arqueo de caja, gestión de proveedores y exportación de reportes a PDF/Excel."
+        },
+        "simulacion": {
+          "pill": "Simulación · +20,000 Líneas",
+          "title": "Simulación TecNM Suite",
+          "role": "Simulation & Systems Engineer",
+          "desc": "Suite de investigación y simulación computacional de eventos discretos con más de 20,000 líneas en Python y SimPy, implementando colas M/M/s, Monte Carlo y procesos de inventario."
+        },
+        "top_avanz_prog": {
+          "pill": "Programación Avanzada · Concurrencia",
+          "title": "Tópicos Avanzados de Programación",
+          "role": "Software Architect & Author",
+          "desc": "Framework y material educativo avanzado que cubre interfaces gráficas modernas, programación concurrente multihilo, mapeo objeto-relacional (ORM) y desarrollo móvil multiplataforma."
+        },
+        "skills_isc": {
+          "pill": "Playbooks · Ingeniería de Software",
+          "title": "Skills ISC TecNM",
+          "role": "Lead Architect & Curator",
+          "desc": "Compendio exhaustivo de especificaciones técnicas, playbooks de desarrollo, patrones de arquitectura limpia y herramientas para la ingeniería en sistemas computacionales."
+        },
+        "rediseno_sii": {
+          "pill": "Modernización Web · UI/UX",
+          "title": "Rediseño Portal SII ITCM",
+          "role": "UI/UX & Frontend Engineer",
+          "desc": "Rediseño moderno del Sistema Integral de Información escolar del ITCM, reemplazando interfaces legacy por una arquitectura web reactiva, modo oscuro y navegación por componentes."
+        },
+        "icpc": {
+          "pill": "Algoritmia Competitiva · ICPC",
+          "title": "ICPC Competitive Hub",
+          "role": "Competitive Programmer & Trainer",
+          "desc": "Repositorio y plataforma de entrenamiento para el International Collegiate Programming Contest: estructuras de datos avanzadas, teoría de grafos, programación dinámica y geometría."
+        },
+        "nextjs_acme": {
+          "pill": "Full-Stack · Next.js App Router",
+          "title": "Next.js Acme Enterprise Dashboard",
+          "role": "Full-Stack Developer",
+          "desc": "Panel administrativo empresarial implementado con Next.js 14 App Router, Server Actions, base de datos PostgreSQL, autenticación y diseño responsivo optimizado para CWV."
+        },
+        "vive_mexico": {
+          "pill": "Turismo & Cultura · Web",
+          "title": "Vive México Experience",
+          "role": "Frontend Developer",
+          "desc": "Plataforma web turística interactiva desarrollada en TypeScript con catálogo de destinos, rutas culturales y diseño visual inmersivo."
+        },
+        "congruencial": {
+          "pill": "Algoritmos Matemáticos · Java",
+          "title": "Generador Congruencial Mixto",
+          "role": "Algorithm Developer",
+          "desc": "Motor generador de números pseudoaleatorios bajo el método congruencial mixto con baterías de pruebas estadísticas de aleatoriedad (medias, varianzas y bondad de ajuste chi-cuadrada)."
+        },
+        "blockbuilder": {
+          "pill": "WebGL · Motor Voxel 3D",
+          "title": "Block Builder 3D",
+          "role": "Graphics & 3D Web Engineer",
+          "desc": "Constructor voxel 3D interactivo en Three.js con sistema de colocación de bloques estilo LEGO, sombreado en tiempo real, selección de paletas y exportación de escenas."
+        },
+        "esfera_3d": {
+          "pill": "Juego 3D · WebGL Cyberpunk",
+          "title": "Esfera 3D Endless Runner",
+          "role": "3D Game Developer",
+          "desc": "Juego 3D endless runner con estética cyberpunk neon en Three.js: túnel procedural infinito, aceleración física, detección de colisiones y efectos de iluminación dinámica."
+        },
+        "win95": {
+          "pill": "Simulador Web · Retro OS",
+          "title": "Windows 95 Web Experience",
+          "role": "Frontend Systems Engineer",
+          "desc": "Recreación fidedigna de Windows 95 en el navegador: gestor de ventanas arrastrables y redimensionables, menú inicio, explorador de archivos y aplicaciones nativas funcionales."
+        },
+        "carreras": {
+          "pill": "Motor de Videojuegos · 3D",
+          "title": "Son Carreras No Carreritas",
+          "role": "Game Engine Developer",
+          "desc": "Videojuego de carreras arcade 3D desarrollado con doble implementación: versión web interactiva en Three.js y versión de escritorio en Python / Pygame con físicas de conducción."
+        },
+        "tetris": {
+          "pill": "Arcade Clásico · Máquina de Estados",
+          "title": "Tetris Engine",
+          "role": "Game Developer",
+          "desc": "Implementación fiel del juego clásico Tetris en Python / Pygame con máquina de estados finitos, rotación SRS (Super Rotation System), niveles de dificultad y tabla de puntuación."
+        },
+        "braincourse": {
+          "pill": "Plataforma LMS · Educación",
+          "title": "BrainCourse E-Learning",
+          "role": "Backend & Educational Developer",
+          "desc": "Sistema de gestión de aprendizaje (LMS) y plataforma modular de cursos en línea con seguimiento de progreso pedagógico y generación de evaluaciones dinámicas."
+        },
+        "prog_web": {
+          "pill": "Arquitectura Web · Estándares",
+          "title": "Programación Web TecNM",
+          "role": "Full-Stack Engineer & Author",
+          "desc": "Framework didáctico y compendio de ingeniería para el desarrollo web profesional: arquitecturas cliente-servidor, APIs RESTful, diseño responsivo y accesibilidad semántica."
+        },
+        "isc_hub": {
+          "pill": "Comunidad · Open Resources",
+          "title": "ISC-Hub Community Portal",
+          "role": "Frontend & Community Lead",
+          "desc": "Centro digital colaborativo para intercambio de proyectos, librerías y documentación técnica entre estudiantes e investigadores de Ingeniería en Sistemas Computacionales."
+        },
+        "isc_cursos": {
+          "pill": "Educación Técnica · Cursos",
+          "title": "Plataforma de Cursos ISC ITCM",
+          "role": "Web Developer & Educator",
+          "desc": "Portal institucional interactivo de capacitación técnica con rutas de aprendizaje en programación, bases de datos, redes y desarrollo de software."
+        },
+        "isc_itcm": {
+          "pill": "Portal Institucional · ISC",
+          "title": "Portal Oficial ISC ITCM",
+          "role": "Full-Stack Engineer",
+          "desc": "Plataforma web central para la carrera de Ingeniería en Sistemas Computacionales del ITCM con agenda de eventos, vinculación académica y recursos oficiales."
         }
       },
       "shown": "mostrando"
@@ -193,10 +325,6 @@
       "runLink": "Abrir",
       "codeLink": "Código",
       "items": {
-        "fourier": {
-          "title": "Lab Fourier",
-          "desc": "Simulador interactivo para descomposición armónica, síntesis de señales de Fourier y osciloscopio en tiempo real con WebGL y Canvas."
-        },
         "vexel": {
           "title": "VEXEL & BRAINY2",
           "desc": "Laboratorios de física y álgebra dimensional 3D con PyVista y Gemini AI: generación y renderizado dinámico guiado por lenguaje natural."
@@ -216,6 +344,10 @@
         "tetris": {
           "title": "Tetris Engine (Python)",
           "desc": "Implementación del sistema clásico de tetrominós con rotación Super Rotation System (SRS), matrices lógicas y loop con Pygame."
+        },
+        "carreras": {
+          "title": "Son Carreras No Carreritas",
+          "desc": "Videojuego de carreras arcade 3D con doble implementación: web interactiva con Three.js y versión de escritorio con Python / Pygame."
         }
       }
     },
@@ -332,7 +464,7 @@
       "ctaContact": "Contact",
       "stats": {
         "hackathons": "Hackathons 2026",
-        "projects": "Projects",
+        "projects": "Public GitHub Projects",
         "latency": "Edge inference",
         "search": "Search space solved"
       },
@@ -416,85 +548,217 @@
           "pill": "Hackathon Winner · Full-Stack",
           "title": "Apyo4All",
           "role": "Lead Full-Stack Architect",
-          "desc": "Cross-platform system (Web & Electron) for humanitarian disaster relief logistics and real-time donation inventory tracking with Supabase and Leaflet."
+          "desc": "Cross-platform application (Web & Desktop Electron) for reactive humanitarian logistics and dynamic inventory balancing between relief centers during natural disasters."
         },
         "ecoeye": {
-          "pill": "Edge AI · Ubiquitous Computing",
+          "pill": "Regional Finalist · Edge AI",
           "title": "EcoEye",
           "role": "Lead Edge AI Architect",
-          "desc": "Camera-free assistive ecosystem: fall detection analyzing WiFi CSI radio frequency perturbations (64 OFDM subcarriers) and sub-50ms obstacle radar with TensorFlow.js."
+          "desc": "Camera-free ubiquitous computing and assistive ambient intelligence: fall detection via WiFi CSI radio frequency perturbation analysis (64 OFDM subcarriers) with sub-50ms edge inference."
         },
         "bloodcare": {
-          "pill": "Deep Learning · Healthcare",
+          "pill": "Local Winner · Deep Learning",
           "title": "BloodCare / GLUCOGEN",
           "role": "Machine Learning Engineer",
-          "desc": "Deep stacked Bi-LSTM in PyTorch with Pinball Loss for continuous glucose trajectory prediction and clinical confidence intervals on OhioT1DM dataset."
+          "desc": "Deep neural network (2-layer Bi-LSTM in PyTorch with Pinball Loss) for continuous glucose forecasting at 30 and 60 minutes on OhioT1DM with medical quantile uncertainty modeling."
         },
-        "olvera_ai_suite": {
-          "pill": "AI Platform · Production",
-          "title": "Olvera AI Suite",
-          "role": "Lead AI Architect",
-          "desc": "High-performance AI dashboard with Next.js and Vercel AI SDK, unified LLM streaming via OpenRouter, Groq Whisper voice transcription, and Studio Mode v2 for multi-file contexts."
+        "siie": {
+          "pill": "RegTech · Industrial Audit",
+          "title": "S.I.I.E. (NOM-001-SEDE)",
+          "role": "Full-Stack AI Developer",
+          "desc": "Automated technical electrical audit compliant with Mexican official standard NOM-001-SEDE-2012. Information extraction using Hugging Face Transformers and on-premise Docker deployment."
+        },
+        "salones": {
+          "pill": "1st Place ISC Fair · Optimization",
+          "title": "Sistema de Salones ISC",
+          "role": "Lead Algorithms & Optimization Engineer",
+          "desc": "Solving the NP-complete timetable allocation problem for 680 weekly classes across 21 rooms (21^680 search space) with genetic algorithms and interactive 3D visualization in PyVista."
         },
         "build_with_ai": {
           "pill": "Google Tour 2026 · Edge RAG",
           "title": "Build with AI ITCM",
           "role": "Lead Software Architect",
-          "desc": "Official platform with serverless RAG over Vercel KV (<200ms) for real-time hackathon proposal evaluation and dynamic mass QR credentialing."
-        },
-        "siie": {
-          "pill": "RegTech · Industrial NLP",
-          "title": "S.I.I.E. (NOM-001)",
-          "role": "Full-Stack AI Developer",
-          "desc": "Automated industrial electrical auditing under official standard NOM-001-SEDE-2012 with Hugging Face Transformers and Docker on-premise."
-        },
-        "salones": {
-          "pill": "NP-Complete Optimization",
-          "title": "ISC Classroom Assignment",
-          "role": "Algorithms Engineer",
-          "desc": "Multi-algorithm solver (Genetic, Random Forest, Hill Climbing) optimizing 680 weekly sessions in 21 venues (21^680 search space) with PyVista 3D analytics."
-        },
-        "edunova": {
-          "pill": "EdTech · Multiplatform",
-          "title": "EduNova AI",
-          "role": "Full-Stack AI Engineer",
-          "desc": "Educational suite built with Flutter and FastAPI (42 endpoints). Multimodal OCR with Gemini Vision for curriculum digitization and at-risk student telemetry."
+          "desc": "Official platform for Google's Build with AI 2026 tour at ITCM: serverless RAG pipeline over Vercel KV (<200ms) for proposal review, automated evaluation, and QR credentialing."
         },
         "sephora": {
-          "pill": "Transformers · Data Science",
-          "title": "DistilRoBERTa Analytics",
-          "role": "Data Scientist",
-          "desc": "Fine-grained 7-emotion classification on 340,000+ reviews using DistilRoBERTa, Docker container, Shiny Server, and Power BI."
+          "pill": "NLP · Ekman Emotion Model",
+          "title": "DistilRoBERTa Sephora Analytics",
+          "role": "Data Scientist & ML Engineer",
+          "desc": "Sentiment analysis and fine-grained classification of 7 Ekman human emotions over 340k+ customer reviews with DistilRoBERTa, reactive Shiny server, and Power BI reporting."
         },
-        "cres": {
-          "pill": "Web Production · CMS",
-          "title": "CRES Institutional",
-          "role": "Lead Developer & UI/UX",
-          "desc": "Official platform for Centro Regional de Estudios Superiores with Next.js 14, dynamic custom CMS, and a perfect 100/100 Lighthouse score."
+        "edunova": {
+          "pill": "EdTech · Cross-Platform",
+          "title": "EduNova AI",
+          "role": "Full-Stack AI Engineer",
+          "desc": "Intelligent educational suite: FastAPI backend with 42 endpoints, Flutter mobile client, academic curriculum digitization via multimodal OCR, and student risk analytics."
         },
         "llama": {
-          "pill": "Model Router · LLMs",
-          "title": "Meta Llama Labs",
+          "pill": "Model Engineering · Open LLMs",
+          "title": "Meta Llama Engineering Labs",
           "role": "NLP & Benchmarking Engineer",
-          "desc": "Engineering pipelines with Meta Llama 3, cost-quality intelligent routing, and automated benchmarks in Jupyter Notebooks."
+          "desc": "Experimental and benchmarking lab for open-source Meta LLaMA 3 models, featuring intelligent routing, quantization testing, and quantitative performance evaluation."
         },
-        "olvera_ai_shiny": {
-          "pill": "Python AI · Web Search",
-          "title": "Olvera AI (Shiny Python)",
-          "role": "Backend & AI Developer",
-          "desc": "Reactive Python Shiny interface with LiteLLM (OpenRouter, Groq, Cerebras), real-time web retrieval via Tavily API, and custom zoom gallery in JavaScript."
+        "ia_llama": {
+          "pill": "AI Systems · Open Models",
+          "title": "Applied AI with LLaMA",
+          "role": "AI Engineer",
+          "desc": "Web platform for enterprise use-case prototyping and integration powered by open Meta LLaMA models with clean responsive interfaces and inference API pipelines."
+        },
+        "agentes_ciclo_vida": {
+          "pill": "Agentic Systems · Diagnostics",
+          "title": "Lifecycle & Obsolescence Agent System",
+          "role": "Agentic Systems Architect",
+          "desc": "Multi-agent Python architecture for automated technology lifecycle assessment and predictive obsolescence diagnosis across enterprise hardware and software."
+        },
+        "cyclistic": {
+          "pill": "Data Analytics · Mobility",
+          "title": "Cyclistic Mobility Dashboard",
+          "role": "Data Analyst & Dashboard Engineer",
+          "desc": "Interactive reactive Shiny for Python dashboard for geospatial analytics and user behavior pattern mining in shared micro-mobility networks with flux visualizations."
         },
         "aura_app": {
-          "pill": "Artificial Empathy · Voice",
+          "pill": "Affective Computing · Neural Voice",
           "title": "AURA APP",
-          "role": "Full-Stack Developer",
-          "desc": "Interactive desktop wellness companion with CustomTkinter, Gemini API cognitive support prompts, and low-latency voice synthesis via ElevenLabs SDK."
+          "role": "AI Full-Stack Developer",
+          "desc": "Emotional wellness companion application featuring modern CustomTkinter desktop UI, Gemini API cognitive engine, and low-latency neural voice synthesis via ElevenLabs."
         },
-        "olvera_food_ai": {
-          "pill": "Domain-Specific · Food AI",
-          "title": "Olvera Food AI",
-          "role": "Backend Developer",
-          "desc": "Specialized culinary research and recipe intelligence bot with Shiny for Python, LiteLLM, and real-time ingredient validation via Tavily API."
+        "prompts_ia": {
+          "pill": "AI Tooling · Prompt Studio",
+          "title": "PROMPTS-IA Studio",
+          "role": "Prompt Engineer & Developer",
+          "desc": "Structured prompt generation and optimization studio for software engineering and requirements analysis, fine-tuned for Google Gemini 3 Flash models."
+        },
+        "vexel": {
+          "pill": "3D Graphics · Scientific Computing",
+          "title": "VEXEL 3D Visualizer",
+          "role": "3D & AI Developer",
+          "desc": "Interactive virtual lab for 3D volumetric rendering and scientific simulation analysis combining PyVista with generative visualization scripts via Gemini AI."
+        },
+        "brainy2": {
+          "pill": "Computational Math · 3D",
+          "title": "BRAINY2 Linear Lab",
+          "role": "Algorithm & Math Developer",
+          "desc": "Interactive dimensional laboratory for exploring linear transformations, eigenvectors, and spatial 3D projections with AI-powered mathematical intuition guidance."
+        },
+        "censo_isc": {
+          "pill": "Web Systems · ACM Chapter",
+          "title": "ACM ITCM Student Census",
+          "role": "Frontend & Systems Architect",
+          "desc": "Web application for student demographic census and analytics within the Computer Systems Engineering community for the official ACM student chapter."
+        },
+        "supertienda": {
+          "pill": "Desktop POS · MVC Architecture",
+          "title": "SuperTienda ProMax POS",
+          "role": "Java Software Engineer",
+          "desc": "Complete enterprise Point of Sale (POS) system built in JavaFX and MySQL featuring real-time inventory control, supplier management, and automated PDF/Excel reports."
+        },
+        "simulacion": {
+          "pill": "Simulation · 20,000+ Lines",
+          "title": "Simulación TecNM Suite",
+          "role": "Simulation & Systems Engineer",
+          "desc": "Research and discrete-event simulation software suite with over 20,000 lines of Python and SimPy, implementing M/M/s queuing theory, Monte Carlo methods, and inventory systems."
+        },
+        "top_avanz_prog": {
+          "pill": "Advanced Programming · Concurrency",
+          "title": "Advanced Programming Topics",
+          "role": "Software Architect & Author",
+          "desc": "Comprehensive engineering framework covering modern GUIs, multithreaded concurrency patterns, Object-Relational Mapping (ORM), and cross-platform mobile development."
+        },
+        "skills_isc": {
+          "pill": "Playbooks · Software Engineering",
+          "title": "Skills ISC TecNM",
+          "role": "Lead Architect & Curator",
+          "desc": "Exhaustive technical handbook of software engineering specifications, clean architecture playbooks, testing strategies, and tools for computer systems engineers."
+        },
+        "rediseno_sii": {
+          "pill": "Web Modernization · UI/UX",
+          "title": "SII ITCM Portal Redesign",
+          "role": "UI/UX & Frontend Engineer",
+          "desc": "Modern UI overhaul of ITCM's legacy student portal, replacing outdated structures with a reactive component-based web experience, dark mode, and sleek aesthetics."
+        },
+        "icpc": {
+          "pill": "Competitive Algorithms · ICPC",
+          "title": "ICPC Competitive Hub",
+          "role": "Competitive Programmer & Trainer",
+          "desc": "Training repository and algorithm platform for the ICPC collegiate contest: advanced data structures, graph theory, dynamic programming, and computational geometry."
+        },
+        "nextjs_acme": {
+          "pill": "Full-Stack · Next.js App Router",
+          "title": "Next.js Acme Enterprise Dashboard",
+          "role": "Full-Stack Developer",
+          "desc": "Enterprise administrative dashboard built with Next.js 14 App Router, Server Actions, PostgreSQL persistence, authentication, and Core Web Vitals optimization."
+        },
+        "vive_mexico": {
+          "pill": "Tourism & Culture · Web",
+          "title": "Vive México Experience",
+          "role": "Frontend Developer",
+          "desc": "Interactive cultural and tourism discovery web platform built in TypeScript featuring destination catalogs, heritage routes, and an immersive user interface."
+        },
+        "congruencial": {
+          "pill": "Mathematical Algorithms · Java",
+          "title": "Mixed Linear Congruential Generator",
+          "role": "Algorithm Developer",
+          "desc": "Pseudorandom number generator engine implementing the mixed linear congruential algorithm with statistical randomness test suites (means, variance, and chi-squared goodness of fit)."
+        },
+        "blockbuilder": {
+          "pill": "WebGL · 3D Voxel Engine",
+          "title": "Block Builder 3D",
+          "role": "Graphics & 3D Web Engineer",
+          "desc": "Interactive 3D voxel builder running on Three.js featuring LEGO-style snapping mechanics, real-time lighting and shadows, color palettes, and scene export capability."
+        },
+        "esfera_3d": {
+          "pill": "3D Game · WebGL Cyberpunk",
+          "title": "Esfera 3D Endless Runner",
+          "role": "3D Game Developer",
+          "desc": "Cyberpunk 3D endless runner game built in Three.js: procedural infinite tunnel, physics acceleration, collision detection, and dynamic neon lighting shaders."
+        },
+        "win95": {
+          "pill": "Web Simulator · Retro OS",
+          "title": "Windows 95 Web Experience",
+          "role": "Frontend Systems Engineer",
+          "desc": "Authentic in-browser recreation of Windows 95: draggable and resizable window manager, start menu, file system explorer, and functional retro applications."
+        },
+        "carreras": {
+          "pill": "Game Engine · 3D",
+          "title": "Son Carreras No Carreritas",
+          "role": "Game Engine Developer",
+          "desc": "Arcade 3D racing video game developed with dual implementations: interactive web edition in Three.js and desktop edition in Python / Pygame with arcade vehicle physics."
+        },
+        "tetris": {
+          "pill": "Classic Arcade · State Machine",
+          "title": "Tetris Engine",
+          "role": "Game Developer",
+          "desc": "Faithful recreation of classic Tetris in Python / Pygame with finite state machine architecture, Super Rotation System (SRS), progressive levels, and high-score tracking."
+        },
+        "braincourse": {
+          "pill": "LMS Platform · Education",
+          "title": "BrainCourse E-Learning",
+          "role": "Backend & Educational Developer",
+          "desc": "Modular learning management system (LMS) and online course delivery platform featuring student progress tracking and dynamic technical quizzes."
+        },
+        "prog_web": {
+          "pill": "Web Architecture · Standards",
+          "title": "TecNM Web Programming Architecture",
+          "role": "Full-Stack Engineer & Author",
+          "desc": "Engineering curriculum and pedagogical framework for modern web development: client-server architectures, RESTful APIs, responsive design, and semantic accessibility."
+        },
+        "isc_hub": {
+          "pill": "Community · Open Resources",
+          "title": "ISC-Hub Community Portal",
+          "role": "Frontend & Community Lead",
+          "desc": "Collaborative digital resource sharing portal for software engineering repositories, technical guides, and project showcases across the ITCM computer science community."
+        },
+        "isc_cursos": {
+          "pill": "Technical Education · Courses",
+          "title": "ISC ITCM Courses Platform",
+          "role": "Web Developer & Educator",
+          "desc": "Interactive technical training portal with structured learning paths in software development, databases, networking, and systems engineering."
+        },
+        "isc_itcm": {
+          "pill": "Institutional Portal · ISC",
+          "title": "Official ISC ITCM Portal",
+          "role": "Full-Stack Engineer",
+          "desc": "Central web portal for the Computer Systems Engineering department at ITCM featuring event calendars, academic linkages, and department documentation."
         }
       },
       "shown": "showing"
@@ -506,10 +770,6 @@
       "runLink": "Launch",
       "codeLink": "Code",
       "items": {
-        "fourier": {
-          "title": "Lab Fourier",
-          "desc": "Interactive simulator for harmonic decomposition, Fourier signal synthesis, and real-time oscilloscope using WebGL and Canvas."
-        },
         "vexel": {
           "title": "VEXEL & BRAINY2",
           "desc": "Physics and 3D dimensional algebra labs using PyVista and Gemini AI: dynamic prompt-guided generation and rendering."
@@ -529,6 +789,10 @@
         "tetris": {
           "title": "Tetris Engine (Python)",
           "desc": "Classic tetromino system with Super Rotation System (SRS), matrix logic, and game loop implemented in Pygame."
+        },
+        "carreras": {
+          "title": "Son Carreras No Carreritas",
+          "desc": "Arcade 3D racing game featuring dual implementations: interactive web build in Three.js and desktop version in Python / Pygame."
         }
       }
     },
