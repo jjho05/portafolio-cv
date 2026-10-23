@@ -6,18 +6,14 @@ class I18n {
         this.init();
     }
 
-    // Detectar idioma del navegador
+    // Detectar idioma del navegador o preferencia guardada
     detectLanguage() {
-        // Primero verificar si hay preferencia guardada
         const savedLang = localStorage.getItem('preferredLanguage');
         if (savedLang) {
             return savedLang;
         }
 
-        // Detectar idioma del navegador
-        const browserLang = navigator.language || navigator.userLanguage;
-
-        // Si es español, usar 'es', de lo contrario 'en'
+        const browserLang = navigator.language || navigator.userLanguage || 'es';
         return browserLang.startsWith('es') ? 'es' : 'en';
     }
 
@@ -44,14 +40,27 @@ class I18n {
         document.documentElement.lang = lang;
     }
 
+    // Alternar idioma entre ES y EN
+    toggle() {
+        const next = this.currentLang === 'es' ? 'en' : 'es';
+        this.changeLanguage(next);
+    }
+
     // Obtener traducción
     t(path) {
+        if (!this.translations || !this.translations[this.currentLang]) {
+            return path;
+        }
+
         const keys = path.split('.');
         let value = this.translations[this.currentLang];
 
         for (const key of keys) {
-            value = value[key];
-            if (!value) return path;
+            if (value && value[key] !== undefined) {
+                value = value[key];
+            } else {
+                return path;
+            }
         }
 
         return value;
@@ -59,10 +68,15 @@ class I18n {
 
     // Aplicar traducciones al DOM
     applyTranslations() {
-        // Actualizar todos los elementos con data-i18n
+        if (!this.translations) return;
+
+        // Actualizar elementos con data-i18n
         document.querySelectorAll('[data-i18n]').forEach(element => {
             const key = element.getAttribute('data-i18n');
-            element.textContent = this.t(key);
+            const translation = this.t(key);
+            if (translation && translation !== key) {
+                element.textContent = translation;
+            }
         });
 
         // Actualizar placeholders
@@ -78,21 +92,16 @@ class I18n {
         });
     }
 
-    // Actualizar toggle de idioma
+    // Actualizar botón de idioma
     updateLanguageToggle() {
-        const toggles = document.querySelectorAll('.lang-toggle');
-        toggles.forEach(toggle => {
-            const buttons = toggle.querySelectorAll('button');
-            buttons.forEach(btn => {
-                if (btn.dataset.lang === this.currentLang) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
-            });
-        });
+        const langLabel = document.getElementById('langLabel');
+        if (langLabel) {
+            // Si el idioma actual es ES, el botón invita a cambiar a EN y viceversa
+            langLabel.textContent = this.currentLang === 'es' ? 'EN' : 'ES';
+        }
     }
 }
 
 // Instancia global
 const i18n = new I18n();
+window.i18n = i18n;
