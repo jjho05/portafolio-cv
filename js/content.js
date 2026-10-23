@@ -417,6 +417,7 @@
 
   const CERTIFICATIONS = [
     { id: 'oracle_ai', icon: 'fa-cloud', url: 'https://catalog-education.oracle.com', hasVerify: true },
+    { id: 'google_gemini_student', icon: 'fa-graduation-cap', url: '', hasVerify: false },
     { id: 'anthropic_mcp', icon: 'fa-network-wired', url: 'https://anthropic.com', hasVerify: false },
     { id: 'anthropic_fluency', icon: 'fa-brain', url: 'https://anthropic.com', hasVerify: false },
     { id: 'anthropic_capabilities', icon: 'fa-shield-halved', url: 'https://anthropic.com', hasVerify: false },
@@ -440,6 +441,7 @@
     { id: 'ibm_brainstorming', cats: 'ai ibm', url: 'https://coursera.org/verify/W9020WKV88L7' },
     { id: 'ibm_ai_fund', cats: 'ai ibm', url: 'https://coursera.org/verify/801MWINP6JEK' },
     { id: 'coursera_scifi', cats: 'ai', url: 'https://coursera.org/verify/S1UM2KFEPGA1' },
+    { id: 'centro_ia_oci', cats: 'ai dev', url: '' },
     { id: 'edc_ia_intermedio', cats: 'ai', url: '' },
     { id: 'big_school_ia', cats: 'ai dev', url: '' },
     { id: 'oa_data_science', cats: 'data', url: '' },

@@ -32,7 +32,7 @@
       "desc": "Arquitecto de Software y Desarrollador Full-Stack especializado en orquestación de Inteligencia Artificial de vanguardia, sistemas agénticos autónomos (Google Antigravity SDK, Vercel AI SDK) y optimización algorítmica de alto rendimiento. Con probada experiencia en certámenes de innovación tecnológica de élite (Ganador Hackatón IEST 2026, Ganador Fase Local y Representante Regional HackaTec 2026), diseño soluciones escalables integrando modelos fundacionales (Google Gemini, Anthropic Claude, Meta Llama), Deep Learning en PyTorch y visión artificial edge. Mi formación en Ciencia de Datos me permite transformar requerimientos complejos en arquitecturas seguras, eficientes y con experiencias de usuario de grado de producción.",
       "meta": {
         "languages_title": "Idiomas",
-        "languages_desc": "Español (Nativo) · Inglés (Profesional Técnico B1+/B2 para ingeniería y documentación).",
+        "languages_desc": "Español (Nativo) · Inglés (B1).",
         "focus_title": "Especialización",
         "focus_desc": "Sistemas Agénticos, Inferencia en Edge, Deep Learning, Arquitectura Limpia y RegTech.",
         "cert_title": "Certificaciones & Distinción",
@@ -400,7 +400,7 @@
           "year": "2025"
         },
         "expociencias": {
-          "badge": "Finalista Nacional",
+          "badge": "Participante Destacado",
           "title": "ExpoCiencias Nacional 2025",
           "desc": "Presentación y defensa de proyectos de investigación científica en inteligencia artificial aplicada.",
           "year": "2025"
@@ -435,6 +435,14 @@
           "desc": "Fundamentos de IA en nube pública, machine learning, redes neuronales e integración de modelos cognitivos sobre OCI.",
           "date": "Feb 2026",
           "id": "103398177OCI25AICFA"
+        },
+        "google_gemini_student": {
+          "title": "Estudiante con certificación de Gemini (Nivel Universitario)",
+          "issuer": "Google for Education",
+          "badge": "Certificación Oficial",
+          "desc": "Acreditación oficial para la aplicación de modelos de IA multimodal Gemini en entornos de educación superior e investigación.",
+          "date": "2026 – 2029 (Vigencia 3 años)",
+          "id": "Acreditado Google for Education"
         },
         "anthropic_mcp": {
           "title": "Model Context Protocol: Advanced Topics",
@@ -525,10 +533,10 @@
     },
     "courses": {
       "title": "Cursos, Diplomados & Formación Continua",
-      "desc": "Catálogo exhaustivo de 19 cursos técnicos completados con acreditación verificable.",
+      "desc": "Catálogo exhaustivo de 20 cursos técnicos completados con acreditación verificable.",
       "shown": "mostrando",
       "filters": {
-        "all": "Todos (19)",
+        "all": "Todos (20)",
         "ai": "IA & LLMs",
         "ibm": "IBM & Coursera",
         "data": "Ciencia de Datos & Cloud",
@@ -545,6 +553,7 @@
         "ibm_brainstorming": { "title": "AI for Brainstorming and Planning", "issuer": "IBM & Coursera", "id": "W9020WKV88L7", "url": "https://coursera.org/verify/W9020WKV88L7" },
         "ibm_ai_fund": { "title": "AI Fundamentals", "issuer": "IBM & Coursera", "id": "801MWINP6JEK", "url": "https://coursera.org/verify/801MWINP6JEK" },
         "coursera_scifi": { "title": "ChatGPT for Beginners: SciFi Writing with Dall-e", "issuer": "Coursera Project Network", "id": "S1UM2KFEPGA1", "url": "https://coursera.org/verify/S1UM2KFEPGA1" },
+        "centro_ia_oci": { "title": "Conviértete en Asociado de Fundamentos de IA en OCI (16 horas)", "issuer": "Centro Público de Formación en Inteligencia Artificial", "id": "Acreditado 16h" },
         "edc_ia_intermedio": { "title": "Inteligencia Artificial Aplicada (Nivel Intermedio, 30 hrs)", "issuer": "EDC Educación Continua", "id": "Acreditado 30h" },
         "big_school_ia": { "title": "Iniciación al Desarrollo con IA", "issuer": "BIG school (Brais Moure & Romuald Fons)", "id": "Certificado Oficial" },
         "oa_data_science": { "title": "Introducción a la Ciencia de Datos (6 hrs)", "issuer": "Open Academy", "id": "OA-2026-0121002180772" },
@@ -629,7 +638,7 @@
       "desc": "Software Architect and Full-Stack Developer specializing in state-of-the-art Artificial Intelligence orchestration, autonomous agentic workflows (Google Antigravity SDK, Vercel AI SDK), and high-performance algorithmic optimization. Backed by proven success in elite technology hackathons (IEST Hackathon Winner 2026, Local Stage Winner and Regional Representative at HackaTec 2026), I architect scalable solutions combining foundational LLMs (Google Gemini, Anthropic Claude, Meta Llama), PyTorch Deep Learning, and edge computer vision. My Data Science background allows me to translate complex business and technical requirements into resilient, secure, and production-grade software architectures.",
       "meta": {
         "languages_title": "Languages",
-        "languages_desc": "Spanish (Native) · English (Technical Working Proficiency B1+/B2 for engineering, research papers & specs).",
+        "languages_desc": "Spanish (Native) · English (B1).",
         "focus_title": "Specialization",
         "focus_desc": "Agentic Systems, Edge Inference, Deep Learning, Clean Architecture & RegTech.",
         "cert_title": "Certifications & Honors",
@@ -997,7 +1006,7 @@
           "year": "2025"
         },
         "expociencias": {
-          "badge": "National Finalist",
+          "badge": "Featured Participant",
           "title": "ExpoCiencias National 2025",
           "desc": "Presentation and defense of applied artificial intelligence scientific research.",
           "year": "2025"
@@ -1032,6 +1041,14 @@
           "desc": "Cloud AI foundations, machine learning pipelines, deep neural networks, and cognitive model integration on OCI.",
           "date": "Feb 2026",
           "id": "103398177OCI25AICFA"
+        },
+        "google_gemini_student": {
+          "title": "Gemini Certified Student (University Level)",
+          "issuer": "Google for Education",
+          "badge": "Official Certification",
+          "desc": "Official accreditation for applying multimodal Gemini AI models in higher education and research environments.",
+          "date": "2026 – 2029 (3-Year Validity)",
+          "id": "Google for Education"
         },
         "anthropic_mcp": {
           "title": "Model Context Protocol: Advanced Topics",
@@ -1119,7 +1136,7 @@
       "title": "Specialized Courses & Continuing Technical Education",
       "shown": "showing",
       "filters": {
-        "all": "All (19)",
+        "all": "All (20)",
         "ai": "AI & LLMs",
         "ibm": "IBM & Coursera",
         "data": "Data Science & Cloud",
@@ -1136,6 +1153,7 @@
         "ibm_brainstorming": { "title": "AI for Brainstorming and Planning", "issuer": "IBM & Coursera", "id": "W9020WKV88L7", "url": "https://coursera.org/verify/W9020WKV88L7" },
         "ibm_ai_fund": { "title": "AI Fundamentals", "issuer": "IBM & Coursera", "id": "801MWINP6JEK", "url": "https://coursera.org/verify/801MWINP6JEK" },
         "coursera_scifi": { "title": "ChatGPT for Beginners: SciFi Writing with Dall-e", "issuer": "Coursera Project Network", "id": "S1UM2KFEPGA1", "url": "https://coursera.org/verify/S1UM2KFEPGA1" },
+        "centro_ia_oci": { "title": "Become an OCI AI Foundations Associate (16 hrs)", "issuer": "Centro Público de Formación en Inteligencia Artificial", "id": "Accredited 16h" },
         "edc_ia_intermedio": { "title": "Applied Artificial Intelligence (Intermediate, 30 hrs)", "issuer": "EDC Educación Continua", "id": "Accredited 30h" },
         "big_school_ia": { "title": "Initiation to AI-Assisted Software Development", "issuer": "BIG school (Brais Moure & Romuald Fons)", "id": "Official Certificate" },
         "oa_data_science": { "title": "Introduction to Data Science (6 hrs)", "issuer": "Open Academy", "id": "OA-2026-0121002180772" },
