@@ -401,6 +401,173 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .xp-bullets { margin-top: 0.65rem; padding-left: 1.1rem; list-style: disc; }
 .xp-bullets li { font-size: 0.87rem; color: var(--text-2); margin-bottom: 0.3rem; line-height: 1.55; }
 
+/* ---------- Certificaciones Oficiales & Cursos ---------- */
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+.cert-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.45rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  transition: all 0.3s var(--ease);
+}
+.cert-card:hover {
+  background: var(--card-hover);
+  border-color: var(--line-2);
+  transform: translateY(-2px);
+}
+.cert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.85rem;
+}
+.cert-issuer-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-2);
+}
+.cert-issuer-badge i {
+  color: var(--accent);
+  font-size: 0.85rem;
+}
+.cert-badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 500;
+}
+.cert-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: var(--text-1);
+  margin-bottom: 0.6rem;
+}
+.cert-desc {
+  font-size: 0.86rem;
+  color: var(--text-2);
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+}
+.cert-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--line);
+  margin-top: auto;
+}
+.cert-id {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-3);
+  letter-spacing: 0.02em;
+}
+.cert-verify {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+.cert-verify:hover { opacity: 0.8; }
+
+.courses-list {
+  border-top: 1px solid var(--line-2);
+  margin-top: 1.2rem;
+  list-style: none;
+  padding: 0;
+}
+.courses-list > li {
+  border-bottom: 1px solid var(--line);
+}
+.courses-list > li.is-hidden { display: none; }
+.course-row {
+  display: grid;
+  grid-template-columns: 180px 1fr auto;
+  gap: 1.2rem;
+  align-items: center;
+  padding: 1.1rem 0.5rem;
+  transition: background 0.25s, padding 0.3s var(--ease);
+}
+.course-row:hover {
+  background: var(--card-hover);
+  padding-left: 0.85rem;
+}
+.course-issuer {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.course-title {
+  font-size: 0.94rem;
+  font-weight: 500;
+  color: var(--text-1);
+}
+.course-title a {
+  color: var(--text-1);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: color 0.2s;
+}
+.course-title a:hover {
+  color: var(--accent);
+}
+.course-title a i {
+  font-size: 0.72rem;
+  color: var(--text-3);
+  transition: transform 0.2s, color 0.2s;
+}
+.course-title a:hover i {
+  color: var(--accent);
+  transform: translate(2px, -2px);
+}
+.course-meta {
+  font-family: var(--font-mono);
+  font-size: 0.73rem;
+  color: var(--text-3);
+  text-align: right;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.course-meta a {
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
 /* ---------- Proyectos ---------- */
 .filter-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 0.5rem; }
 .filter-bar { display: flex; flex-wrap: wrap; gap: 0.45rem; }
@@ -586,6 +753,9 @@ a.p-row:hover .p-arrow { color: var(--accent); transform: translate(3px, -3px); 
   .honor { grid-template-columns: 1fr auto; gap: 0.4rem 1rem; }
   .honor-year { grid-column: 1 / -1; }
   .xp, .edu { grid-template-columns: 1fr; gap: 0.5rem; }
+  .certs-grid { grid-template-columns: 1fr; }
+  .course-row { grid-template-columns: 1fr; gap: 0.35rem; padding: 0.9rem 0.25rem; }
+  .course-meta { text-align: left; justify-content: flex-start; }
   .vignette { background: linear-gradient(180deg, rgba(var(--veil), 0.78) 0%, rgba(var(--veil), 0.5) 60%, rgba(var(--veil), 0.35) 100%); }
 }
 

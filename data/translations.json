@@ -3,6 +3,7 @@
     "nav": {
       "about": "Perfil",
       "experience": "Trayectoria",
+      "credentials": "Credenciales",
       "projects": "Proyectos",
       "lab": "Lab",
       "stack": "Stack",
@@ -410,12 +411,155 @@
           "desc": "Presentación y defensa de proyectos de investigación científica en inteligencia artificial aplicada.",
           "year": "2025"
         },
+        "genius": {
+          "badge": "Participante Destacado",
+          "title": "Genius Arena Hackathon — Talent Land 2026",
+          "desc": "Certamen nacional de desarrollo tecnológico presencial en Talent Land México / Capital One.",
+          "year": "2026"
+        },
         "student": {
           "badge": "Distinción Académica",
           "title": "Alumno Destacado ITCM",
           "desc": "Reconocimiento institucional por alto desempeño académico, liderazgo técnico y representación.",
           "year": "2024 — 2026"
         }
+      }
+    },
+    "credentials": {
+      "label": "ACREDITACIONES & LICENCIAS",
+      "title": "Certificaciones & Formación Continua",
+      "desc": "Inventario oficial de acreditaciones técnicas, diplomados y certificaciones emitidas por corporaciones globales e instituciones líderes."
+    },
+    "certifications": {
+      "title": "Certificaciones Oficiales de Industria & Cloud",
+      "verify": "Verificar credencial",
+      "items": {
+        "oracle_ai": {
+          "title": "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate",
+          "issuer": "Oracle University",
+          "badge": "Cloud Oficial",
+          "desc": "Fundamentos de IA en nube pública, machine learning, redes neuronales e integración de modelos cognitivos sobre OCI.",
+          "date": "Feb 2026",
+          "id": "103398177OCI25AICFA"
+        },
+        "anthropic_mcp": {
+          "title": "Model Context Protocol: Advanced Topics",
+          "issuer": "Anthropic Courses",
+          "badge": "Protocolos & Agentes",
+          "desc": "Implementación y arquitectura avanzada del estándar abierto MCP para interoperabilidad entre LLMs y sistemas externos.",
+          "date": "Mar 2026",
+          "id": "mmfnnwixvfiw",
+          "url": "https://verify.skilljar.com/c/mmfnnwixvfiw"
+        },
+        "anthropic_fluency": {
+          "title": "AI Fluency: Framework & Foundations",
+          "issuer": "Anthropic Courses",
+          "badge": "Frameworks LLM",
+          "desc": "Diseño de contexto estructurado, razonamiento formal de modelos y marcos metodológicos para soluciones con IA.",
+          "date": "Mar 2026",
+          "id": "4zxf4hb6dhzx",
+          "url": "https://verify.skilljar.com/c/4zxf4hb6dhzx"
+        },
+        "anthropic_capabilities": {
+          "title": "AI Capabilities and Limitations",
+          "issuer": "Anthropic Courses",
+          "badge": "Seguridad & Alineación",
+          "desc": "Auditoría de comportamiento en modelos fundacionales, mitigación de riesgos de alucinación y robustez operativa.",
+          "date": "Mar 2026",
+          "id": "mr449yu7y9xw",
+          "url": "https://verify.skilljar.com/c/mr449yu7y9xw"
+        },
+        "ibm_ai_spec": {
+          "title": "AI Fundamentals Specialization (Programa de 7 Cursos)",
+          "issuer": "IBM & Coursera",
+          "badge": "Especialización Profesional",
+          "desc": "Certificado profesional que cubre desarrollo de aplicaciones con IA, prompts estructurados y modelos de visión y lenguaje.",
+          "date": "Mar 2026",
+          "id": "0ZBUUHMCG7L1",
+          "url": "https://coursera.org/verify/0ZBUUHMCG7L1"
+        },
+        "salesforce_ai_eng": {
+          "title": "Introducción a la Ingeniería en Inteligencia Artificial (Fase I)",
+          "issuer": "Iberoamerican Technology Foundation & Salesforce",
+          "badge": "Silicon Valley, CA",
+          "desc": "Fundamentos de ingeniería de software orientada a modelos de IA, sistemas cognitivos y arquitectura computacional.",
+          "date": "Mar 2026",
+          "id": "6213351160JH"
+        },
+        "google_prompt_eng": {
+          "title": "Prompt Engineering for Advanced LLMs",
+          "issuer": "Google Cloud & IA Academy",
+          "badge": "Prompt Engineering",
+          "desc": "Técnicas avanzadas de Few-Shot, Chain-of-Thought, optimización de ventanas de atención y evaluación comparativa.",
+          "date": "2026",
+          "id": "Acreditación Oficial"
+        },
+        "cisco_cyber": {
+          "title": "Introducción a la Ciberseguridad",
+          "issuer": "Cisco Networking Academy & TecNM",
+          "badge": "Ciberseguridad",
+          "desc": "Seguridad de la información, protección de infraestructura de redes, cifrado y políticas de defensa perimetral.",
+          "date": "2026",
+          "id": "Folio: L23070477"
+        },
+        "prompt_designer": {
+          "title": "Diseñador de Peticiones para Modelos (Prompt Designer)",
+          "issuer": "Plataforma Oficial de Certificación",
+          "badge": "Certificación Técnica",
+          "desc": "Certificación con registro oficial en diseño de directivas y prompts para entornos productivos automatizados.",
+          "date": "2026",
+          "id": "4FCAB6BB-C048-434B-8FF8-1F8D79FACE0E"
+        },
+        "duke_math": {
+          "title": "Data Science Math Skills",
+          "issuer": "Duke University & Coursera",
+          "badge": "Ciencia de Datos",
+          "desc": "Álgebra lineal matricial, funciones multivariables, probabilidad bayesiana y matemáticas para machine learning.",
+          "date": "Mar 2026",
+          "id": "Q67PL8Z2F76D",
+          "url": "https://coursera.org/verify/Q67PL8Z2F76D"
+        },
+        "redaccion_prof": {
+          "title": "Ortografía y Redacción Profesional",
+          "issuer": "Plataforma Oficial de Certificación",
+          "badge": "Comunicación Técnica",
+          "desc": "Certificación oficial en competencias de redacción, comunicación corporativa y elaboración de informes técnicos.",
+          "date": "2026",
+          "id": "548FC366-8CAC-4DA9-8C91-5016E943fc2a"
+        }
+      }
+    },
+    "courses": {
+      "title": "Cursos, Diplomados & Formación Continua",
+      "desc": "Catálogo exhaustivo de 19 cursos técnicos completados con acreditación verificable.",
+      "shown": "mostrando",
+      "filters": {
+        "all": "Todos (19)",
+        "ai": "IA & LLMs",
+        "ibm": "IBM & Coursera",
+        "data": "Ciencia de Datos & Cloud",
+        "dev": "Desarrollo de Software"
+      },
+      "items": {
+        "ibm_chatgpt": { "title": "Build AI Apps with ChatGPT, Dall-E, and GPT-4", "issuer": "IBM & Coursera", "id": "FI342XAGCNS4", "url": "https://coursera.org/verify/FI342XAGCNS4" },
+        "ibm_genai": { "title": "Introduction to Generative AI", "issuer": "IBM & Coursera", "id": "2A7I70EKCD7R", "url": "https://coursera.org/verify/2A7I70EKCD7R" },
+        "ibm_app_build": { "title": "AI for App Building", "issuer": "IBM & Coursera", "id": "C0DP399RI4NM", "url": "https://coursera.org/verify/C0DP399RI4NM" },
+        "ibm_data_analysis": { "title": "AI for Data Analysis", "issuer": "IBM & Coursera", "id": "R9SK2FKJ7GQ4", "url": "https://coursera.org/verify/R9SK2FKJ7GQ4" },
+        "ibm_writing": { "title": "AI for Writing and Communicating", "issuer": "IBM & Coursera", "id": "5STNRUO86G9J", "url": "https://coursera.org/verify/5STNRUO86G9J" },
+        "ibm_research": { "title": "AI for Research and Insights", "issuer": "IBM & Coursera", "id": "HHHJ7TRP1KQ6", "url": "https://coursera.org/verify/HHHJ7TRP1KQ6" },
+        "ibm_content": { "title": "AI for Content Creation", "issuer": "IBM & Coursera", "id": "HWKP0VBA543P", "url": "https://coursera.org/verify/HWKP0VBA543P" },
+        "ibm_brainstorming": { "title": "AI for Brainstorming and Planning", "issuer": "IBM & Coursera", "id": "W9020WKV88L7", "url": "https://coursera.org/verify/W9020WKV88L7" },
+        "ibm_ai_fund": { "title": "AI Fundamentals", "issuer": "IBM & Coursera", "id": "801MWINP6JEK", "url": "https://coursera.org/verify/801MWINP6JEK" },
+        "coursera_scifi": { "title": "ChatGPT for Beginners: SciFi Writing with Dall-e", "issuer": "Coursera Project Network", "id": "S1UM2KFEPGA1", "url": "https://coursera.org/verify/S1UM2KFEPGA1" },
+        "edc_ia_intermedio": { "title": "Inteligencia Artificial Aplicada (Nivel Intermedio, 30 hrs)", "issuer": "EDC Educación Continua", "id": "Acreditado 30h" },
+        "big_school_ia": { "title": "Iniciación al Desarrollo con IA", "issuer": "BIG school (Brais Moure & Romuald Fons)", "id": "Certificado Oficial" },
+        "oa_data_science": { "title": "Introducción a la Ciencia de Datos (6 hrs)", "issuer": "Open Academy", "id": "OA-2026-0121002180772" },
+        "oa_privacy": { "title": "Protección de Datos y Privacidad para Todos (4 hrs)", "issuer": "Open Academy", "id": "OA-2026-0121002180773" },
+        "oa_gemini": { "title": "Domina la IA con Gemini (2 hrs)", "issuer": "Open Academy", "id": "OA-2026-0121002177853" },
+        "oa_google_marketing": { "title": "Google: IA Práctica para Marketing", "issuer": "Google & Open Academy", "id": "OA-2026-0121002177854" },
+        "ibm_skillsbuild": { "title": "Habilidades Profesionales (Professional Skills)", "issuer": "IBM SkillsBuild", "id": "PLAN-C4FCC67D3E76" },
+        "sololearn_java": { "title": "Introduction to Java", "issuer": "Sololearn", "id": "CC-C8WCKGKK" },
+        "sololearn_html": { "title": "Introduction to HTML", "issuer": "Sololearn", "id": "CC-ABWWZTU4" }
       }
     },
     "stack": {
@@ -464,6 +608,7 @@
       "experience": "Career",
       "projects": "Projects",
       "lab": "Lab",
+      "credentials": "Credentials",
       "stack": "Stack",
       "contact": "Contact"
     },
@@ -869,12 +1014,149 @@
           "desc": "Presentation and defense of applied artificial intelligence scientific research.",
           "year": "2025"
         },
+        "genius": {
+          "badge": "Featured Competitor",
+          "title": "Genius Arena Hackathon — Talent Land 2026",
+          "desc": "On-site national software innovation tournament at Talent Land Mexico, sponsored by Capital One.",
+          "year": "2026"
+        },
         "student": {
           "badge": "Academic Honor",
           "title": "Distinguished Student Award ITCM",
           "desc": "Institutional recognition for exceptional academic record, technical leadership, and student representation.",
           "year": "2024 — 2026"
         }
+      }
+    },
+    "credentials": {
+      "label": "CREDENTIALS & LICENSES",
+      "title": "Certifications & Continuing Education",
+      "desc": "Official inventory of professional certifications, diplomas, and technical specializations issued by global tech corporations and leading institutions."
+    },
+    "certifications": {
+      "title": "Official Industry & Cloud Certifications",
+      "verify": "Verify credential",
+      "items": {
+        "oracle_ai": {
+          "title": "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate",
+          "issuer": "Oracle University",
+          "badge": "Official Cloud",
+          "desc": "Cloud AI foundations, machine learning pipelines, deep neural networks, and cognitive model integration on OCI.",
+          "date": "Feb 2026",
+          "id": "103398177OCI25AICFA"
+        },
+        "anthropic_mcp": {
+          "title": "Model Context Protocol: Advanced Topics",
+          "issuer": "Anthropic Courses",
+          "badge": "Protocols & Agents",
+          "desc": "Advanced implementation and systems architecture for the open MCP standard connecting LLMs to tools and datasources.",
+          "date": "Mar 2026",
+          "id": "mmfnnwixvfiw"
+        },
+        "anthropic_fluency": {
+          "title": "AI Fluency: Framework & Foundations",
+          "issuer": "Anthropic Courses",
+          "badge": "Cognitive AI",
+          "desc": "Foundational cognitive frameworks for reasoning, model capabilities, and structured AI alignment.",
+          "date": "Mar 2026",
+          "id": "4zxf4hb6dhzx"
+        },
+        "anthropic_capabilities": {
+          "title": "AI Capabilities and Limitations",
+          "issuer": "Anthropic Courses",
+          "badge": "Safety & Limits",
+          "desc": "Empirical risk analysis, capability boundaries, hallucination mitigation, and production safety guards.",
+          "date": "Mar 2026",
+          "id": "mr449yu7y9xw"
+        },
+        "ibm_ai_spec": {
+          "title": "AI Fundamentals Specialization (7 Professional Courses)",
+          "issuer": "IBM & Coursera",
+          "badge": "Specialization",
+          "desc": "Comprehensive 7-course specialization covering generative models, prompt engineering, data analysis, and enterprise AI workflows.",
+          "date": "Feb 2026",
+          "id": "0ZBUUHMCG7L1"
+        },
+        "salesforce_ai_eng": {
+          "title": "Introduction to Artificial Intelligence Engineering",
+          "issuer": "Salesforce & Iberoamerican Technology Foundation",
+          "badge": "AI Engineering",
+          "desc": "System architecture for enterprise AI, model lifecycle, prompt design, and data pipelines.",
+          "date": "2026",
+          "id": "6213351160JH"
+        },
+        "google_prompt_eng": {
+          "title": "Prompt Engineering for Advanced LLMs",
+          "issuer": "Google Cloud & IA Academy",
+          "badge": "Prompt Eng",
+          "desc": "Advanced prompt design architectures, zero/few-shot reasoning, chain-of-thought, and inference optimization.",
+          "date": "2026",
+          "id": "Accredited"
+        },
+        "cisco_cyber": {
+          "title": "Introduction to Cybersecurity",
+          "issuer": "Cisco Networking Academy & TecNM",
+          "badge": "Cybersecurity",
+          "desc": "Information security fundamentals, network defense vectors, cryptography, and operational threat mitigation.",
+          "date": "Dec 2024",
+          "id": "L23070477"
+        },
+        "prompt_designer": {
+          "title": "Diseñador de Peticiones para Modelos de IA (Prompt Designer)",
+          "issuer": "Official Certification Platform",
+          "badge": "Prompting",
+          "desc": "Technical query structuring, constraint engineering, and structured output formatting for foundational models.",
+          "date": "2026",
+          "id": "4FCAB6BB-C048-434B-8FF8-1F8D79FACE0E"
+        },
+        "duke_math": {
+          "title": "Data Science Math Skills",
+          "issuer": "Duke University & Coursera",
+          "badge": "Applied Math",
+          "desc": "Mathematical foundations for data science: calculus, set theory, functions, Bayesian probability, and variance.",
+          "date": "Feb 2026",
+          "id": "Q67PL8Z2F76D"
+        },
+        "redaccion_prof": {
+          "title": "Ortografía y Redacción Profesional Técnica",
+          "issuer": "Official Certification Platform",
+          "badge": "Technical Writing",
+          "desc": "Engineering documentation, technical specifications, syntax accuracy, and professional executive communication.",
+          "date": "2026",
+          "id": "548FC366-8CAC-4DA9-8C91-5016E943fc2a"
+        }
+      }
+    },
+    "courses": {
+      "title": "Specialized Courses & Continuing Technical Education",
+      "shown": "showing",
+      "filters": {
+        "all": "All (19)",
+        "ai": "AI & LLMs",
+        "ibm": "IBM & Coursera",
+        "data": "Data Science & Cloud",
+        "dev": "Software Engineering"
+      },
+      "items": {
+        "ibm_chatgpt": { "title": "Build AI Apps with ChatGPT, Dall-E, and GPT-4", "issuer": "IBM & Coursera", "id": "FI342XAGCNS4", "url": "https://coursera.org/verify/FI342XAGCNS4" },
+        "ibm_genai": { "title": "Introduction to Generative AI", "issuer": "IBM & Coursera", "id": "2A7I70EKCD7R", "url": "https://coursera.org/verify/2A7I70EKCD7R" },
+        "ibm_app_build": { "title": "AI for App Building", "issuer": "IBM & Coursera", "id": "C0DP399RI4NM", "url": "https://coursera.org/verify/C0DP399RI4NM" },
+        "ibm_data_analysis": { "title": "AI for Data Analysis", "issuer": "IBM & Coursera", "id": "R9SK2FKJ7GQ4", "url": "https://coursera.org/verify/R9SK2FKJ7GQ4" },
+        "ibm_writing": { "title": "AI for Writing and Communicating", "issuer": "IBM & Coursera", "id": "5STNRUO86G9J", "url": "https://coursera.org/verify/5STNRUO86G9J" },
+        "ibm_research": { "title": "AI for Research and Insights", "issuer": "IBM & Coursera", "id": "HHHJ7TRP1KQ6", "url": "https://coursera.org/verify/HHHJ7TRP1KQ6" },
+        "ibm_content": { "title": "AI for Content Creation", "issuer": "IBM & Coursera", "id": "HWKP0VBA543P", "url": "https://coursera.org/verify/HWKP0VBA543P" },
+        "ibm_brainstorming": { "title": "AI for Brainstorming and Planning", "issuer": "IBM & Coursera", "id": "W9020WKV88L7", "url": "https://coursera.org/verify/W9020WKV88L7" },
+        "ibm_ai_fund": { "title": "AI Fundamentals", "issuer": "IBM & Coursera", "id": "801MWINP6JEK", "url": "https://coursera.org/verify/801MWINP6JEK" },
+        "coursera_scifi": { "title": "ChatGPT for Beginners: SciFi Writing with Dall-e", "issuer": "Coursera Project Network", "id": "S1UM2KFEPGA1", "url": "https://coursera.org/verify/S1UM2KFEPGA1" },
+        "edc_ia_intermedio": { "title": "Applied Artificial Intelligence (Intermediate, 30 hrs)", "issuer": "EDC Educación Continua", "id": "Accredited 30h" },
+        "big_school_ia": { "title": "Initiation to AI-Assisted Software Development", "issuer": "BIG school (Brais Moure & Romuald Fons)", "id": "Official Certificate" },
+        "oa_data_science": { "title": "Introduction to Data Science (6 hrs)", "issuer": "Open Academy", "id": "OA-2026-0121002180772" },
+        "oa_privacy": { "title": "Data Protection & Privacy for Everyone (4 hrs)", "issuer": "Open Academy", "id": "OA-2026-0121002180773" },
+        "oa_gemini": { "title": "Master AI with Gemini (2 hrs)", "issuer": "Open Academy", "id": "OA-2026-0121002177853" },
+        "oa_google_marketing": { "title": "Google: Practical AI for Digital Strategy", "issuer": "Google & Open Academy", "id": "OA-2026-0121002177854" },
+        "ibm_skillsbuild": { "title": "Professional Skills Suite", "issuer": "IBM SkillsBuild", "id": "PLAN-C4FCC67D3E76" },
+        "sololearn_java": { "title": "Introduction to Java", "issuer": "Sololearn", "id": "CC-C8WCKGKK" },
+        "sololearn_html": { "title": "Introduction to HTML", "issuer": "Sololearn", "id": "CC-ABWWZTU4" }
       }
     },
     "stack": {

@@ -411,7 +411,44 @@
     { id: 'local', win: true },
     { id: 'isc', win: true },
     { id: 'expociencias', win: false },
+    { id: 'genius', win: false },
     { id: 'student', win: false }
+  ];
+
+  const CERTIFICATIONS = [
+    { id: 'oracle_ai', icon: 'fa-cloud', url: 'https://catalog-education.oracle.com', hasVerify: true },
+    { id: 'anthropic_mcp', icon: 'fa-network-wired', url: 'https://anthropic.com', hasVerify: false },
+    { id: 'anthropic_fluency', icon: 'fa-brain', url: 'https://anthropic.com', hasVerify: false },
+    { id: 'anthropic_capabilities', icon: 'fa-shield-halved', url: 'https://anthropic.com', hasVerify: false },
+    { id: 'ibm_ai_spec', icon: 'fa-layer-group', url: 'https://coursera.org/verify/specialization/0ZBUUHMCG7L1', hasVerify: true },
+    { id: 'salesforce_ai_eng', icon: 'fa-microchip', url: '', hasVerify: false },
+    { id: 'google_prompt_eng', icon: 'fa-wand-magic-sparkles', url: '', hasVerify: false },
+    { id: 'cisco_cyber', icon: 'fa-lock', url: 'https://www.netacad.com', hasVerify: true },
+    { id: 'prompt_designer', icon: 'fa-terminal', url: '', hasVerify: false },
+    { id: 'duke_math', icon: 'fa-square-root-variable', url: 'https://coursera.org/verify/Q67PL8Z2F76D', hasVerify: true },
+    { id: 'redaccion_prof', icon: 'fa-pen-nib', url: '', hasVerify: false }
+  ];
+
+  const COURSES = [
+    { id: 'ibm_chatgpt', cats: 'ai ibm', url: 'https://coursera.org/verify/FI342XAGCNS4' },
+    { id: 'ibm_genai', cats: 'ai ibm', url: 'https://coursera.org/verify/2A7I70EKCD7R' },
+    { id: 'ibm_app_build', cats: 'ai ibm dev', url: 'https://coursera.org/verify/C0DP399RI4NM' },
+    { id: 'ibm_data_analysis', cats: 'data ibm', url: 'https://coursera.org/verify/R9SK2FKJ7GQ4' },
+    { id: 'ibm_writing', cats: 'ibm dev', url: 'https://coursera.org/verify/5STNRUO86G9J' },
+    { id: 'ibm_research', cats: 'ibm data', url: 'https://coursera.org/verify/HHHJ7TRP1KQ6' },
+    { id: 'ibm_content', cats: 'ai ibm', url: 'https://coursera.org/verify/HWKP0VBA543P' },
+    { id: 'ibm_brainstorming', cats: 'ai ibm', url: 'https://coursera.org/verify/W9020WKV88L7' },
+    { id: 'ibm_ai_fund', cats: 'ai ibm', url: 'https://coursera.org/verify/801MWINP6JEK' },
+    { id: 'coursera_scifi', cats: 'ai', url: 'https://coursera.org/verify/S1UM2KFEPGA1' },
+    { id: 'edc_ia_intermedio', cats: 'ai', url: '' },
+    { id: 'big_school_ia', cats: 'ai dev', url: '' },
+    { id: 'oa_data_science', cats: 'data', url: '' },
+    { id: 'oa_privacy', cats: 'data dev', url: '' },
+    { id: 'oa_gemini', cats: 'ai', url: '' },
+    { id: 'oa_google_marketing', cats: 'ai data', url: '' },
+    { id: 'ibm_skillsbuild', cats: 'ibm dev', url: '' },
+    { id: 'sololearn_java', cats: 'dev', url: '' },
+    { id: 'sololearn_html', cats: 'dev', url: '' }
   ];
 
   const EXPERIENCE = ['build_with_ai', 'apyo4all', 'ecoeye', 'bloodcare', 'siie', 'salones', 'edunova', 'cres'];
@@ -556,9 +593,57 @@
       </li>`).join('');
   }
 
+  function renderCertifications() {
+    const el = $('#certsGrid');
+    if (!el) return;
+    el.innerHTML = CERTIFICATIONS.map((c) => {
+      const verifyLink = c.url
+        ? `<a class="cert-verify" href="${c.url}" target="_blank" rel="noopener noreferrer"><span data-i18n="certifications.verify"></span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>`
+        : '';
+      return h`
+        <article class="cert-card spot reveal">
+          <div class="cert-header">
+            <div class="cert-issuer-badge">
+              <i class="fa-solid ${c.icon}" aria-hidden="true"></i>
+              <span data-i18n="certifications.items.${c.id}.issuer"></span>
+            </div>
+            <span class="cert-badge" data-i18n="certifications.items.${c.id}.badge"></span>
+          </div>
+          <h4 class="cert-title" data-i18n="certifications.items.${c.id}.title"></h4>
+          <p class="cert-desc" data-i18n="certifications.items.${c.id}.desc"></p>
+          <div class="cert-footer">
+            <span class="cert-id" data-i18n="certifications.items.${c.id}.id"></span>
+            ${verifyLink}
+          </div>
+        </article>`;
+    }).join('');
+  }
+
+  function renderCourses() {
+    const el = $('#coursesList');
+    if (!el) return;
+    el.innerHTML = COURSES.map((course) => {
+      const titleEl = course.url
+        ? `<a href="${course.url}" target="_blank" rel="noopener noreferrer"><span data-i18n="courses.items.${course.id}.title"></span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>`
+        : `<span data-i18n="courses.items.${course.id}.title"></span>`;
+      return h`
+        <li class="course-row reveal" data-cats="${course.cats}">
+          <span class="course-issuer" data-i18n="courses.items.${course.id}.issuer"></span>
+          <h4 class="course-title">${titleEl}</h4>
+          <span class="course-meta" data-i18n="courses.items.${course.id}.id"></span>
+        </li>`;
+    }).join('');
+    const total = $('#courseTotal');
+    if (total) total.textContent = String(COURSES.length);
+    const shown = $('#courseShown');
+    if (shown) shown.textContent = String(COURSES.length);
+  }
+
   renderMarquee();
   renderHonors();
   renderExperience();
+  renderCertifications();
+  renderCourses();
   renderProjects();
   renderLab();
   renderStack();

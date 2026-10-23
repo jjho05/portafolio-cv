@@ -98,7 +98,7 @@
   const header = $('#header');
   const bar = $('#progressBar');
   const links = $$('.nav-link');
-  const sections = ['about', 'career', 'projects', 'lab', 'stack', 'contact']
+  const sections = ['about', 'career', 'credentials', 'projects', 'lab', 'stack', 'contact']
     .map((id) => document.getElementById(id)).filter(Boolean);
 
   let ticking = false;
@@ -154,6 +154,27 @@
         if (show) n++;
       });
       if (shown) shown.textContent = String(n);
+    });
+  }
+
+  /* ---------- Filtros de cursos ---------- */
+  const courseFilterBar = $('#courseFilters');
+  const courseList = $('#coursesList');
+  const courseShown = $('#courseShown');
+  if (courseFilterBar && courseList) {
+    courseFilterBar.addEventListener('click', (e) => {
+      const btn = e.target.closest('.filter-btn');
+      if (!btn) return;
+      $$('.filter-btn', courseFilterBar).forEach((b) => b.classList.toggle('active', b === btn));
+      const f = btn.getAttribute('data-filter');
+      let n = 0;
+      $$('#coursesList > li').forEach((li) => {
+        const cats = (li.getAttribute('data-cats') || '').split(/\s+/);
+        const show = f === 'all' || cats.includes(f);
+        li.classList.toggle('is-hidden', !show);
+        if (show) n++;
+      });
+      if (courseShown) courseShown.textContent = String(n);
     });
   }
 

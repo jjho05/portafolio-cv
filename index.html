@@ -66,6 +66,7 @@
             <nav class="nav-menu" id="navMenu" aria-label="Principal">
                 <a href="#about" class="nav-link" data-i18n="nav.about">Perfil</a>
                 <a href="#career" class="nav-link" data-i18n="nav.experience">Trayectoria</a>
+                <a href="#credentials" class="nav-link" data-i18n="nav.credentials">Credenciales</a>
                 <a href="#projects" class="nav-link" data-i18n="nav.projects">Proyectos</a>
                 <a href="#lab" class="nav-link" data-i18n="nav.lab">Lab</a>
                 <a href="#stack" class="nav-link" data-i18n="nav.stack">Stack</a>
@@ -193,6 +194,33 @@
                         <p class="xp-desc" data-i18n="education.law.desc">Integración multidisciplinaria de marcos normativos, propiedad intelectual de software, auditoría de cumplimiento técnico (NOM / GDPR) y gobernanza de modelos de inteligencia artificial.</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- CREDENTIALS -->
+        <section class="section" id="credentials">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-label" data-i18n="credentials.label">ACREDITACIONES & LICENCIAS</p>
+                    <h2 class="section-title" data-i18n="credentials.title">Certificaciones & Formación Continua</h2>
+                    <p class="section-desc" data-i18n="credentials.desc"></p>
+                </header>
+
+                <h3 class="subhead" data-i18n="certifications.title">Certificaciones Oficiales de Industria</h3>
+                <div class="certs-grid" id="certsGrid"></div>
+
+                <h3 class="subhead" data-i18n="courses.title">Cursos, Diplomados & Especializaciones</h3>
+                <div class="filter-row">
+                    <div class="filter-bar" id="courseFilters" role="group" aria-label="Filtros de cursos">
+                        <button class="filter-btn active" data-filter="all" data-i18n="courses.filters.all">Todos (19)</button>
+                        <button class="filter-btn" data-filter="ai" data-i18n="courses.filters.ai">IA & LLMs</button>
+                        <button class="filter-btn" data-filter="ibm" data-i18n="courses.filters.ibm">IBM & Coursera</button>
+                        <button class="filter-btn" data-filter="data" data-i18n="courses.filters.data">Ciencia de Datos & Cloud</button>
+                        <button class="filter-btn" data-filter="dev" data-i18n="courses.filters.dev">Desarrollo de Software</button>
+                    </div>
+                    <p class="filter-count"><span data-i18n="courses.shown">mostrando</span> <b id="courseShown">19</b> / <span id="courseTotal">19</span></p>
+                </div>
+                <ul class="courses-list" id="coursesList"></ul>
             </div>
         </section>
 
