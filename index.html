@@ -6,972 +6,259 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jesús Olvera — Full-Stack & AI Systems Architect</title>
     <meta name="description"
-        content="Jesús Olvera — Software Architect, Full-Stack Developer & Data Science Specialist. High-performance systems, autonomous agentic workflows, deep learning, and scalable web/mobile architectures.">
+        content="Jesús Olvera — arquitecto de software y especialista en ciencia de datos. Sistemas de IA, flujos agénticos, deep learning y arquitecturas web/móviles. Ganador del Hackatón IEST Anáhuac 2026.">
     <meta name="author" content="Jesús Javier Hernández Olvera">
+    <meta name="theme-color" content="#07070a">
+    <link rel="canonical" href="https://jjho05.github.io/portafolio-cv/">
 
-    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Jesús Olvera — Full-Stack & AI Systems Architect">
-    <meta property="og:description"
-        content="Autonomous agentic systems, PyTorch deep learning, and high-performance software engineering.">
+    <meta property="og:description" content="Sistemas agénticos, deep learning en PyTorch e ingeniería de software de alto rendimiento.">
     <meta property="og:url" content="https://jjho05.github.io/portafolio-cv/">
+    <meta name="twitter:card" content="summary">
 
-    <!-- Anti-FOUC Theme Script -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jesús Javier Hernández Olvera",
+      "jobTitle": "Full-Stack & AI Systems Architect",
+      "url": "https://jjho05.github.io/portafolio-cv/",
+      "sameAs": ["https://github.com/jjho05"],
+      "alumniOf": "Instituto Tecnológico de Ciudad Madero"
+    }
+    </script>
+
+    <!-- Tema antes del primer pintado (evita parpadeo) -->
     <script>
         (function () {
-            const saved = localStorage.getItem('preferred-theme');
-            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const theme = (saved === 'dark' || saved === 'light') ? saved : (prefersDark ? 'dark' : 'light');
+            var saved = localStorage.getItem('preferred-theme');
+            var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            var theme = (saved === 'dark' || saved === 'light') ? saved : (prefersDark ? 'dark' : 'light');
+            document.documentElement.classList.add('js');
             document.documentElement.setAttribute('data-theme', theme);
             document.documentElement.style.colorScheme = theme;
         })();
     </script>
 
-    <!-- Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap"
         rel="stylesheet">
-
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
-    <!-- 3D WebGL Background Canvas -->
     <canvas id="gl" aria-hidden="true"></canvas>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="cursor" id="cursor" aria-hidden="true"></div>
+    <div class="progress" aria-hidden="true"><div class="progress-bar" id="progressBar"></div></div>
 
-    <!-- Top Progress Indicator -->
-    <div class="progress-container">
-        <div class="progress-bar" id="progressBar"></div>
-    </div>
-
-    <!-- Header Navigation -->
     <header class="header" id="header">
-        <div class="container">
-            <nav class="nav">
-                <a href="#home" class="brand">
-                    <span>Jesús Olvera</span>
-                    <span class="brand-badge">Architect</span>
-                </a>
+        <div class="container nav">
+            <a href="#home" class="brand" aria-label="Jesús Olvera — inicio">
+                <span class="brand-mark">JO</span>
+                <span class="brand-name">Jesús Olvera</span>
+            </a>
 
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="#about" class="nav-link" data-i18n="nav.about">Sobre Mí</a></li>
-                    <li><a href="#experience" class="nav-link" data-i18n="nav.experience">Trayectoria</a></li>
-                    <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Proyectos</a></li>
-                    <li><a href="#lab" class="nav-link" data-i18n="nav.lab">Laboratorio</a></li>
-                    <li><a href="#education" class="nav-link" data-i18n="nav.education">Educación</a></li>
-                    <li><a href="#distinctions" class="nav-link" data-i18n="nav.distinctions">Distinciones</a></li>
-                    <li><a href="#stack" class="nav-link" data-i18n="nav.stack">Tecnologías</a></li>
-                    <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contacto</a></li>
-                </ul>
-
-                <div class="nav-controls">
-                    <!-- Language Toggle -->
-                    <button class="control-btn" id="langToggle" onclick="window.toggleLanguage()" title="Cambiar idioma">
-                        <span id="langLabel">EN</span>
-                    </button>
-
-                    <!-- Theme Toggle -->
-                    <button class="control-btn" id="themeToggle" title="Tema: Sistema (Auto)">
-                        <i class="fas fa-circle-half-stroke"></i>
-                    </button>
-
-                    <!-- Audio FX Toggle -->
-                    <button class="control-btn" id="soundToggle" title="Audio FX: Desactivado">
-                        <i class="fas fa-volume-xmark"></i>
-                    </button>
-
-                    <!-- Mobile Menu Button -->
-                    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
+            <nav class="nav-menu" id="navMenu" aria-label="Principal">
+                <a href="#about" class="nav-link" data-i18n="nav.about">Perfil</a>
+                <a href="#career" class="nav-link" data-i18n="nav.experience">Trayectoria</a>
+                <a href="#projects" class="nav-link" data-i18n="nav.projects">Proyectos</a>
+                <a href="#lab" class="nav-link" data-i18n="nav.lab">Lab</a>
+                <a href="#stack" class="nav-link" data-i18n="nav.stack">Stack</a>
+                <a href="#contact" class="nav-link" data-i18n="nav.contact">Contacto</a>
             </nav>
+
+            <div class="nav-controls">
+                <button class="control-btn" id="langToggle" onclick="window.toggleLanguage()" aria-label="Cambiar idioma / Switch language">
+                    <span id="langLabel">EN</span>
+                </button>
+                <button class="control-btn" id="themeToggle" aria-label="Cambiar tema" title="Tema: Sistema">
+                    <i class="fas fa-circle-half-stroke"></i>
+                </button>
+                <button class="control-btn" id="soundToggle" aria-label="Efectos de audio" title="Audio FX: Desactivado">
+                    <i class="fas fa-volume-xmark"></i>
+                </button>
+                <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="status-pill">
-                <span class="status-dot"></span>
-                <span data-i18n="hero.status">Disponible para proyectos & roles técnicos</span>
-            </div>
-
-            <h1 class="hero-name">Jesús Olvera</h1>
-            <h2 class="hero-role" data-i18n="hero.role">Full-Stack & AI Systems Architect</h2>
-            <p class="hero-bio" data-i18n="hero.bio">
-                Arquitecto de Software y Especialista en Ciencia de Datos. Diseño sistemas de inteligencia artificial de alto rendimiento, flujos agénticos autónomos, deep learning y arquitecturas web/móviles escalables.
-            </p>
-
-            <div class="hero-actions">
-                <a href="#projects" class="btn btn-primary">
-                    <span data-i18n="hero.ctaProjects">Ver Proyectos</span>
-                    <i class="fas fa-arrow-down" style="font-size: 0.75rem;"></i>
-                </a>
-                <a href="https://github.com/jjho05" target="_blank" class="btn btn-secondary">
-                    <i class="fab fa-github"></i>
-                    <span>GitHub</span>
-                    <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.7rem; opacity: 0.6;"></i>
-                </a>
-                <a href="#contact" class="btn btn-secondary">
-                    <span data-i18n="hero.ctaContact">Contacto</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="section" id="about">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label" data-i18n="about.label">PERFIL PROFESIONAL</div>
-                <h2 class="section-title" data-i18n="about.title">Perfil de Ingeniería</h2>
-                <p class="section-desc" data-i18n="about.desc">
-                    Arquitecto de Software y Desarrollador Full-Stack especializado en orquestación de Inteligencia Artificial de vanguardia, sistemas agénticos autónomos (Google Antigravity SDK, Vercel AI SDK) y optimización algorítmica de alto rendimiento. Con probada experiencia en certámenes de innovación tecnológica de élite (Ganador Hackatón IEST 2026, Ganador Fase Local y Representante Regional HackaTec 2026), diseño soluciones escalables integrando modelos fundacionales (Gemini 3, Claude 3.5/3.7, Meta Llama 3), Deep Learning en PyTorch y visión artificial edge. Mi formación en Ciencia de Datos me permite transformar requerimientos complejos en arquitecturas seguras, eficientes y con experiencias de usuario de grado de producción.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trajectory / Professional Experience Section -->
-    <section class="section" id="experience" style="background: var(--bg-subtle);">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label" data-i18n="experience.label">TRAYECTORIA PROFESIONAL</div>
-                <h2 class="section-title" data-i18n="experience.title">Experiencia & Liderazgo Técnico</h2>
-                <p class="section-desc" data-i18n="experience.desc">
-                    Roles de arquitectura, dirección técnica y desarrollo en certámenes nacionales, plataformas institucionales e industria.
-                </p>
-            </div>
-
-            <div class="experience-list">
-                <!-- 1. Build with AI Google Tour -->
-                <div class="experience-item spotlight-card">
-                    <div class="experience-header">
-                        <h3 class="experience-title" data-i18n="experience.items.build_with_ai.title">Ecosistema Build with AI (Gira Oficial Google 2026)</h3>
-                        <span class="experience-period" data-i18n="experience.items.build_with_ai.period">2026</span>
-                    </div>
-                    <div class="experience-role" data-i18n="experience.items.build_with_ai.role">Lead Software Architect | Colaboración ITCM & Google</div>
-                    <p class="experience-desc" data-i18n="experience.items.build_with_ai.desc">
-                        Liderazgo en el diseño y despliegue de la plataforma oficial de registro y evaluación de propuestas para el evento organizado por el ITCM en colaboración directa con Google. Pipeline RAG serverless sobre Vercel KV (&lt;200ms) y módulos de acreditación masiva con credenciales QR dinámicas.
-                    </p>
+    <main class="page">
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <div class="container hero-inner">
+                <div class="status-pill reveal">
+                    <span class="status-dot"></span>
+                    <span data-i18n="hero.status">Disponible para proyectos & roles técnicos</span>
                 </div>
 
-                <!-- 2. Apyo4All -->
-                <div class="experience-item spotlight-card">
-                    <div class="experience-header">
-                        <h3 class="experience-title" data-i18n="experience.items.apyo4all.title">Apyo4All — Coordinación Humanitaria y Centros de Acopio</h3>
-                        <span class="experience-period" data-i18n="experience.items.apyo4all.period">2026</span>
-                    </div>
-                    <div class="experience-role" data-i18n="experience.items.apyo4all.role">Lead Full-Stack Architect | Ganador Hackatón IEST 2026</div>
-                    <p class="experience-desc" data-i18n="experience.items.apyo4all.desc">
-                        Diseño multiplataforma (Web React 19 + Desktop Electron) para gestión logística humanitaria ante desastres naturales. Motor reactivo de inventario con trazabilidad estricta en Supabase, balanceo entre sedes, cálculo de stock y generación automatizada de manifiestos oficiales en PDF y Excel con Leaflet.
-                    </p>
-                </div>
-
-                <!-- 3. EcoEye -->
-                <div class="experience-item spotlight-card">
-                    <div class="experience-header">
-                        <h3 class="experience-title" data-i18n="experience.items.ecoeye.title">EcoEye — Computación Ubicua e Inteligencia Asistencial</h3>
-                        <span class="experience-period" data-i18n="experience.items.ecoeye.period">2026</span>
-                    </div>
-                    <div class="experience-role" data-i18n="experience.items.ecoeye.role">Lead Edge AI & Ubiquitous Architect | Representante Regional HackaTec 2026</div>
-                    <p class="experience-desc" data-i18n="experience.items.ecoeye.desc">
-                        Arquitectura asistencial bajo la filosofía 'Edge Computing + Zero-Camera Indoors'. Detección pionera de caídas sin cámaras mediante análisis de perturbaciones de radiofrecuencia WiFi CSI (64 subportadoras OFDM, filtros Butterworth y PCA) y radar peatonal en tiempo real con TensorFlow.js (&lt;50ms).
-                    </p>
-                </div>
-
-                <!-- 4. BloodCare -->
-                <div class="experience-item spotlight-card">
-                    <div class="experience-header">
-                        <h3 class="experience-title" data-i18n="experience.items.bloodcare.title">BloodCare / GLUCOGEN — Deep Learning Biomédico (Diabetes Tipo 1)</h3>
-                        <span class="experience-period" data-i18n="experience.items.bloodcare.period">2026</span>
-                    </div>
-                    <div class="experience-role" data-i18n="experience.items.bloodcare.role">Machine Learning Engineer | Ganador Fase Local HackaTec 2026</div>
-                    <p class="experience-desc" data-i18n="experience.items.bloodcare.desc">
-                        Red neuronal profunda (Bi-LSTM apilado de 2 capas en PyTorch) para predicción continua de glucosa a 30 y 60 min sobre OhioT1DM. Modelado de incertidumbre médica mediante Quantile Regression con Pinball Loss e ingeniería de características temporales (splines cúbicos y derivadas).
-                    </p>
-                </div>
-
-                <!-- 5. SIIE -->
-                <div class="experience-item spotlight-card">
-                    <div class="experience-header">
-                        <h3 class="experience-title" data-i18n="experience.items.siie.title">S.I.I.E. — RegTech AI (Inspección Eléctrica NOM-001)</h3>
-                        <span class="experience-period" data-i18n="experience.items.siie.period">2025 — 2026</span>
-                    </div>
-                    <div class="experience-role" data-i18n="experience.items.siie.role">Full-Stack AI Developer | Entornos Industriales</div>
-                    <p class="experience-desc" data-i18n="experience.items.siie.desc">
-                        Sistema inteligente de auditoría técnica conforme a la NOM-001-SEDE-2012 para instalaciones de alta tensión. Modelos NLP con Transformers de Hugging Face para extracción técnica de planos, contenerizado en Docker on-premise, reduciendo el ciclo de dictamen de 5 días a horas.
-                    </p>
-                </div>
-
-                <!-- 6. Sistema Salones ISC -->
-                <div class="experience-item spotlight-card">
-                    <div class="experience-header">
-                        <h3 class="experience-title" data-i18n="experience.items.salones.title">Sistema de Salones ISC — Optimización NP-Completo</h3>
-                        <span class="experience-period" data-i18n="experience.items.salones.period">2025</span>
-                    </div>
-                    <div class="experience-role" data-i18n="experience.items.salones.role">Lead Algorithms & Optimization Engineer</div>
-                    <p class="experience-desc" data-i18n="experience.items.salones.desc">
-                        Resolución del problema de asignación de 680 sesiones semanales en 21 aulas (espacio de búsqueda 21^680 ≈ 10^900 combinaciones). Implementación de 4 motores: Heurístico, Greedy + Hill Climbing, Random Forest y Algoritmo Genético evolutivo con visualización 3D en PyVista.
-                    </p>
-                </div>
-
-                <!-- 7. EduNova AI -->
-                <div class="experience-item spotlight-card">
-                    <div class="experience-header">
-                        <h3 class="experience-title" data-i18n="experience.items.edunova.title">EduNova AI — Suite Educativa y Analítica Predictiva</h3>
-                        <span class="experience-period" data-i18n="experience.items.edunova.period">2025</span>
-                    </div>
-                    <div class="experience-role" data-i18n="experience.items.edunova.role">Full-Stack AI Engineer</div>
-                    <p class="experience-desc" data-i18n="experience.items.edunova.desc">
-                        Backend con 42 endpoints REST en FastAPI y cliente móvil en Flutter para digitalización de retículas académicas por OCR multimodal con Gemini Vision. Generación de módulos y analítica predictiva para detección temprana de estudiantes en riesgo académico.
-                    </p>
-                </div>
-
-                <!-- 8. CRES -->
-                <div class="experience-item spotlight-card">
-                    <div class="experience-header">
-                        <h3 class="experience-title" data-i18n="experience.items.cres.title">CRES — Plataforma Web Institucional & CMS</h3>
-                        <span class="experience-period" data-i18n="experience.items.cres.period">2024 — 2025</span>
-                    </div>
-                    <div class="experience-role" data-i18n="experience.items.cres.role">Lead Developer & UI/UX Designer</div>
-                    <p class="experience-desc" data-i18n="experience.items.cres.desc">
-                        Desarrollo integral de la plataforma web oficial para el Centro Regional de Estudios Superiores con Next.js 14, TypeScript y Tailwind CSS. CMS modular dinámico a medida y puntuación perfecta de 100/100 en auditorías Lighthouse (Performance, SEO, Accesibilidad).
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Distinctions & Awards -->
-    <section class="section" id="distinctions">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label" data-i18n="distinctions.label">RECONOCIMIENTOS</div>
-                <h2 class="section-title" data-i18n="distinctions.title">Premios & Hackathons</h2>
-                <p class="section-desc" data-i18n="distinctions.desc">
-                    Certámenes de innovación tecnológica, hackathons y distinciones académicas.
-                </p>
-            </div>
-
-            <div class="distinctions-list">
-                <!-- 1. IEST Hackathon Winner -->
-                <div class="distinction-item">
-                    <div>
-                        <span class="distinction-badge badge-gold" data-i18n="distinctions.items.iest.badge">Ganador</span>
-                    </div>
-                    <div class="distinction-info">
-                        <h4 data-i18n="distinctions.items.iest.title">Hackatón Universitario IEST Anáhuac 2026</h4>
-                        <p data-i18n="distinctions.items.iest.desc">Ganador con Apyo4All: sistema reactivo de coordinación humanitaria y centros de acopio.</p>
-                    </div>
-                    <div class="distinction-year" data-i18n="distinctions.items.iest.year">2026</div>
-                </div>
-
-                <!-- 2. HackaTec Regional Representative -->
-                <div class="distinction-item">
-                    <div>
-                        <span class="distinction-badge badge-blue" data-i18n="distinctions.items.regional.badge">Representante Regional</span>
-                    </div>
-                    <div class="distinction-info">
-                        <h4 data-i18n="distinctions.items.regional.title">HackaTec Regional 2026 (TecNM Región 2)</h4>
-                        <p data-i18n="distinctions.items.regional.desc">EcoEye: Computación ubicua asistencial y detección de caídas sin cámaras por WiFi CSI.</p>
-                    </div>
-                    <div class="distinction-year" data-i18n="distinctions.items.regional.year">2026</div>
-                </div>
-
-                <!-- 3. HackaTec Local Winner -->
-                <div class="distinction-item">
-                    <div>
-                        <span class="distinction-badge badge-green" data-i18n="distinctions.items.local.badge">Ganador Local</span>
-                    </div>
-                    <div class="distinction-info">
-                        <h4 data-i18n="distinctions.items.local.title">HackaTec Local ITCM 2026</h4>
-                        <p data-i18n="distinctions.items.local.desc">BloodCare / GLUCOGEN: Red neuronal profunda en PyTorch para predicción de glucosa con OhioT1DM.</p>
-                    </div>
-                    <div class="distinction-year" data-i18n="distinctions.items.local.year">2026</div>
-                </div>
-
-                <!-- 4. Feria ISC Winner -->
-                <div class="distinction-item">
-                    <div>
-                        <span class="distinction-badge badge-gold" data-i18n="distinctions.items.isc.badge">1er Lugar</span>
-                    </div>
-                    <div class="distinction-info">
-                        <h4 data-i18n="distinctions.items.isc.title">Feria de Proyectos ISC 2025</h4>
-                        <p data-i18n="distinctions.items.isc.desc">Primer lugar en la categoría de Software y Videojuegos por excelencia arquitectónica y algorítmica.</p>
-                    </div>
-                    <div class="distinction-year" data-i18n="distinctions.items.isc.year">2025</div>
-                </div>
-
-                <!-- 5. ExpoCiencias Finalist -->
-                <div class="distinction-item">
-                    <div>
-                        <span class="distinction-badge badge-blue" data-i18n="distinctions.items.expociencias.badge">Finalista Nacional</span>
-                    </div>
-                    <div class="distinction-info">
-                        <h4 data-i18n="distinctions.items.expociencias.title">ExpoCiencias Nacional 2025</h4>
-                        <p data-i18n="distinctions.items.expociencias.desc">Presentación y defensa de proyectos de investigación científica en inteligencia artificial aplicada.</p>
-                    </div>
-                    <div class="distinction-year" data-i18n="distinctions.items.expociencias.year">2025</div>
-                </div>
-
-                <!-- 6. Distinguished Student ITCM -->
-                <div class="distinction-item">
-                    <div>
-                        <span class="distinction-badge badge-green" data-i18n="distinctions.items.student.badge">Distinción Académica</span>
-                    </div>
-                    <div class="distinction-info">
-                        <h4 data-i18n="distinctions.items.student.title">Alumno Destacado ITCM</h4>
-                        <p data-i18n="distinctions.items.student.desc">Reconocimiento institucional por alto desempeño académico, liderazgo técnico y representación.</p>
-                    </div>
-                    <div class="distinction-year" data-i18n="distinctions.items.student.year">2024 — 2026</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Complete Projects Portfolio Section -->
-    <section class="section" id="projects">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label" data-i18n="projects.label">INGENIERÍA & SISTEMAS</div>
-                <h2 class="section-title" data-i18n="projects.title">Catálogo Completo de Proyectos</h2>
-                <p class="section-desc" data-i18n="projects.desc">
-                    Sistemas de grado de producción, modelos de aprendizaje profundo y arquitecturas desplegadas.
-                </p>
-            </div>
-
-            <!-- Project Category Filter Bar -->
-            <div class="filter-bar" id="projectFilters">
-                <button class="filter-btn active" data-filter="all" data-i18n="projects.filters.all">Todos</button>
-                <button class="filter-btn" data-filter="ai" data-i18n="projects.filters.ai">IA & Agentes</button>
-                <button class="filter-btn" data-filter="deeplearning" data-i18n="projects.filters.deeplearning">Deep Learning & Salud</button>
-                <button class="filter-btn" data-filter="fullstack" data-i18n="projects.filters.fullstack">Full-Stack & Sistemas</button>
-                <button class="filter-btn" data-filter="hackathon" data-i18n="projects.filters.hackathon">Hackathons</button>
-            </div>
-
-            <div class="projects-grid" id="projectsGrid">
-                <!-- 1. Apyo4All -->
-                <a href="https://github.com/jjho05/Apyo4all" target="_blank" class="project-card spotlight-card" data-category="fullstack hackathon">
-                    <div>
-                        <div class="project-top">
-                            <span class="project-pill" data-i18n="projects.items.apyo4all.pill">Ganador Hackatón · Full-Stack</span>
-                            <span class="project-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
-                        </div>
-                        <h3 class="project-title" data-i18n="projects.items.apyo4all.title">Apyo4All</h3>
-                        <div class="project-role" data-i18n="projects.items.apyo4all.role">Lead Full-Stack Architect</div>
-                        <p class="project-desc" data-i18n="projects.items.apyo4all.desc">
-                            Plataforma multiplataforma (Web & Electron) para la logística humanitaria y balance reactivo de inventarios entre centros de acopio ante desastres naturales con Supabase y Leaflet.
-                        </p>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">React 19</span>
-                        <span class="tag">TypeScript</span>
-                        <span class="tag">Supabase</span>
-                        <span class="tag">Electron</span>
-                        <span class="tag">Leaflet</span>
-                        <span class="tag">jsPDF</span>
-                    </div>
-                </a>
-
-                <!-- 2. EcoEye -->
-                <a href="https://github.com/jjho05/EcoEye" target="_blank" class="project-card spotlight-card" data-category="deeplearning hackathon ai">
-                    <div>
-                        <div class="project-top">
-                            <span class="project-pill" data-i18n="projects.items.ecoeye.pill">Edge AI · Computación Ubicua</span>
-                            <span class="project-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
-                        </div>
-                        <h3 class="project-title" data-i18n="projects.items.ecoeye.title">EcoEye</h3>
-                        <div class="project-role" data-i18n="projects.items.ecoeye.role">Lead Edge AI Architect</div>
-                        <p class="project-desc" data-i18n="projects.items.ecoeye.desc">
-                            Ecosistema asistencial sin cámaras: detección de caídas analizando radiofrecuencia WiFi CSI (64 subportadoras OFDM) y radar peatonal con TensorFlow.js (&lt;50ms).
-                        </p>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">TensorFlow.js</span>
-                        <span class="tag">Gemini Multimodal</span>
-                        <span class="tag">WiFi CSI</span>
-                        <span class="tag">Butterworth / PCA</span>
-                        <span class="tag">Offline-First</span>
-                    </div>
-                </a>
-
-                <!-- 3. BloodCare -->
-                <a href="https://github.com/jjho05/BloodCare" target="_blank" class="project-card spotlight-card" data-category="deeplearning hackathon">
-                    <div>
-                        <div class="project-top">
-                            <span class="project-pill" data-i18n="projects.items.bloodcare.pill">Deep Learning · Salud</span>
-                            <span class="project-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
-                        </div>
-                        <h3 class="project-title" data-i18n="projects.items.bloodcare.title">BloodCare / GLUCOGEN</h3>
-                        <div class="project-role" data-i18n="projects.items.bloodcare.role">Machine Learning Engineer</div>
-                        <p class="project-desc" data-i18n="projects.items.bloodcare.desc">
-                            Red neuronal profunda (Bi-LSTM en PyTorch con Pinball Loss) para predicción continua de glucosa e intervalos de confianza médica sobre el dataset OhioT1DM.
-                        </p>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">PyTorch</span>
-                        <span class="tag">Bi-LSTM</span>
-                        <span class="tag">Pinball Loss</span>
-                        <span class="tag">OhioT1DM</span>
-                    </div>
-                </a>
-
-                <!-- 4. Olvera AI Suite -->
-                <a href="https://github.com/jjho05/olvera-ai-suite" target="_blank" class="project-card spotlight-card" data-category="ai fullstack">
-                    <div>
-                        <div class="project-top">
-                            <span class="project-pill" data-i18n="projects.items.olvera_ai_suite.pill">AI Platform · Producción</span>
-                            <span class="project-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
-                        </div>
-                        <h3 class="project-title" data-i18n="projects.items.olvera_ai_suite.title">Olvera AI Suite</h3>
-                        <div class="project-role" data-i18n="projects.items.olvera_ai_suite.role">Lead AI Architect</div>
-                        <p class="project-desc" data-i18n="projects.items.olvera_ai_suite.desc">
-                            Dashboard premium con Next.js y Vercel AI SDK, streaming unificado de LLMs vía OpenRouter, transcripción de voz con Groq Whisper y Studio Mode v2 para contextos multi-archivo.
-                        </p>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">Next.js 14</span>
-                        <span class="tag">Vercel AI SDK</span>
-                        <span class="tag">OpenRouter</span>
-                        <span class="tag">Groq Whisper</span>
-                        <span class="tag">shadcn/ui</span>
-                    </div>
-                </a>
-
-                <!-- 5. Build with AI ITCM -->
-                <a href="https://github.com/jjho05/build-with-ai-itcm" target="_blank" class="project-card spotlight-card" data-category="ai fullstack">
-                    <div>
-                        <div class="project-top">
-                            <span class="project-pill" data-i18n="projects.items.build_with_ai.pill">Google Tour 2026 · Edge RAG</span>
-                            <span class="project-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
-                        </div>
-                        <h3 class="project-title" data-i18n="projects.items.build_with_ai.title">Build with AI ITCM</h3>
-                        <div class="project-role" data-i18n="projects.items.build_with_ai.role">Lead Software Architect</div>
-                        <p class="project-desc" data-i18n="projects.items.build_with_ai.desc">
-                            Plataforma oficial con pipeline RAG serverless sobre Vercel KV (&lt;200ms) para evaluación en tiempo real de cientos de propuestas y generación masiva de credenciales QR.
-                        </p>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">Next.js 14</span>
-                        <span class="tag">Gemini API</span>
-                        <span class="tag">Vercel KV</span>
-                        <span class="tag">RAG Pipeline</span>
-                        <span class="tag">Serverless</span>
-                    </div>
-                </a>
-
-                <!-- 6. SIIE NOM-001 -->
-                <a href="https://github.com/jjho05/Sistema-Inteligente-Inspeccion-Electrica-Ejecutable" target="_blank" class="project-card spotlight-card" data-category="ai fullstack">
-                    <div>
-                        <div class="project-top">
-                            <span class="project-pill" data-i18n="projects.items.siie.pill">RegTech · NLP Industrial</span>
-                            <span class="project-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
-                        </div>
-                        <h3 class="project-title" data-i18n="projects.items.siie.title">S.I.I.E. (NOM-001)</h3>
-                        <div class="project-role" data-i18n="projects.items.siie.role">Full-Stack AI Developer</div>
-                        <p class="project-desc" data-i18n="projects.items.siie.desc">
-                            Auditoría eléctrica industrial conforme a la NOM-001-SEDE-2012 mediante Transformers de Hugging Face y Docker on-premise, reduciendo tiempos de dictamen de 5 días a horas.
-                        </p>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Docker</span>
-                        <span class="tag">Hugging Face</span>
-                        <span class="tag">FastAPI</span>
-                        <span class="tag">PostgreSQL</span>
-                    </div>
-                </a>
-
-                <!-- 7. Sistema Salones ISC -->
-                <a href="https://github.com/jjho05/Sistema-Salones-ISC" target="_blank" class="project-card spotlight-card" data-category="fullstack ai">
-                    <div>
-                        <div class="project-top">
-                            <span class="project-pill" data-i18n="projects.items.salones.pill">Optimización NP-Completo</span>
-                            <span class="project-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
-                        </div>
-                        <h3 class="project-title" data-i18n="projects.items.salones.title">Sistema de Salones ISC</h3>
-                        <div class="project-role" data-i18n="projects.items.salones.role">Algorithms Engineer</div>
-                        <p class="project-desc" data-i18n="projects.items.salones.desc">
-                            Resolvedor multi-algoritmo (Genético, Random Forest, Hill Climbing) para 680 clases semanales en 21 aulas (21^680 combinaciones) con visualización 3D en PyVista.
-                        </p>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">Genetic Algorithms</span>
-                        <span class="tag">Random Forest</span>
-                        <span class="tag">PyVista 3D</span>
-                        <span class="tag">Hill Climbing</span>
-                    </div>
-                </a>
-
-                <!-- 8. EduNova AI -->
-                <a href="https://github.com/jjho05/EduNova_AI" target="_blank" class="project-card spotlight-card" data-category="fullstack ai">
-                    <div>
-                        <div class="project-top">
-                            <span class="project-pill" data-i18n="projects.items.edunova.pill">EdTech · Multiplataforma</span>
-                            <span class="project-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
-                        </div>
-                        <h3 class="project-title" data-i18n="projects.items.edunova.title">EduNova AI</h3>
-                        <div class="project-role" data-i18n="projects.items.edunova.role">Full-Stack AI Engineer</div>
-                        <p class="project-desc" data-i18n="projects.items.edunova.desc">
-                            Suite educativa con backend FastAPI (42 endpoints) y app Flutter. Digitalización de retículas académicas por OCR multimodal con Gemini Vision y analítica de riesgo estudiantil.
-                        </p>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">Flutter 3.x</span>
-                        <span class="tag">FastAPI</span>
-                        <span class="tag">MySQL</span>
-                        <span class="tag">Gemini Vision</span>
-                        <span class="tag">OCR</span>
-                    </div>
-                </a>
-
-                <!-- 9. DistilRoBERTa Sephora -->
-                <a href="https://github.com/jjho05/distilroberta-sephora-analytics" target="_blank" class="project-card spotlight-card" data-category="ai deeplearning">
-                    <div>
-                        <div class="project-top">
-                            <span class="project-pill" data-i18n="projects.items.sephora.pill">Transformers · Data Science</span>
-                            <span class="project-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
-                        </div>
-                        <h3 class="project-title" data-i18n="projects.items.sephora.title">DistilRoBERTa Analytics</h3>
-                        <div class="project-role" data-i18n="projects.items.sephora.role">Data Scientist</div>
-                        <p class="project-desc" data-i18n="projects.items.sephora.desc">
-                            Fine-tuning de DistilRoBERTa sobre +340,000 reseñas para clasificar 7 emociones humanas finas, desplegado en contenedor Docker vinculado a Shiny y Power BI.
-                        </p>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">DistilRoBERTa</span>
-                        <span class="tag">Docker</span>
-                        <span class="tag">Shiny Python</span>
-                        <span class="tag">Power BI</span>
-                        <span class="tag">NLP</span>
-                    </div>
-                </a>
-
-                <!-- 10. CRES Institutional -->
-                <a href="https://github.com/jjho05/CRES" target="_blank" class="project-card spotlight-card" data-category="fullstack">
-                    <div>
-                        <div class="project-top">
-                            <span class="project-pill" data-i18n="projects.items.cres.pill">Web Production · CMS</span>
-                            <span class="project-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
-                        </div>
-                        <h3 class="project-title" data-i18n="projects.items.cres.title">CRES Institutional</h3>
-                        <div class="project-role" data-i18n="projects.items.cres.role">Lead Developer & UI/UX</div>
-                        <p class="project-desc" data-i18n="projects.items.cres.desc">
-                            Plataforma web oficial para el Centro Regional de Estudios Superiores con Next.js 14, CMS modular dinámico a medida y 100/100 en todas las auditorías Lighthouse.
-                        </p>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">Next.js 14</span>
-                        <span class="tag">TypeScript</span>
-                        <span class="tag">Tailwind</span>
-                        <span class="tag">Custom CMS</span>
-                        <span class="tag">Lighthouse 100</span>
-                    </div>
-                </a>
-
-                <!-- 11. Meta Llama Labs -->
-                <a href="https://github.com/jjho05/meta-llama-engineering-labs" target="_blank" class="project-card spotlight-card" data-category="ai">
-                    <div>
-                        <div class="project-top">
-                            <span class="project-pill" data-i18n="projects.items.llama.pill">Model Router · LLMs</span>
-                            <span class="project-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
-                        </div>
-                        <h3 class="project-title" data-i18n="projects.items.llama.title">Meta Llama Labs</h3>
-                        <div class="project-role" data-i18n="projects.items.llama.role">NLP & Benchmarking Engineer</div>
-                        <p class="project-desc" data-i18n="projects.items.llama.desc">
-                            Pipelines de ingeniería con Meta Llama 3, desarrollo de Model Router inteligente para costo/calidad y benchmarking automatizado en Jupyter Notebooks.
-                        </p>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">Meta Llama 3</span>
-                        <span class="tag">Model Router</span>
-                        <span class="tag">Benchmarking</span>
-                        <span class="tag">Jupyter</span>
-                    </div>
-                </a>
-
-                <!-- 12. Olvera AI (Shiny Python) -->
-                <a href="https://github.com/jjho05/olvera-ai-shiny" target="_blank" class="project-card spotlight-card" data-category="ai fullstack">
-                    <div>
-                        <div class="project-top">
-                            <span class="project-pill" data-i18n="projects.items.olvera_ai_shiny.pill">Python AI · Web Search</span>
-                            <span class="project-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
-                        </div>
-                        <h3 class="project-title" data-i18n="projects.items.olvera_ai_shiny.title">Olvera AI (Shiny Python)</h3>
-                        <div class="project-role" data-i18n="projects.items.olvera_ai_shiny.role">Backend & AI Developer</div>
-                        <p class="project-desc" data-i18n="projects.items.olvera_ai_shiny.desc">
-                            Interfaz reactiva en Shiny for Python con LiteLLM (OpenRouter, Groq, Cerebras), búsqueda web en tiempo real con Tavily API y galería interactiva con zoom en JS.
-                        </p>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">Python (Shiny)</span>
-                        <span class="tag">LiteLLM</span>
-                        <span class="tag">Tavily API</span>
-                        <span class="tag">Groq / Cerebras</span>
-                    </div>
-                </a>
-
-                <!-- 13. AURA APP -->
-                <a href="https://github.com/jjho05/AURA-APP" target="_blank" class="project-card spotlight-card" data-category="ai">
-                    <div>
-                        <div class="project-top">
-                            <span class="project-pill" data-i18n="projects.items.aura_app.pill">Empatía Artificial · Voz</span>
-                            <span class="project-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
-                        </div>
-                        <h3 class="project-title" data-i18n="projects.items.aura_app.title">AURA APP</h3>
-                        <div class="project-role" data-i18n="projects.items.aura_app.role">Full-Stack Developer</div>
-                        <p class="project-desc" data-i18n="projects.items.aura_app.desc">
-                            Asistente de bienestar emocional con interfaz en CustomTkinter, motor conversacional con Gemini API y síntesis de voz natural ultra-rápida mediante ElevenLabs SDK.
-                        </p>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">CustomTkinter</span>
-                        <span class="tag">Gemini API</span>
-                        <span class="tag">ElevenLabs</span>
-                    </div>
-                </a>
-
-                <!-- 14. Olvera Food AI -->
-                <a href="https://github.com/jjho05/olvera-food-bot" target="_blank" class="project-card spotlight-card" data-category="ai">
-                    <div>
-                        <div class="project-top">
-                            <span class="project-pill" data-i18n="projects.items.olvera_food_ai.pill">Especializado · Gastronomía</span>
-                            <span class="project-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
-                        </div>
-                        <h3 class="project-title" data-i18n="projects.items.olvera_food_ai.title">Olvera Food AI</h3>
-                        <div class="project-role" data-i18n="projects.items.olvera_food_ai.role">Backend Developer</div>
-                        <p class="project-desc" data-i18n="projects.items.olvera_food_ai.desc">
-                            Asistente inteligente especializado en investigación culinaria, balance nutricional y sustitución de ingredientes con Shiny for Python y Tavily.
-                        </p>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">Python (Shiny)</span>
-                        <span class="tag">Prompt Engineering</span>
-                        <span class="tag">Tavily API</span>
-                        <span class="tag">LiteLLM</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Interactive Lab & Simulators Section -->
-    <section class="section" id="lab" style="background: var(--bg-subtle);">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label" data-i18n="lab.label">INVESTIGACIÓN, 3D & GRÁFICOS</div>
-                <h2 class="section-title" data-i18n="lab.title">Laboratorio Interactivo & Simuladores</h2>
-                <p class="section-desc" data-i18n="lab.desc">
-                    Motores gráficos, simuladores matemáticos y recreaciones interactivas ejecutables.
-                </p>
-            </div>
-
-            <div class="lab-grid">
-                <!-- Lab Fourier -->
-                <div class="lab-card spotlight-card">
-                    <div>
-                        <div class="lab-icon"><i class="fas fa-wave-square"></i></div>
-                        <h3 class="lab-title" data-i18n="lab.items.fourier.title">Lab Fourier</h3>
-                        <p class="lab-desc" data-i18n="lab.items.fourier.desc">
-                            Simulador interactivo para descomposición armónica, síntesis de señales de Fourier y osciloscopio en tiempo real con WebGL y Canvas.
-                        </p>
-                    </div>
-                    <div class="lab-actions">
-                        <a href="https://github.com/jjho05" target="_blank" class="btn btn-secondary btn-xs">
-                            <i class="fab fa-github"></i> <span data-i18n="lab.codeLink">Código</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- BRAINY2 & VEXEL -->
-                <div class="lab-card spotlight-card">
-                    <div>
-                        <div class="lab-icon"><i class="fas fa-cubes"></i></div>
-                        <h3 class="lab-title" data-i18n="lab.items.vexel.title">VEXEL & BRAINY2</h3>
-                        <p class="lab-desc" data-i18n="lab.items.vexel.desc">
-                            Laboratorios de física y álgebra dimensional 3D con PyVista y Gemini AI: generación y renderizado dinámico guiado por lenguaje natural.
-                        </p>
-                    </div>
-                    <div class="lab-actions">
-                        <a href="https://github.com/jjho05/BRAINY2" target="_blank" class="btn btn-secondary btn-xs">
-                            <i class="fab fa-github"></i> <span data-i18n="lab.codeLink">Código</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Block Builder 3D -->
-                <div class="lab-card spotlight-card">
-                    <div>
-                        <div class="lab-icon"><i class="fas fa-cube"></i></div>
-                        <h3 class="lab-title" data-i18n="lab.items.blockbuilder.title">Block Builder (Three.js)</h3>
-                        <p class="lab-desc" data-i18n="lab.items.blockbuilder.desc">
-                            Constructor 3D interactivo en el navegador estilo voxel: colocación dinámica de geometría, físicas de colisión y shaders personalizados.
-                        </p>
-                    </div>
-                    <div class="lab-actions">
-                        <a href="https://jjho05.github.io/BLOCK-BUILDER/app.html" target="_blank" class="btn btn-primary btn-xs">
-                            <i class="fas fa-play"></i> <span data-i18n="lab.runLink">Abrir</span>
-                        </a>
-                        <a href="https://github.com/jjho05/BLOCK-BUILDER" target="_blank" class="btn btn-secondary btn-xs">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Esfera 3D Neon Runner -->
-                <div class="lab-card spotlight-card">
-                    <div>
-                        <div class="lab-icon"><i class="fas fa-circle-notch"></i></div>
-                        <h3 class="lab-title" data-i18n="lab.items.neon.title">Neon Runner 3D</h3>
-                        <p class="lab-desc" data-i18n="lab.items.neon.desc">
-                            Simulador interactivo en túnel infinito con WebGL y Three.js, demostrando iluminación reactiva y cálculo espacial de aceleraciones.
-                        </p>
-                    </div>
-                    <div class="lab-actions">
-                        <a href="https://jjho05.github.io/ESFERA-3D/app.html" target="_blank" class="btn btn-primary btn-xs">
-                            <i class="fas fa-play"></i> <span data-i18n="lab.runLink">Abrir</span>
-                        </a>
-                        <a href="https://github.com/jjho05/ESFERA-3D" target="_blank" class="btn btn-secondary btn-xs">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Windows 95 Simulation -->
-                <div class="lab-card spotlight-card">
-                    <div>
-                        <div class="lab-icon"><i class="fab fa-windows"></i></div>
-                        <h3 class="lab-title" data-i18n="lab.items.win95.title">Windows 95 Web OS</h3>
-                        <p class="lab-desc" data-i18n="lab.items.win95.desc">
-                            Recreación fiel del gestor de ventanas, sistema de archivos simulado y aplicaciones ejecutables utilizando JavaScript puro sin dependencias.
-                        </p>
-                    </div>
-                    <div class="lab-actions">
-                        <a href="https://jjho05.github.io/WINDOWS-95/" target="_blank" class="btn btn-primary btn-xs">
-                            <i class="fas fa-play"></i> <span data-i18n="lab.runLink">Abrir</span>
-                        </a>
-                        <a href="https://github.com/jjho05/WINDOWS-95" target="_blank" class="btn btn-secondary btn-xs">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Tetris Python -->
-                <div class="lab-card spotlight-card">
-                    <div>
-                        <div class="lab-icon"><i class="fas fa-gamepad"></i></div>
-                        <h3 class="lab-title" data-i18n="lab.items.tetris.title">Tetris Engine (Python)</h3>
-                        <p class="lab-desc" data-i18n="lab.items.tetris.desc">
-                            Implementación del sistema clásico de tetrominós con rotación Super Rotation System (SRS), matrices lógicas y loop con Pygame.
-                        </p>
-                    </div>
-                    <div class="lab-actions">
-                        <a href="https://github.com/jjho05/TETRIS" target="_blank" class="btn btn-secondary btn-xs">
-                            <i class="fab fa-github"></i> <span data-i18n="lab.codeLink">Código</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section class="section" id="education">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label" data-i18n="education.label">FORMACIÓN ACADÉMICA</div>
-                <h2 class="section-title" data-i18n="education.title">Educación Superior</h2>
-                <p class="section-desc" data-i18n="education.desc">
-                    Fundamentos teóricos, matemáticas discretas y especialización en Ciencia de Datos.
-                </p>
-            </div>
-
-            <div class="education-card spotlight-card">
-                <div class="education-header">
-                    <div>
-                        <h3 class="education-degree" data-i18n="education.degree">Ingeniería en Sistemas Computacionales</h3>
-                        <div class="education-specialty" data-i18n="education.specialty">Especialidad: Aplicaciones en Ciencia de Datos</div>
-                        <div class="education-school" data-i18n="education.institution">Instituto Tecnológico de Ciudad Madero (ITCM)</div>
-                    </div>
-                    <div class="education-period" data-i18n="education.period">2023 – Presente</div>
-                </div>
-                <div class="education-courses" data-i18n="education.courses">
-                    Áreas de Dominio: Inteligencia Artificial, Ciencia de Datos, Algoritmos Avanzados, Deep Learning, Arquitectura de Software, Computación Distribuida y Bases de Datos Relacionales/NoSQL.
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technical Stack Section -->
-    <section class="section" id="stack" style="background: var(--bg-subtle);">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label" data-i18n="stack.label">CAPACIDADES TÉCNICAS</div>
-                <h2 class="section-title" data-i18n="stack.title">Arsenal de Ingeniería</h2>
-                <p class="section-desc" data-i18n="stack.desc">
-                    Herramientas y tecnologías seleccionadas para entornos de producción de alta demanda.
-                </p>
-            </div>
-
-            <div class="stack-grid">
-                <!-- 1. AI & Agentic Systems -->
-                <div class="stack-card spotlight-card">
-                    <h3><i class="fas fa-brain" style="color: var(--accent);"></i> <span data-i18n="stack.items.ai.title">IA & Sistemas Agénticos</span></h3>
-                    <p data-i18n="stack.items.ai.desc">Orquestación de flujos de trabajo autónomos, pipelines RAG empresariales y consumo de modelos fundacionales de última generación.</p>
-                    <div class="stack-chips">
-                        <span class="tag">Google Antigravity SDK</span>
-                        <span class="tag">Gemini 3.x</span>
-                        <span class="tag">Claude 3.7 Sonnet</span>
-                        <span class="tag">Meta Llama 3</span>
-                        <span class="tag">Vercel AI SDK</span>
-                        <span class="tag">LiteLLM</span>
-                        <span class="tag">Vector Embeddings</span>
-                    </div>
-                </div>
-
-                <!-- 2. Full-Stack & Mobile -->
-                <div class="stack-card spotlight-card">
-                    <h3><i class="fas fa-layer-group" style="color: #8b5cf6;"></i> <span data-i18n="stack.items.fullstack.title">Full-Stack & Móvil</span></h3>
-                    <p data-i18n="stack.items.fullstack.desc">Desarrollo web y móvil de alto rendimiento con arquitecturas serverless, tipado estricto y renderizado reactivo ultra-rápido.</p>
-                    <div class="stack-chips">
-                        <span class="tag">Next.js 14/15</span>
-                        <span class="tag">React 19</span>
-                        <span class="tag">TypeScript</span>
-                        <span class="tag">FastAPI</span>
-                        <span class="tag">Flutter 3.x</span>
-                        <span class="tag">Electron</span>
-                        <span class="tag">Tailwind CSS</span>
-                    </div>
-                </div>
-
-                <!-- 3. Deep Learning & Data -->
-                <div class="stack-card spotlight-card">
-                    <h3><i class="fas fa-dna" style="color: #ec4899;"></i> <span data-i18n="stack.items.dl.title">Deep Learning & Datos</span></h3>
-                    <p data-i18n="stack.items.dl.desc">Modelado matemático y estadístico para predicción de series temporales continuas y procesamiento de lenguaje natural.</p>
-                    <div class="stack-chips">
-                        <span class="tag">PyTorch</span>
-                        <span class="tag">Bi-LSTM</span>
-                        <span class="tag">Quantile Pinball Loss</span>
-                        <span class="tag">Transformers</span>
-                        <span class="tag">Pandas / NumPy</span>
-                        <span class="tag">Scikit-learn</span>
-                        <span class="tag">Power BI</span>
-                    </div>
-                </div>
-
-                <!-- 4. Infrastructure & DevOps -->
-                <div class="stack-card spotlight-card">
-                    <h3><i class="fas fa-server" style="color: #10b981;"></i> <span data-i18n="stack.items.cloud.title">Infraestructura & Cloud</span></h3>
-                    <p data-i18n="stack.items.cloud.desc">Despliegues contenerizados para plantas industriales y nubes serverless con alta disponibilidad y persistencia en memoria.</p>
-                    <div class="stack-chips">
-                        <span class="tag">Docker</span>
-                        <span class="tag">Supabase</span>
-                        <span class="tag">PostgreSQL</span>
-                        <span class="tag">Redis</span>
-                        <span class="tag">Vercel Edge</span>
-                        <span class="tag">GitHub Actions CI/CD</span>
-                        <span class="tag">Linux</span>
-                    </div>
-                </div>
-
-                <!-- 5. Edge AI & Telemetry -->
-                <div class="stack-card spotlight-card">
-                    <h3><i class="fas fa-wifi" style="color: #f59e0b;"></i> <span data-i18n="stack.items.edge.title">Edge AI & Computación Ubicua</span></h3>
-                    <p data-i18n="stack.items.edge.desc">Procesamiento en dispositivo con inferencia visual en tiempo real y telemetría de radiofrecuencia no invasiva.</p>
-                    <div class="stack-chips">
-                        <span class="tag">TensorFlow.js (&lt;50ms)</span>
-                        <span class="tag">WiFi CSI (OFDM)</span>
-                        <span class="tag">Filtros Butterworth</span>
-                        <span class="tag">PCA</span>
-                        <span class="tag">Three.js / WebGL</span>
-                        <span class="tag">Canvas API</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section" id="contact">
-        <div class="container">
-            <div class="contact-box">
-                <div class="section-label" data-i18n="contact.label">CONTACTO</div>
-                <h3 data-i18n="contact.title">¿Iniciamos una conversación técnica?</h3>
-                <p data-i18n="contact.desc">
-                    Disponible para roles de ingeniería de software, arquitectura de IA y colaboraciones de alto impacto.
+                <h1 class="hero-name" id="heroName" aria-label="Jesús Olvera">Jesús Olvera</h1>
+                <h2 class="hero-role reveal">Full-Stack &amp; <em>AI Systems</em> Architect</h2>
+                <p class="hero-bio reveal" data-i18n="hero.bio">
+                    Arquitecto de Software y Especialista en Ciencia de Datos. Diseño sistemas de inteligencia artificial de alto rendimiento, flujos agénticos autónomos, deep learning y arquitecturas web/móviles escalables.
                 </p>
 
-                <div class="contact-links">
+                <div class="hero-actions reveal">
+                    <a href="#projects" class="btn btn-primary">
+                        <span data-i18n="hero.ctaProjects">Ver Proyectos</span>
+                        <i class="fas fa-arrow-down" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://github.com/jjho05" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="#contact" class="btn btn-ghost">
+                        <span data-i18n="hero.ctaContact">Contacto</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="container">
+                <dl class="stats reveal">
+                    <div class="stat"><dt class="stat-n"><span data-count="3">3</span></dt><dd data-i18n="hero.stats.hackathons">Hackatones 2026</dd></div>
+                    <div class="stat"><dt class="stat-n"><span data-count="14">14</span></dt><dd data-i18n="hero.stats.projects">Proyectos</dd></div>
+                    <div class="stat"><dt class="stat-n">&lt;50<small>ms</small></dt><dd data-i18n="hero.stats.latency">Inferencia en edge</dd></div>
+                    <div class="stat"><dt class="stat-n">10<sup>900</sup></dt><dd data-i18n="hero.stats.search">Combinaciones exploradas</dd></div>
+                </dl>
+            </div>
+        </section>
+
+        <div class="marquee" aria-hidden="true"><div class="marquee-track" id="marqueeTrack"></div></div>
+
+        <!-- ABOUT -->
+        <section class="section" id="about">
+            <div class="container split">
+                <header class="section-header sticky">
+                    <p class="section-label" data-i18n="about.label">PERFIL PROFESIONAL</p>
+                    <h2 class="section-title" data-i18n="about.title">Perfil de Ingeniería</h2>
+                </header>
+                <p class="statement reveal" data-i18n="about.desc">
+                    Arquitecto de Software y Desarrollador Full-Stack especializado en orquestación de Inteligencia Artificial de vanguardia, sistemas agénticos autónomos y optimización algorítmica de alto rendimiento.
+                </p>
+            </div>
+        </section>
+
+        <!-- CAREER -->
+        <section class="section" id="career">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-label" data-i18n="experience.label">TRAYECTORIA PROFESIONAL</p>
+                    <h2 class="section-title" data-i18n="experience.title">Experiencia & Liderazgo Técnico</h2>
+                    <p class="section-desc" data-i18n="experience.desc"></p>
+                </header>
+
+                <h3 class="subhead" data-i18n="distinctions.title">Premios & Hackathons</h3>
+                <ul class="honors" id="honorsList"></ul>
+
+                <h3 class="subhead" data-i18n="experience.title">Experiencia</h3>
+                <ul class="xps" id="xpList"></ul>
+
+                <h3 class="subhead" data-i18n="education.title">Educación Superior</h3>
+                <div class="edu reveal">
+                    <span class="xp-period" data-i18n="education.period">2023 – Presente</span>
+                    <div class="xp-body">
+                        <h4 data-i18n="education.degree">Ingeniería en Sistemas Computacionales</h4>
+                        <p class="xp-role" data-i18n="education.specialty">Especialidad: Aplicaciones en Ciencia de Datos</p>
+                        <p class="xp-desc"><span data-i18n="education.institution">Instituto Tecnológico de Ciudad Madero (ITCM)</span></p>
+                        <p class="xp-desc" data-i18n="education.courses"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="section" id="projects">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-label" data-i18n="projects.label">INGENIERÍA & SISTEMAS</p>
+                    <h2 class="section-title" data-i18n="projects.title">Catálogo de Proyectos</h2>
+                    <p class="section-desc" data-i18n="projects.desc"></p>
+                </header>
+
+                <div class="filter-row">
+                    <div class="filter-bar" id="projectFilters" role="group" aria-label="Filtros">
+                        <button class="filter-btn active" data-filter="all" data-i18n="projects.filters.all">Todos</button>
+                        <button class="filter-btn" data-filter="ai" data-i18n="projects.filters.ai">IA & Agentes</button>
+                        <button class="filter-btn" data-filter="deeplearning" data-i18n="projects.filters.deeplearning">Deep Learning & Salud</button>
+                        <button class="filter-btn" data-filter="fullstack" data-i18n="projects.filters.fullstack">Full-Stack & Sistemas</button>
+                        <button class="filter-btn" data-filter="hackathon" data-i18n="projects.filters.hackathon">Hackathons</button>
+                    </div>
+                    <p class="filter-count"><span data-i18n="projects.shown">mostrando</span> <b id="projShown">14</b> / <span id="projTotal">14</span></p>
+                </div>
+
+                <ul class="p-list" id="projectList"></ul>
+            </div>
+        </section>
+
+        <!-- LAB -->
+        <section class="section" id="lab">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-label" data-i18n="lab.label">INVESTIGACIÓN, 3D & GRÁFICOS</p>
+                    <h2 class="section-title" data-i18n="lab.title">Laboratorio Interactivo</h2>
+                    <p class="section-desc" data-i18n="lab.desc"></p>
+                </header>
+                <div class="lab-grid" id="labGrid"></div>
+            </div>
+        </section>
+
+        <!-- STACK -->
+        <section class="section" id="stack">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-label" data-i18n="stack.label">CAPACIDADES TÉCNICAS</p>
+                    <h2 class="section-title" data-i18n="stack.title">Arsenal de Ingeniería</h2>
+                    <p class="section-desc" data-i18n="stack.desc"></p>
+                </header>
+                <ul class="stack-list" id="stackList"></ul>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section contact" id="contact">
+            <div class="container">
+                <p class="section-label" data-i18n="contact.label">CONTACTO</p>
+                <h2 class="contact-title reveal" data-i18n="contact.title">¿Iniciamos una conversación técnica?</h2>
+                <p class="contact-desc reveal" data-i18n="contact.desc"></p>
+                <a class="contact-mail reveal" href="mailto:jjho.reivaj05@gmail.com">jjho.reivaj05@gmail.com</a>
+                <div class="contact-links reveal">
                     <a href="mailto:jjho.reivaj05@gmail.com" class="btn btn-primary">
-                        <i class="fas fa-envelope"></i>
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
                         <span data-i18n="contact.emailBtn">Enviar Correo</span>
                     </a>
-                    <button class="btn btn-secondary" onclick="window.copyEmail(this)">
-                        <i class="fas fa-copy"></i>
+                    <button class="btn btn-ghost" onclick="window.copyEmail(this)">
+                        <i class="fas fa-copy" aria-hidden="true"></i>
                         <span data-i18n="contact.copyBtn">Copiar Email</span>
                     </button>
-                    <a href="https://github.com/jjho05" target="_blank" class="btn btn-secondary">
-                        <i class="fab fa-github"></i>
+                    <a href="https://github.com/jjho05" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+                        <i class="fab fa-github" aria-hidden="true"></i>
                         <span>GitHub</span>
                     </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container" style="display: flex; align-items: center; justify-content: space-between; width: 100%; flex-wrap: wrap; gap: 1rem;">
-            <div>
-                © 2026 Jesús Javier Hernández Olvera. <span data-i18n="footer.rights">Todos los derechos reservados.</span>
-            </div>
-            <div style="font-family: var(--font-mono); font-size: 0.75rem;">
-                <span data-i18n="footer.tech">HTML semántico · CSS Vanilla · Modern JS</span>
-            </div>
+        <div class="container footer-inner">
+            <span>© 2026 Jesús Javier Hernández Olvera. <span data-i18n="footer.rights">Todos los derechos reservados.</span></span>
+            <span class="footer-tech" data-i18n="footer.tech"></span>
         </div>
     </footer>
 
-    <!-- Three.js Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
-    <!-- Scripts -->
     <script src="./js/i18n.js"></script>
     <script src="./js/theme.js"></script>
+    <script src="./js/content.js"></script>
     <script src="./js/scene.js"></script>
     <script src="./js/audio.js"></script>
     <script src="./js/main.js"></script>
-
-    <script>
-        // Global utility functions for UI
-        window.toggleLanguage = function () {
-            if (window.i18n) {
-                window.i18n.toggle();
-            }
-        };
-
-        window.copyEmail = function (btn) {
-            const email = 'jjho.reivaj05@gmail.com';
-            navigator.clipboard.writeText(email).then(() => {
-                const span = btn.querySelector('span');
-                const originalText = span.textContent;
-                const copiedText = (window.i18n && window.i18n.translations && window.i18n.translations[window.i18n.currentLang]?.contact?.copied) || 'Copiado';
-                span.textContent = copiedText;
-                setTimeout(() => {
-                    span.textContent = originalText;
-                }, 2000);
-            });
-        };
-    </script>
 </body>
 
 </html>

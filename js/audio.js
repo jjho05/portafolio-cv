@@ -106,7 +106,7 @@
   // Hook subtle clicks on buttons and interactive filters
   document.addEventListener('click', (e) => {
     if (!isSoundOn) return;
-    if (e.target.closest('button, .btn, .nav-link, .filter-btn, .project-card')) {
+    if (e.target.closest('button, .btn, .nav-link, .filter-btn, .p-row')) {
       playClickSound(520, 0.04);
     }
   });

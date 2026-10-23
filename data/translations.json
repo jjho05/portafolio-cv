@@ -1,13 +1,11 @@
 {
   "es": {
     "nav": {
-      "about": "Sobre Mí",
+      "about": "Perfil",
       "experience": "Trayectoria",
       "projects": "Proyectos",
-      "lab": "Laboratorio",
-      "education": "Educación",
-      "distinctions": "Distinciones",
-      "stack": "Tecnologías",
+      "lab": "Lab",
+      "stack": "Stack",
       "contact": "Contacto"
     },
     "hero": {
@@ -18,7 +16,14 @@
       "bio": "Arquitecto de Software y Especialista en Ciencia de Datos. Diseño sistemas de inteligencia artificial de alto rendimiento, flujos agénticos autónomos, deep learning y arquitecturas web/móviles escalables.",
       "ctaProjects": "Ver Proyectos",
       "ctaGitHub": "GitHub",
-      "ctaContact": "Contacto"
+      "ctaContact": "Contacto",
+      "stats": {
+        "hackathons": "Hackatones 2026",
+        "projects": "Proyectos",
+        "latency": "Inferencia en edge",
+        "search": "Combinaciones exploradas"
+      },
+      "scroll": "Desliza"
     },
     "about": {
       "label": "PERFIL PROFESIONAL",
@@ -178,7 +183,8 @@
           "role": "Backend Developer",
           "desc": "Asistente inteligente especializado en investigación culinaria, balance nutricional y sustitución de ingredientes con Shiny for Python y Tavily."
         }
-      }
+      },
+      "shown": "mostrando"
     },
     "lab": {
       "label": "INVESTIGACIÓN, 3D & GRÁFICOS",
@@ -303,17 +309,15 @@
     },
     "footer": {
       "rights": "Todos los derechos reservados.",
-      "tech": "Construido con HTML semántico, CSS Vanilla, JavaScript y arquitectura sin plantillas."
+      "tech": "HTML semántico, CSS, JavaScript y Three.js."
     }
   },
   "en": {
     "nav": {
-      "about": "About",
-      "experience": "Trajectory",
+      "about": "Profile",
+      "experience": "Career",
       "projects": "Projects",
       "lab": "Lab",
-      "education": "Education",
-      "distinctions": "Honors",
       "stack": "Stack",
       "contact": "Contact"
     },
@@ -325,7 +329,14 @@
       "bio": "Software Architect and Data Science Specialist. I build high-performance artificial intelligence systems, autonomous agentic workflows, deep learning, and scalable web/mobile architectures.",
       "ctaProjects": "Explore Work",
       "ctaGitHub": "GitHub",
-      "ctaContact": "Contact"
+      "ctaContact": "Contact",
+      "stats": {
+        "hackathons": "Hackathons 2026",
+        "projects": "Projects",
+        "latency": "Edge inference",
+        "search": "Search space solved"
+      },
+      "scroll": "Scroll"
     },
     "about": {
       "label": "PROFESSIONAL SUMMARY",
@@ -485,7 +496,8 @@
           "role": "Backend Developer",
           "desc": "Specialized culinary research and recipe intelligence bot with Shiny for Python, LiteLLM, and real-time ingredient validation via Tavily API."
         }
-      }
+      },
+      "shown": "showing"
     },
     "lab": {
       "label": "RESEARCH, 3D & GRAPHICS",
@@ -610,7 +622,7 @@
     },
     "footer": {
       "rights": "All rights reserved.",
-      "tech": "Engineered with semantic HTML, modern CSS, JavaScript, and zero template bloat."
+      "tech": "Semantic HTML, CSS, vanilla JavaScript and Three.js."
     }
   }
 }
