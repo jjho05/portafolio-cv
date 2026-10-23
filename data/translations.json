@@ -14,52 +14,53 @@
       "title": "Full-Stack & AI Architect",
       "institution": "Instituto Tecnológico de Ciudad Madero",
       "status": "Próximo a Egresar",
-      "subtitle": "Orquestando el futuro de la IA mediante arquitecturas escalables y diseño minimalista.",
+      "subtitle": "Orquestando el futuro de la IA mediante sistemas agénticos autónomos, deep learning y arquitecturas escalables.",
       "cta1": "Ver Proyectos",
       "cta2": "Contactar"
     },
     "about": {
       "title": "Sobre Mí",
-      "description": "Arquitecto de Software y Especialista en Ciencia de Datos enfocado en la creación de ecosistemas inteligentes. Me especializo en la integración de flujos de trabajo agénticos (Agentic AI) y el desarrollo Full-Stack de alto rendimiento. Mi enfoque combina la eficiencia del backend con interfaces de usuario premium (Apple Style), transformando problemas complejos en soluciones técnicas elegantes y escalables.",
+      "description": "Arquitecto de Software, Full-Stack Developer y Especialista en Ciencia de Datos enfocado en la creación de ecosistemas inteligentes y de alto rendimiento. Ganador de certámenes de innovación tecnológica de élite (1er Lugar Hackatón IEST 2026, Ganador Local y Representante Regional HackaTec 2026). Me especializo en la integración de flujos agénticos autónomos, deep learning en PyTorch y desarrollo web/móvil moderno, combinando robustez técnica en el backend con interfaces de usuario pulidas de clase mundial.",
       "achievements": {
+        "winner_iest": {
+          "title": "🏆 Ganador Hackatón IEST 2026",
+          "subtitle": "1er Lugar Absoluto — Apyo4All"
+        },
+        "hackatec_regional": {
+          "title": "🚀 HackaTec Regional 2026",
+          "subtitle": "TecNM Región 2 — EcoEye"
+        },
+        "hackatec_local": {
+          "title": "🥇 Ganador HackaTec Local 2026",
+          "subtitle": "Deep Learning — BloodCare"
+        },
         "winner": {
-          "title": "🏆 Ganador Feria ISC 2025",
-          "subtitle": "ITCM - Software & Videojuegos"
-        },
-        "innovatec": {
-          "title": "💡 Participante InnovaTec 2025",
-          "subtitle": "Innovación Tecnológica"
-        },
-        "expociencias": {
-          "title": "🔬 Finalista ExpoCiencias 2025",
-          "subtitle": "Investigación en IA"
-        },
-        "potential": {
-          "title": "🚀 Tech Lead ACM ITCM",
-          "subtitle": "Liderazgo en Documentación"
+          "title": "🏅 Ganador Feria ISC 2025",
+          "subtitle": "ITCM — Software & Videojuegos"
         },
         "student": {
           "title": "🎓 Alumno Destacado",
           "subtitle": "Ing. Sistemas Computacionales"
         },
         "ai": {
-          "title": "🤖 Full-Stack & AI Expert",
-          "subtitle": "Gemini, Claude & Next.js"
+          "title": "🤖 Full-Stack & Agentic AI",
+          "subtitle": "Next.js, Python, PyTorch & LLMs"
         }
       },
       "stats": {
-        "projects": "Proyectos Industriales",
+        "projects": "Proyectos Clave",
         "technologies": "Tecnologías",
-        "certs": "Hitos de Liderazgo"
+        "experience": "Años Programando",
+        "certs": "Premios & Hackathons"
       }
     },
     "experience": {
-      "title": "Trayectoria Profesional",
-      "subtitle": "Hitos clave y liderazgo técnico"
+      "title": "Trayectoria Profesional & Logros",
+      "subtitle": "Hitos clave, premios en hackathons y liderazgo técnico"
     },
     "projects": {
       "title": "Proyectos Destacados",
-      "subtitle": "Aplicaciones y sistemas de grado industrial",
+      "subtitle": "Sistemas de grado industrial, inteligencia artificial y aplicaciones de alto impacto",
       "viewCode": "Ver Código",
       "viewDocs": "Ver Docs",
       "viewDemo": "Ver Demo",
@@ -72,26 +73,26 @@
       }
     },
     "games": {
-      "title": "Juegos Interactivos",
-      "subtitle": "Desarrollo de motores de juego con JavaScript y Three.js",
-      "playNow": "Jugar Ahora",
+      "title": "Gráficos 3D, Simuladores & Juegos",
+      "subtitle": "Desarrollo interactivo con WebGL, Three.js, Canvas y Python",
+      "playNow": "Ver Demo",
       "viewCode": "Ver Código",
       "viewDocs": "Ver Docs"
     },
     "skills": {
       "title": "Habilidades Técnicas",
-      "subtitle": "Tecnologías y herramientas de vanguardia",
+      "subtitle": "Tecnologías, frameworks y herramientas de vanguardia",
       "categories": {
-        "ai": "IA & RAG Systems",
+        "ai": "IA, Agentes & Deep Learning",
         "programming": "Backend & Cloud",
-        "data": "Ciencia de Datos",
+        "data": "Ciencia de Datos & Analytics",
         "web": "Frontend & UI/UX",
-        "tools": "DevOps & Tools"
+        "tools": "DevOps & Arquitectura"
       }
     },
     "contact": {
       "title": "Contacto",
-      "subtitle": "¿Tienes un proyecto ambicioso? ¡Hablemos!",
+      "subtitle": "¿Tienes un proyecto ambicioso o vacante técnica? ¡Hablemos!",
       "email": "Email",
       "github": "GitHub",
       "instagram": "Instagram",
@@ -108,7 +109,7 @@
       "about": "About",
       "experience": "Experience",
       "projects": "Projects",
-      "games": "Games",
+      "games": "Games & 3D",
       "skills": "Skills",
       "contact": "Contact"
     },
@@ -118,52 +119,53 @@
       "title": "Full-Stack & AI Architect",
       "institution": "Technological Institute of Ciudad Madero",
       "status": "Soon to Graduate",
-      "subtitle": "Orchestrating the future of AI through scalable architectures and minimalist design.",
+      "subtitle": "Orchestrating the future of AI through autonomous agentic systems, deep learning, and scalable architectures.",
       "cta1": "View Projects",
       "cta2": "Contact Me"
     },
     "about": {
       "title": "About Me",
-      "description": "Software Architect and Data Science Specialist focused on building intelligent ecosystems. I specialize in integrating Agentic AI workflows and high-performance Full-Stack development. My approach combines backend efficiency with premium (Apple-style) user interfaces, transforming complex problems into elegant and scalable technical solutions.",
+      "description": "Software Architect, Full-Stack Developer, and Data Science Specialist focused on building resilient, high-performance intelligent ecosystems. Winner of elite technological innovation competitions (1st Place Absolute Winner at IEST Hackathon 2026, Local Stage Winner and Regional Representative at HackaTec 2026). I specialize in autonomous agentic workflows, PyTorch deep learning, and modern web/mobile engineering, combining backend efficiency with world-class user interfaces.",
       "achievements": {
+        "winner_iest": {
+          "title": "🏆 IEST Hackathon 2026 Winner",
+          "subtitle": "1st Place Absolute — Apyo4All"
+        },
+        "hackatec_regional": {
+          "title": "🚀 HackaTec Regional 2026",
+          "subtitle": "TecNM Region 2 — EcoEye"
+        },
+        "hackatec_local": {
+          "title": "🥇 HackaTec Local Winner 2026",
+          "subtitle": "Deep Learning — BloodCare"
+        },
         "winner": {
-          "title": "🏆 ISC Fair Winner 2025",
-          "subtitle": "ITCM - Software & Games"
-        },
-        "innovatec": {
-          "title": "💡 InnovaTec 2025 Participant",
-          "subtitle": "Technological Innovation"
-        },
-        "expociencias": {
-          "title": "🔬 ExpoCiencias 2025 Finalist",
-          "subtitle": "AI Research Projects"
-        },
-        "potential": {
-          "title": "🚀 Tech Lead ACM ITCM",
-          "subtitle": "Documentation Leadership"
+          "title": "🏅 ISC Fair Winner 2025",
+          "subtitle": "ITCM — Software & Video Games"
         },
         "student": {
-          "title": "🎓 Outstanding Student",
+          "title": "🎓 Distinguished Student",
           "subtitle": "Computer Systems Engineering"
         },
         "ai": {
-          "title": "🤖 Full-Stack & AI Expert",
-          "subtitle": "Gemini, Claude & Next.js"
+          "title": "🤖 Full-Stack & Agentic AI",
+          "subtitle": "Next.js, Python, PyTorch & LLMs"
         }
       },
       "stats": {
-        "projects": "Industrial Projects",
+        "projects": "Core Projects",
         "technologies": "Technologies",
-        "certs": "Leadership Milestones"
+        "experience": "Years Coding",
+        "certs": "Awards & Hackathons"
       }
     },
     "experience": {
-      "title": "Professional Experience",
-      "subtitle": "Key milestones and technical leadership"
+      "title": "Professional Experience & Honors",
+      "subtitle": "Key milestones, hackathon championships, and technical leadership"
     },
     "projects": {
       "title": "Featured Projects",
-      "subtitle": "Industrial-grade applications and systems",
+      "subtitle": "Industrial-grade systems, artificial intelligence, and high-impact applications",
       "viewCode": "View Code",
       "viewDemo": "View Demo",
       "categories": {
@@ -175,26 +177,26 @@
       }
     },
     "games": {
-      "title": "Interactive Games",
-      "subtitle": "Game engine development with JavaScript and Three.js",
-      "playNow": "Play Now",
+      "title": "3D Graphics, Simulators & Games",
+      "subtitle": "Interactive graphics and physics engines with WebGL, Three.js, Canvas, and Python",
+      "playNow": "Live Demo",
       "viewCode": "View Code",
       "viewDocs": "View Docs"
     },
     "skills": {
       "title": "Technical Skills",
-      "subtitle": "State-of-the-art technologies and tools",
+      "subtitle": "Cutting-edge technologies, frameworks, and architecture tools",
       "categories": {
-        "ai": "AI & RAG Systems",
+        "ai": "AI, Agents & Deep Learning",
         "programming": "Backend & Cloud",
-        "data": "Data Science",
+        "data": "Data Science & Analytics",
         "web": "Frontend & UI/UX",
-        "tools": "DevOps & Tools"
+        "tools": "DevOps & Architecture"
       }
     },
     "contact": {
       "title": "Contact",
-      "subtitle": "Have an ambitious project? Let's talk!",
+      "subtitle": "Have an ambitious project or technical opening? Let's talk!",
       "email": "Email",
       "github": "GitHub",
       "instagram": "Instagram",
