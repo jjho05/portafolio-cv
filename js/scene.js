@@ -48,9 +48,14 @@
   function readTheme() {
     const dark = document.documentElement.getAttribute('data-theme') !== 'light';
     target.isDark = dark;
-    target.accent.copy(cssColor('--accent-fill', dark ? '#c8f542' : '#a3e635'));
-    // Línea tenue: mezcla del acento con el fondo
-    target.dim.copy(target.accent).lerp(new THREE.Color(dark ? '#07070a' : '#fafaf7'), dark ? 0.55 : 0.35);
+    if (dark) {
+      target.accent.set('#c8f542');
+      target.dim.set('#52652a');
+    } else {
+      // Modo claro: esquema arquitectónico slate/grafito de alta legibilidad (sin verde)
+      target.accent.set('#0f172a');
+      target.dim.set('#94a3b8');
+    }
   }
 
   /* ---------- Sprite circular suave para los nodos ---------- */

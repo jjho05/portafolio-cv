@@ -11,7 +11,7 @@
         'url': GH + 'Apyo4all',
         'cats': 'fullstack hackathon',
         'tags': [
-            'React 19',
+            'React',
             'TypeScript',
             'Supabase',
             'Electron',
@@ -70,7 +70,7 @@
         'url': GH + 'build-with-ai-itcm',
         'cats': 'ai fullstack',
         'tags': [
-            'Next.js 14',
+            'Next.js',
             'Gemini API',
             'Vercel KV',
             'RAG',
@@ -160,7 +160,7 @@
         'url': GH + 'PROMPTS-IA',
         'cats': 'ai',
         'tags': [
-            'Gemini 3 Flash',
+            'Gemini API',
             'Prompt Engineering',
             'Python',
             'Streamlit'
@@ -270,7 +270,7 @@
         'url': GH + 'nextjs-acme-dashboard',
         'cats': 'fullstack',
         'tags': [
-            'Next.js 14',
+            'Next.js',
             'TypeScript',
             'Server Actions',
             'PostgreSQL'
@@ -442,11 +442,11 @@
   ];
 
   const STACK = [
-    { id: 'arch', icon: 'fa-layer-group', chips: ['Clean Architecture', 'Event-Driven', 'Microservices', 'Offline-first', 'PWA'] },
-    { id: 'fe', icon: 'fa-code', chips: ['TypeScript', 'Next.js 14/15', 'React 19', 'Tailwind CSS', 'Vanilla CSS', 'Three.js'] },
-    { id: 'be', icon: 'fa-server', chips: ['FastAPI', 'Python', 'Node.js', 'PostgreSQL', 'Supabase', 'Docker', 'Redis'] },
-    { id: 'ai', icon: 'fa-brain', chips: ['PyTorch', 'TensorFlow.js', 'Transformers (Hugging Face)', 'Gemini API', 'LiteLLM', 'RAG'] },
-    { id: 'systems', icon: 'fa-microchip', chips: ['Linux (Debian/Ubuntu)', 'Bash', 'Git', 'CI/CD Actions', 'Computer Vision'] }
+    { id: 'ai', icon: 'fa-brain', chips: ['Google Gemini', 'Anthropic Claude', 'Meta Llama', 'Sistemas Agénticos', 'Advanced RAG', 'Model Routing', 'Prompt Engineering', 'LiteLLM', 'Function Calling'] },
+    { id: 'fullstack', icon: 'fa-code', chips: ['TypeScript', 'Python', 'FastAPI', 'Next.js', 'React', 'Tailwind CSS', 'Modern CSS', 'Three.js / WebGL', 'Clean Architecture', 'REST & GraphQL APIs'] },
+    { id: 'dl', icon: 'fa-chart-line', chips: ['PyTorch', 'Bi-LSTM', 'Pinball Loss', 'Quantile Regression', 'Hugging Face', 'DistilRoBERTa', 'Pandas', 'Scikit-learn', 'Time Series Forecasting'] },
+    { id: 'cloud', icon: 'fa-server', chips: ['Docker', 'PostgreSQL', 'Redis', 'Supabase', 'GitHub Actions CI/CD', 'Linux Server', 'Bash Scripting', 'Serverless Edge'] },
+    { id: 'edge', icon: 'fa-microchip', chips: ['Edge AI (<50ms)', 'TensorFlow.js', 'WiFi CSI Signal Processing', 'Butterworth Filtering', 'PCA', 'Computer Vision', 'Flutter', 'Offline-First'] }
   ];
 
   const MARQUEE = [

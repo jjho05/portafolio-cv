@@ -10,6 +10,8 @@
   }
 
   function getSavedTheme() {
+    const urlParam = new URLSearchParams(window.location.search).get('theme');
+    if (urlParam === 'light' || urlParam === 'dark') return urlParam;
     return localStorage.getItem(STORAGE_KEY) || 'auto';
   }
 

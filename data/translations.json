@@ -28,7 +28,15 @@
     "about": {
       "label": "PERFIL PROFESIONAL",
       "title": "Perfil de Ingeniería",
-      "desc": "Arquitecto de Software y Desarrollador Full-Stack especializado en orquestación de Inteligencia Artificial de vanguardia, sistemas agénticos autónomos (Google Antigravity SDK, Vercel AI SDK) y optimización algorítmica de alto rendimiento. Con probada experiencia en certámenes de innovación tecnológica de élite (Ganador Hackatón IEST 2026, Ganador Fase Local y Representante Regional HackaTec 2026), diseño soluciones escalables integrando modelos fundacionales (Gemini 3, Claude 3.5/3.7, Meta Llama 3), Deep Learning en PyTorch y visión artificial edge. Mi formación en Ciencia de Datos me permite transformar requerimientos complejos en arquitecturas seguras, eficientes y con experiencias de usuario de grado de producción."
+      "desc": "Arquitecto de Software y Desarrollador Full-Stack especializado en orquestación de Inteligencia Artificial de vanguardia, sistemas agénticos autónomos (Google Antigravity SDK, Vercel AI SDK) y optimización algorítmica de alto rendimiento. Con probada experiencia en certámenes de innovación tecnológica de élite (Ganador Hackatón IEST 2026, Ganador Fase Local y Representante Regional HackaTec 2026), diseño soluciones escalables integrando modelos fundacionales (Google Gemini, Anthropic Claude, Meta Llama), Deep Learning en PyTorch y visión artificial edge. Mi formación en Ciencia de Datos me permite transformar requerimientos complejos en arquitecturas seguras, eficientes y con experiencias de usuario de grado de producción.",
+      "meta": {
+        "languages_title": "Idiomas",
+        "languages_desc": "Español (Nativo) · Inglés (Profesional Técnico B1+/B2 para ingeniería y documentación).",
+        "focus_title": "Especialización",
+        "focus_desc": "Sistemas Agénticos, Inferencia en Edge, Deep Learning, Arquitectura Limpia y RegTech.",
+        "cert_title": "Certificaciones & Distinción",
+        "cert_desc": "Prompt Engineering for Advanced LLMs (Google Cloud) · Alumno Destacado ITCM."
+      }
     },
     "experience": {
       "label": "TRAYECTORIA PROFESIONAL",
@@ -45,7 +53,7 @@
           "role": "Lead Full-Stack Architect | Ganador Hackatón IEST 2026",
           "period": "2026",
           "title": "Apyo4All — Coordinación Humanitaria y Centros de Acopio",
-          "desc": "Diseño multiplataforma (Web React 19 + Desktop Electron) para gestión logística humanitaria ante desastres naturales. Motor reactivo de inventario con trazabilidad estricta en Supabase, balanceo entre sedes, cálculo de stock y generación automatizada de manifiestos oficiales en PDF y Excel con Leaflet."
+          "desc": "Diseño multiplataforma (Web React + Desktop Electron) para gestión logística humanitaria ante desastres naturales. Motor reactivo de inventario con trazabilidad estricta en Supabase, balanceo entre sedes, cálculo de stock y generación automatizada de manifiestos oficiales en PDF y Excel con Leaflet."
         },
         "ecoeye": {
           "role": "Lead Edge AI & Ubiquitous Architect | Representante Regional HackaTec 2026",
@@ -81,7 +89,7 @@
           "role": "Lead Developer & UI/UX Designer",
           "period": "2024 — 2025",
           "title": "CRES — Plataforma Web Institucional & CMS",
-          "desc": "Desarrollo integral de la plataforma web oficial para el Centro Regional de Estudios Superiores con Next.js 14, TypeScript y Tailwind CSS. CMS modular dinámico a medida y puntuación perfecta de 100/100 en auditorías Lighthouse (Performance, SEO, Accesibilidad)."
+          "desc": "Desarrollo integral de la plataforma web oficial para el Centro Regional de Estudios Superiores con Next.js, TypeScript y Tailwind CSS. CMS modular dinámico a medida y puntuación perfecta de 100/100 en auditorías Lighthouse (Performance, SEO, Accesibilidad)."
         }
       }
     },
@@ -151,13 +159,13 @@
           "pill": "Model Engineering · Open LLMs",
           "title": "Meta Llama Engineering Labs",
           "role": "NLP & Benchmarking Engineer",
-          "desc": "Laboratorio de experimentación, optimización y benchmarking cuantitativo para modelos abiertos de la familia Meta LLaMA 3 con orquestación de enrutamiento inteligente."
+          "desc": "Laboratorio de experimentación, optimización y benchmarking cuantitativo para modelos abiertos de la familia Meta Llama con orquestación de enrutamiento inteligente."
         },
         "ia_llama": {
           "pill": "Sistemas de IA · Modelos Abiertos",
           "title": "IA Aplicada con LLaMA",
           "role": "AI Engineer",
-          "desc": "Plataforma web de demostración e integración de casos de uso empresariales empleando modelos abiertos de Meta LLaMA con interfaces responsivas y consumo de APIs de inferencia."
+          "desc": "Plataforma web de demostración e integración de casos de uso empresariales empleando modelos abiertos de Meta Llama con interfaces responsivas y consumo de APIs de inferencia."
         },
         "agentes_ciclo_vida": {
           "pill": "Sistemas Agénticos · Diagnóstico",
@@ -181,7 +189,7 @@
           "pill": "Herramientas de IA · Prompt Studio",
           "title": "PROMPTS-IA Studio",
           "role": "Prompt Engineer & Developer",
-          "desc": "Generador y evaluador estructurado de prompts para desarrollo de software e ingeniería de requerimientos optimizado para modelos Google Gemini 3 Flash."
+          "desc": "Generador y evaluador estructurado de prompts para desarrollo de software e ingeniería de requerimientos optimizado para modelos Google Gemini."
         },
         "vexel": {
           "pill": "Gráficos 3D · Computación Científica",
@@ -241,7 +249,7 @@
           "pill": "Full-Stack · Next.js App Router",
           "title": "Next.js Acme Enterprise Dashboard",
           "role": "Full-Stack Developer",
-          "desc": "Panel administrativo empresarial implementado con Next.js 14 App Router, Server Actions, base de datos PostgreSQL, autenticación y diseño responsivo optimizado para CWV."
+          "desc": "Panel administrativo empresarial implementado con Next.js App Router, Server Actions, base de datos PostgreSQL, autenticación y diseño responsivo optimizado para CWV."
         },
         "vive_mexico": {
           "pill": "Turismo & Cultura · Web",
@@ -359,7 +367,13 @@
       "specialty": "Especialidad: Aplicaciones en Ciencia de Datos",
       "institution": "Instituto Tecnológico de Ciudad Madero (ITCM)",
       "period": "2023 – Presente",
-      "courses": "Áreas de Dominio: Inteligencia Artificial, Ciencia de Datos, Algoritmos Avanzados, Deep Learning, Arquitectura de Software, Computación Distribuida y Bases de Datos Relacionales/NoSQL."
+      "courses": "Áreas de Dominio: Inteligencia Artificial, Ciencia de Datos, Algoritmos Avanzados, Deep Learning, Arquitectura de Software, Computación Distribuida y Bases de Datos Relacionales/NoSQL.",
+      "law": {
+        "period": "Formación Complementaria",
+        "degree": "Licenciatura en Derecho",
+        "specialty": "Enfoque: Derecho Digital, Privacidad de Datos & RegTech",
+        "desc": "Integración multidisciplinaria de marcos normativos, propiedad intelectual de software, auditoría de cumplimiento técnico (NOM / GDPR) y gobernanza de modelos de inteligencia artificial."
+      }
     },
     "distinctions": {
       "label": "RECONOCIMIENTOS",
@@ -410,24 +424,24 @@
       "desc": "Herramientas y tecnologías seleccionadas para entornos de producción de alta demanda.",
       "items": {
         "ai": {
-          "title": "IA & Sistemas Agénticos",
-          "desc": "Orquestación de flujos de trabajo autónomos, pipelines RAG empresariales y consumo de modelos fundacionales de última generación."
+          "title": "IA, Modelos Fundacionales & Sistemas Agénticos",
+          "desc": "Orquestación de flujos de trabajo autónomos, pipelines RAG avanzados, model routing y consumo de modelos de frontera (Google Gemini, Anthropic Claude, Meta Llama)."
         },
         "fullstack": {
-          "title": "Full-Stack & Móvil",
-          "desc": "Desarrollo web y móvil de alto rendimiento con arquitecturas serverless, tipado estricto y renderizado reactivo ultra-rápido."
+          "title": "Arquitectura Full-Stack & Sistemas Modernos",
+          "desc": "Desarrollo web y backend de alto rendimiento con arquitecturas limpias, tipado estricto, microservicios y renderizado reactivo ultra-rápido."
         },
         "dl": {
-          "title": "Deep Learning & Datos",
-          "desc": "Modelado matemático y estadístico para predicción de series temporales continuas y procesamiento de lenguaje natural."
+          "title": "Deep Learning, Series Temporales & NLP",
+          "desc": "Modelado matemático y predictivo con PyTorch, redes neuronales profundas (Bi-LSTM, Pinball Loss), Transformers y embeddings vectoriales."
         },
         "cloud": {
-          "title": "Infraestructura & Cloud",
-          "desc": "Despliegues contenerizados para plantas industriales y nubes serverless con alta disponibilidad y persistencia en memoria."
+          "title": "Cloud, Contenedores & Persistencia",
+          "desc": "Entornos contenerizados con Docker, bases de datos relacionales y clave-valor (PostgreSQL, Redis, Supabase), pipelines CI/CD y despliegue serverless."
         },
         "edge": {
-          "title": "Edge AI & Computación Ubicua",
-          "desc": "Procesamiento en dispositivo con inferencia visual en tiempo real y telemetría de radiofrecuencia no invasiva."
+          "title": "Edge AI, Visión Computacional & Señal",
+          "desc": "Inferencia en dispositivo de baja latencia (<50ms), visión artificial, procesamiento de señales de radiofrecuencia (WiFi CSI) y computación ubicua."
         }
       }
     },
@@ -441,7 +455,7 @@
     },
     "footer": {
       "rights": "Todos los derechos reservados.",
-      "tech": "HTML semántico, CSS, JavaScript y Three.js."
+      "location": "Tampico, Tamaulipas, México"
     }
   },
   "en": {
@@ -473,7 +487,15 @@
     "about": {
       "label": "PROFESSIONAL SUMMARY",
       "title": "Engineering Profile",
-      "desc": "Software Architect and Full-Stack Developer specializing in state-of-the-art Artificial Intelligence orchestration, autonomous agentic workflows (Google Antigravity SDK, Vercel AI SDK), and high-performance algorithmic optimization. Backed by proven success in elite technology hackathons (IEST Hackathon Winner 2026, Local Stage Winner and Regional Representative at HackaTec 2026), I architect scalable solutions combining foundational LLMs (Gemini 3, Claude 3.5/3.7, Meta Llama 3), PyTorch Deep Learning, and edge computer vision. My Data Science background allows me to translate complex business and technical requirements into resilient, secure, and production-grade software architectures."
+      "desc": "Software Architect and Full-Stack Developer specializing in state-of-the-art Artificial Intelligence orchestration, autonomous agentic workflows (Google Antigravity SDK, Vercel AI SDK), and high-performance algorithmic optimization. Backed by proven success in elite technology hackathons (IEST Hackathon Winner 2026, Local Stage Winner and Regional Representative at HackaTec 2026), I architect scalable solutions combining foundational LLMs (Google Gemini, Anthropic Claude, Meta Llama), PyTorch Deep Learning, and edge computer vision. My Data Science background allows me to translate complex business and technical requirements into resilient, secure, and production-grade software architectures.",
+      "meta": {
+        "languages_title": "Languages",
+        "languages_desc": "Spanish (Native) · English (Technical Working Proficiency B1+/B2 for engineering, research papers & specs).",
+        "focus_title": "Specialization",
+        "focus_desc": "Agentic Systems, Edge Inference, Deep Learning, Clean Architecture & RegTech.",
+        "cert_title": "Certifications & Honors",
+        "cert_desc": "Prompt Engineering for Advanced LLMs (Google Cloud) · ITCM Outstanding Student Award."
+      }
     },
     "experience": {
       "label": "CAREER TRAJECTORY",
@@ -490,7 +512,7 @@
           "role": "Lead Full-Stack Architect | Winner IEST Hackathon 2026",
           "period": "2026",
           "title": "Apyo4All — Humanitarian Relief & Logistics Platform",
-          "desc": "Cross-platform architecture (Web React 19 + Desktop Electron) for emergency humanitarian logistics. Reactive inventory engine with strict traceability in Supabase, automated stock rebalancing, and official PDF/Excel delivery manifests via Leaflet."
+          "desc": "Cross-platform architecture (Web React + Desktop Electron) for emergency humanitarian logistics. Reactive inventory engine with strict traceability in Supabase, automated stock rebalancing, and official PDF/Excel delivery manifests via Leaflet."
         },
         "ecoeye": {
           "role": "Lead Edge AI & Ubiquitous Architect | Regional Representative HackaTec 2026",
@@ -526,7 +548,7 @@
           "role": "Lead Developer & UI/UX Designer",
           "period": "2024 — 2025",
           "title": "CRES — Institutional Web Ecosystem & Custom CMS",
-          "desc": "Complete engineering of official platform for Centro Regional de Estudios Superiores with Next.js 14, TypeScript, and Tailwind CSS. Built custom modular CMS and achieved perfect 100/100 Lighthouse scores across Performance, SEO, and Accessibility."
+          "desc": "Complete engineering of official platform for Centro Regional de Estudios Superiores with Next.js, TypeScript, and Tailwind CSS. Built custom modular CMS and achieved perfect 100/100 Lighthouse scores across Performance, SEO, and Accessibility."
         }
       }
     },
@@ -596,13 +618,13 @@
           "pill": "Model Engineering · Open LLMs",
           "title": "Meta Llama Engineering Labs",
           "role": "NLP & Benchmarking Engineer",
-          "desc": "Experimental and benchmarking lab for open-source Meta LLaMA 3 models, featuring intelligent routing, quantization testing, and quantitative performance evaluation."
+          "desc": "Experimental and benchmarking lab for open-source Meta Llama models, featuring intelligent routing, quantization testing, and quantitative performance evaluation."
         },
         "ia_llama": {
           "pill": "AI Systems · Open Models",
           "title": "Applied AI with LLaMA",
           "role": "AI Engineer",
-          "desc": "Web platform for enterprise use-case prototyping and integration powered by open Meta LLaMA models with clean responsive interfaces and inference API pipelines."
+          "desc": "Web platform for enterprise use-case prototyping and integration powered by open Meta Llama models with clean responsive interfaces and inference API pipelines."
         },
         "agentes_ciclo_vida": {
           "pill": "Agentic Systems · Diagnostics",
@@ -626,7 +648,7 @@
           "pill": "AI Tooling · Prompt Studio",
           "title": "PROMPTS-IA Studio",
           "role": "Prompt Engineer & Developer",
-          "desc": "Structured prompt generation and optimization studio for software engineering and requirements analysis, fine-tuned for Google Gemini 3 Flash models."
+          "desc": "Structured prompt generation and optimization studio for software engineering and requirements analysis, fine-tuned for Google Gemini models."
         },
         "vexel": {
           "pill": "3D Graphics · Scientific Computing",
@@ -686,7 +708,7 @@
           "pill": "Full-Stack · Next.js App Router",
           "title": "Next.js Acme Enterprise Dashboard",
           "role": "Full-Stack Developer",
-          "desc": "Enterprise administrative dashboard built with Next.js 14 App Router, Server Actions, PostgreSQL persistence, authentication, and Core Web Vitals optimization."
+          "desc": "Enterprise administrative dashboard built with Next.js App Router, Server Actions, PostgreSQL persistence, authentication, and Core Web Vitals optimization."
         },
         "vive_mexico": {
           "pill": "Tourism & Culture · Web",
@@ -804,7 +826,13 @@
       "specialty": "Specialization: Applications in Data Science",
       "institution": "Instituto Tecnológico de Ciudad Madero (ITCM)",
       "period": "2023 – Present",
-      "courses": "Key Focus Areas: Artificial Intelligence, Data Science, Advanced Algorithms, Deep Learning, Software Architecture, Distributed Systems, Relational & NoSQL Databases."
+      "courses": "Key Focus Areas: Artificial Intelligence, Data Science, Advanced Algorithms, Deep Learning, Software Architecture, Distributed Systems, Relational & NoSQL Databases.",
+      "law": {
+        "period": "Complementary Education",
+        "degree": "Bachelor of Laws (LL.B.)",
+        "specialty": "Focus: Digital Law, Data Privacy & RegTech",
+        "desc": "Multidisciplinary integration of legal frameworks, software intellectual property, technical compliance auditing (NOM / GDPR), and AI governance."
+      }
     },
     "distinctions": {
       "label": "ACHIEVEMENTS",
@@ -855,24 +883,24 @@
       "desc": "Curated technologies selected for high-demand production environments.",
       "items": {
         "ai": {
-          "title": "AI & Agentic Systems",
-          "desc": "Autonomous workflow orchestration, enterprise RAG pipelines, and consumption of frontier foundational models."
+          "title": "AI, Foundational Models & Agentic Systems",
+          "desc": "Autonomous agent orchestration, advanced RAG pipelines, model routing, and frontier model integration (Google Gemini, Anthropic Claude, Meta Llama)."
         },
         "fullstack": {
-          "title": "Full-Stack & Mobile",
-          "desc": "High-performance web and mobile engineering with serverless architectures, strict typing, and ultra-fast reactive rendering."
+          "title": "Full-Stack Architecture & Modern Systems",
+          "desc": "High-performance web and backend development with clean architectures, strict typing, microservices, and ultra-fast reactive rendering."
         },
         "dl": {
-          "title": "Deep Learning & Data",
-          "desc": "Mathematical and statistical modeling for continuous time-series forecasting and specialized natural language processing."
+          "title": "Deep Learning, Time Series & NLP",
+          "desc": "Mathematical and predictive modeling with PyTorch, deep recurrent neural networks (Bi-LSTM, Pinball Loss), Transformers, and vector embeddings."
         },
         "cloud": {
-          "title": "Cloud & Infrastructure",
-          "desc": "Containerized deployments for industrial plants and serverless clouds with high availability and in-memory persistence."
+          "title": "Cloud, Containers & Persistence",
+          "desc": "Containerized environments with Docker, relational and key-value datastores (PostgreSQL, Redis, Supabase), CI/CD pipelines, and serverless edge delivery."
         },
         "edge": {
-          "title": "Edge AI & Ubiquitous Computing",
-          "desc": "On-device processing with real-time visual inference and non-invasive radio frequency telemetry."
+          "title": "Edge AI, Computer Vision & Signal Processing",
+          "desc": "Ultra-low-latency on-device inference (<50ms), computer vision, RF signal telemetry (WiFi CSI), and privacy-preserving ubiquitous computing."
         }
       }
     },
@@ -886,7 +914,7 @@
     },
     "footer": {
       "rights": "All rights reserved.",
-      "tech": "Semantic HTML, CSS, vanilla JavaScript and Three.js."
+      "location": "Tampico, Tamaulipas, Mexico"
     }
   }
 }
