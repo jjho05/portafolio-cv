@@ -29,9 +29,9 @@
       "desc": "Certámenes de innovación tecnológica, hackathons y distinciones académicas.",
       "items": {
         "iest": {
-          "badge": "1er Lugar Absoluto",
+          "badge": "Ganador",
           "title": "Hackatón Universitario IEST Anáhuac 2026",
-          "desc": "Ganador absoluto con Apyo4All: sistema reactivo de coordinación humanitaria y centros de acopio.",
+          "desc": "Ganador con Apyo4All: sistema reactivo de coordinación humanitaria y centros de acopio.",
           "year": "2026"
         },
         "regional": {
@@ -80,7 +80,7 @@
       },
       "items": {
         "apyo4all": {
-          "pill": "Hackatón Winner · Full-Stack",
+          "pill": "Ganador Hackatón · Full-Stack",
           "title": "Apyo4All",
           "desc": "Plataforma multiplataforma (Web & Electron) para la logística humanitaria y balance reactivo de centros de acopio ante desastres naturales."
         },
@@ -234,9 +234,9 @@
       "desc": "Technology innovation tournaments, hackathons, and academic distinctions.",
       "items": {
         "iest": {
-          "badge": "1st Place Absolute Winner",
+          "badge": "Winner",
           "title": "IEST Anáhuac University Hackathon 2026",
-          "desc": "Overall winner with Apyo4All: reactive humanitarian logistics coordination and donation tracking platform.",
+          "desc": "Winner with Apyo4All: reactive humanitarian logistics coordination and donation tracking platform.",
           "year": "2026"
         },
         "regional": {

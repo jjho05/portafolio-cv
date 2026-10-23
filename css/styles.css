@@ -160,6 +160,29 @@ body {
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 
+/* --- Fixed 3D WebGL Canvas --- */
+#gl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.85;
+  transition: opacity 0.35s ease;
+}
+
+html[data-theme="light"] #gl {
+  opacity: 0.32;
+}
+
+@media (prefers-color-scheme: light) {
+  html:not([data-theme="dark"]) #gl {
+    opacity: 0.32;
+  }
+}
+
 /* Layout Container */
 .container {
   width: 100%;

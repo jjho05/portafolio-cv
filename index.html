@@ -42,6 +42,9 @@
 </head>
 
 <body>
+    <!-- 3D WebGL Background Canvas -->
+    <canvas id="gl" aria-hidden="true"></canvas>
+
     <!-- Top Progress Indicator -->
     <div class="progress-container">
         <div class="progress-bar" id="progressBar"></div>
@@ -74,6 +77,11 @@
                     <!-- Theme Toggle -->
                     <button class="control-btn" id="themeToggle" title="Tema: Sistema (Auto)">
                         <i class="fas fa-circle-half-stroke"></i>
+                    </button>
+
+                    <!-- Audio FX Toggle -->
+                    <button class="control-btn" id="soundToggle" title="Audio FX: Desactivado">
+                        <i class="fas fa-volume-xmark"></i>
                     </button>
 
                     <!-- Mobile Menu Button -->
@@ -144,11 +152,11 @@
                 <!-- 1. IEST Hackathon Winner -->
                 <div class="distinction-item">
                     <div>
-                        <span class="distinction-badge badge-gold" data-i18n="distinctions.items.iest.badge">1er Lugar Absoluto</span>
+                        <span class="distinction-badge badge-gold" data-i18n="distinctions.items.iest.badge">Ganador</span>
                     </div>
                     <div class="distinction-info">
                         <h4 data-i18n="distinctions.items.iest.title">Hackatón Universitario IEST Anáhuac 2026</h4>
-                        <p data-i18n="distinctions.items.iest.desc">Ganador absoluto con Apyo4All: sistema reactivo de coordinación humanitaria y centros de acopio.</p>
+                        <p data-i18n="distinctions.items.iest.desc">Ganador con Apyo4All: sistema reactivo de coordinación humanitaria y centros de acopio.</p>
                     </div>
                     <div class="distinction-year" data-i18n="distinctions.items.iest.year">2026</div>
                 </div>
@@ -689,9 +697,14 @@
         </div>
     </footer>
 
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
     <!-- Scripts -->
     <script src="./js/i18n.js"></script>
     <script src="./js/theme.js"></script>
+    <script src="./js/scene.js"></script>
+    <script src="./js/audio.js"></script>
     <script src="./js/main.js"></script>
 
     <script>
