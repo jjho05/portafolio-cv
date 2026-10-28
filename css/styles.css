@@ -52,6 +52,7 @@ html {
   background: var(--bg);
   color: var(--text-1);
   -webkit-text-size-adjust: 100%;
+  transition: background-color 0.4s var(--ease), color 0.4s var(--ease);
 }
 
 body {
@@ -63,6 +64,28 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   counter-reset: sec;
+  transition: color 0.4s var(--ease);
+}
+
+/* ---------- Transición Suave de Modo Claro / Modo Oscuro ---------- */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.4s;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html.theme-transitioning,
+html.theme-transitioning *,
+html.theme-transitioning *::before,
+html.theme-transitioning *::after {
+  transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              fill 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              stroke 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transition-delay: 0s !important;
 }
 
 ul { list-style: none; }
@@ -92,6 +115,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
     rgba(var(--veil), 0.86) 0%,
     rgba(var(--veil), 0.6) 38%,
     rgba(var(--veil), 0) 68%);
+  transition: opacity 0.4s var(--ease);
 }
 
 .page { position: relative; z-index: 1; }
@@ -179,6 +203,9 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   font-size: 0.74rem;
   color: var(--text-2);
   transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+.control-btn i {
+  transition: transform 0.25s var(--ease), opacity 0.2s ease;
 }
 .control-btn:hover { color: var(--text-1); border-color: var(--line-2); background: var(--card-hover); }
 .nav-toggle { display: none; width: 34px; height: 34px; font-size: 1.05rem; }
