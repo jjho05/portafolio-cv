@@ -70,11 +70,10 @@ html.theme-transition,
 html.theme-transition *,
 html.theme-transition *::before,
 html.theme-transition *::after {
-  transition: background-color 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important,
-              border-color 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important,
-              color 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important,
-              box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important,
-              opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important,
+              border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important,
+              color 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important,
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
   transition-delay: 0s !important;
 }
 
@@ -140,10 +139,10 @@ body,
 .footer,
 .brand-mark,
 .brand-name {
-  transition: background-color 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-              color 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 ul { list-style: none; }
@@ -169,10 +168,20 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   inset: 0;
   z-index: 0;
   pointer-events: none;
+  background: transparent;
+}
+
+.vignette::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   background: linear-gradient(90deg,
     rgba(7, 7, 10, 0.86) 0%,
     rgba(7, 7, 10, 0.6) 38%,
     rgba(7, 7, 10, 0) 68%);
+  opacity: 1;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
 }
 
 .vignette::after {
@@ -184,8 +193,12 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
     rgba(250, 250, 247, 0.6) 38%,
     rgba(250, 250, 247, 0) 68%);
   opacity: 0;
-  transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   pointer-events: none;
+}
+
+html[data-theme="light"] .vignette::before {
+  opacity: 0;
 }
 
 html[data-theme="light"] .vignette::after {
@@ -857,7 +870,19 @@ a.p-row:hover .p-arrow { color: var(--accent); transform: translate(3px, -3px); 
   .certs-grid { grid-template-columns: 1fr; }
   .course-row { grid-template-columns: 1fr; gap: 0.35rem; padding: 0.9rem 0.25rem; }
   .course-meta { text-align: left; justify-content: flex-start; }
-  .vignette { background: linear-gradient(180deg, rgba(var(--veil), 0.78) 0%, rgba(var(--veil), 0.5) 60%, rgba(var(--veil), 0.35) 100%); }
+  .vignette { background: transparent; }
+  .vignette::before {
+    background: linear-gradient(180deg,
+      rgba(7, 7, 10, 0.78) 0%,
+      rgba(7, 7, 10, 0.5) 60%,
+      rgba(7, 7, 10, 0.35) 100%);
+  }
+  .vignette::after {
+    background: linear-gradient(180deg,
+      rgba(250, 250, 247, 0.78) 0%,
+      rgba(250, 250, 247, 0.5) 60%,
+      rgba(250, 250, 247, 0.35) 100%);
+  }
 }
 
 @media (max-width: 520px) {

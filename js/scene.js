@@ -245,7 +245,7 @@
     rings.forEach((r) => r.material.color.copy(palette.accent));
     // En claro, aditivo desaparece sobre fondo blanco: usar blending normal y nodos más grandes
     const blend = target.isDark ? THREE.AdditiveBlending : THREE.NormalBlending;
-    if (nodeMat.blending !== blend && (instant || palette.accent.distanceTo(target.accent) < 0.25)) {
+    if (nodeMat.blending !== blend) {
       nodeMat.blending = blend;
       pulseMat.blending = blend;
       nodeMat.size = target.isDark ? 0.2 : 0.26;

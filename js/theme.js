@@ -63,9 +63,13 @@
   function cycleTheme() {
     const current = getSavedTheme();
     let next = 'dark';
-    if (current === 'auto') next = 'dark';
-    else if (current === 'dark') next = 'light';
-    else if (current === 'light') next = 'auto';
+    if (current === 'auto') {
+      next = getSystemTheme() === 'dark' ? 'light' : 'dark';
+    } else if (current === 'dark') {
+      next = 'light';
+    } else if (current === 'light') {
+      next = 'auto';
+    }
 
     if (next === 'auto') {
       localStorage.removeItem(STORAGE_KEY);
