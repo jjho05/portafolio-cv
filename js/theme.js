@@ -41,45 +41,23 @@
     }, 120);
   }
 
-  function applyTheme(theme, animate = true) {
-    const effectiveTheme = theme === 'auto' ? getSystemTheme() : theme;
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-
-    const updateDOM = () => {
-      document.documentElement.setAttribute('data-theme', effectiveTheme);
-      document.documentElement.style.colorScheme = effectiveTheme;
-      updateIcon(theme, effectiveTheme);
-    };
-
-    // Si ya está aplicado y solo cambia icono
-    if (currentTheme === effectiveTheme && document.documentElement.style.colorScheme === effectiveTheme) {
-      updateIcon(theme, effectiveTheme);
-      return;
-    }
-
+  function triggerThemeTransition() {
     const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) return;
 
-    // Si es la carga inicial o el usuario prefiere movimiento reducido: cambio instantáneo
-    if (!animate || prefersReduced) {
-      updateDOM();
-      return;
-    }
-
-    // View Transitions API (Chrome 111+, Safari 18+, Edge)
-    if (typeof document.startViewTransition === 'function') {
-      document.startViewTransition(() => {
-        updateDOM();
-      });
-      return;
-    }
-
-    // Fallback con clase de transición CSS (Firefox, Safari < 18)
-    document.documentElement.classList.add('theme-transitioning');
-    updateDOM();
+    document.documentElement.classList.add('theme-transition');
     if (transitionTimer) clearTimeout(transitionTimer);
     transitionTimer = setTimeout(() => {
-      document.documentElement.classList.remove('theme-transitioning');
-    }, 450);
+      document.documentElement.classList.remove('theme-transition');
+    }, 550);
+  }
+
+  function applyTheme(theme, animate = false) {
+    const effectiveTheme = theme === 'auto' ? getSystemTheme() : theme;
+    if (animate) triggerThemeTransition();
+    document.documentElement.setAttribute('data-theme', effectiveTheme);
+    document.documentElement.style.colorScheme = effectiveTheme;
+    updateIcon(theme, effectiveTheme);
   }
 
   function cycleTheme() {
@@ -97,7 +75,7 @@
     applyTheme(next, true);
   }
 
-  // Initial apply: SIN animación para evitar parpadeos (FOUC)
+  // Initial apply: sin animar para evitar parpadeos
   applyTheme(getSavedTheme(), false);
 
   // Listen for OS theme changes if user has 'auto'
