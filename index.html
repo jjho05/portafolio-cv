@@ -134,92 +134,27 @@
 
         <!-- ABOUT -->
         <section class="section" id="about">
-            <div class="container">
-                <header class="section-header">
-                    <p class="section-label" data-i18n="about.label">PERFIL DE INGENIERÍA</p>
-                    <h2 class="section-title" data-i18n="about.title">Arquitectura &amp; Laboratorio de Sistemas</h2>
-                    <p class="section-desc" data-i18n="about.desc">
+            <div class="container split">
+                <header class="section-header sticky">
+                    <p class="section-label" data-i18n="about.label">PERFIL PROFESIONAL</p>
+                    <h2 class="section-title" data-i18n="about.title">Perfil de Ingeniería</h2>
+                </header>
+                <div class="about-content">
+                    <p class="statement reveal" data-i18n="about.desc">
                         Arquitecto de Software y Desarrollador Full-Stack especializado en orquestación de Inteligencia Artificial de vanguardia, sistemas agénticos autónomos y optimización algorítmica de alto rendimiento.
                     </p>
-                </header>
-
-                <div class="bento-grid reveal">
-                    <!-- Tile 1: Terminal Interactiva -->
-                    <div class="bento-card bento-terminal spot">
-                        <div class="bento-terminal-header">
-                            <div class="terminal-dots">
-                                <span class="t-dot red"></span>
-                                <span class="t-dot yellow"></span>
-                                <span class="t-dot green"></span>
-                            </div>
-                            <span class="terminal-title">SYS://OLVERA_AI_KERNEL.v3.4 [LIVE]</span>
-                            <span class="terminal-tag">BASH / PYTORCH</span>
+                    <div class="about-meta reveal">
+                        <div class="about-card">
+                            <h4 data-i18n="about.meta.languages_title">Idiomas</h4>
+                            <p data-i18n="about.meta.languages_desc">Español (Nativo) · Inglés (B1)</p>
                         </div>
-                        <div class="bento-terminal-body" id="terminalOutput">
-                            <p class="t-line dim">&gt; INICIALIZANDO NÚCLEO COGNITIVO...</p>
-                            <p class="t-line"><span class="accent-text">ESTADO:</span> En línea · Tampico, Tamaulipas (UTC-6)</p>
-                            <p class="t-line"><span class="accent-text">STACK CORE:</span> PyTorch 2.5 · CUDA 12.4 · Gemini 2.0 · Claude 3.7</p>
-                            <p class="t-line"><span class="accent-text">TELEMETRÍA:</span> Inferencia Edge &lt;18ms · 14 Repos Públicos Verificados</p>
-                            <p class="t-line highlight"><span class="t-prompt">&gt;</span> Pulsa un comando para interactuar con el sistema:</p>
+                        <div class="about-card">
+                            <h4 data-i18n="about.meta.focus_title">Especialización</h4>
+                            <p data-i18n="about.meta.focus_desc">Sistemas Agénticos, Inferencia en Edge, Deep Learning, Arquitectura Limpia y RegTech.</p>
                         </div>
-                        <div class="terminal-chips">
-                            <button class="t-chip" data-cmd="pulse"><i class="fa-solid fa-bolt"></i> Pulso 3D</button>
-                            <button class="t-chip" data-cmd="hackathon"><i class="fa-solid fa-trophy"></i> Hackatón</button>
-                            <button class="t-chip" data-cmd="stack"><i class="fa-solid fa-layer-group"></i> Stack</button>
-                            <button class="t-chip" data-cmd="whoami"><i class="fa-solid fa-user-gear"></i> Whoami</button>
-                            <button class="t-chip" data-cmd="clear"><i class="fa-solid fa-eraser"></i> Clear</button>
-                        </div>
-                    </div>
-
-                    <!-- Tile 2: Live Geo & Clock -->
-                    <div class="bento-card bento-geo spot">
-                        <div class="bento-badge"><span class="live-dot"></span> TELEMETRÍA EN VIVO</div>
-                        <h3 class="bento-title">Tampico, MX</h3>
-                        <div class="geo-clock" id="geoLiveClock">--:--:-- UTC-6</div>
-                        <p class="geo-coords">22.2558° N, 97.8686° W · ITCM Campus</p>
-                        <div class="geo-radar">
-                            <div class="radar-circle c1"></div>
-                            <div class="radar-circle c2"></div>
-                            <div class="radar-circle c3"></div>
-                            <div class="radar-sweep"></div>
-                            <div class="radar-blip"></div>
-                        </div>
-                        <span class="geo-status-pill">Disponible para roles técnicos de élite</span>
-                    </div>
-
-                    <!-- Tile 3: Hackatón IEST Anáhuac 2026 -->
-                    <div class="bento-card bento-award spot">
-                        <div class="award-icon-box">
-                            <i class="fa-solid fa-trophy"></i>
-                        </div>
-                        <span class="award-kicker">1ER LUGAR OFICIAL</span>
-                        <h3 class="bento-title">Ganador Hackatón IEST Anáhuac 2026</h3>
-                        <p class="bento-text">
-                            Desarrollo de <strong>Apyo4All</strong>: plataforma reactiva para logística de emergencia y trazabilidad humanitaria con gestión de sedes e inventarios en tiempo real.
-                        </p>
-                        <div class="award-meta-tags">
-                            <span class="tag">Supabase Realtime</span>
-                            <span class="tag">React + Electron</span>
-                            <span class="tag">Leaflet GIS</span>
-                        </div>
-                    </div>
-
-                    <!-- Tile 4: Métricas de Alto Rendimiento -->
-                    <div class="bento-card bento-metrics spot">
-                        <span class="bento-kicker">ESTÁNDARES DE INGENIERÍA</span>
-                        <div class="metrics-row">
-                            <div class="m-item">
-                                <span class="m-val" data-count="14">14</span>
-                                <span class="m-lbl">Proyectos Verificados en GitHub</span>
-                            </div>
-                            <div class="m-item">
-                                <span class="m-val">&lt;18<small>ms</small></span>
-                                <span class="m-lbl">Latencia Inferencia Edge</span>
-                            </div>
-                            <div class="m-item">
-                                <span class="m-val">100<small>%</small></span>
-                                <span class="m-lbl">Arquitectura Limpia &amp; Tipado</span>
-                            </div>
+                        <div class="about-card">
+                            <h4 data-i18n="about.meta.cert_title">Certificaciones &amp; Distinción</h4>
+                            <p data-i18n="about.meta.cert_desc">Prompt Engineering for Advanced LLMs (Google Cloud) · Alumno Destacado ITCM.</p>
                         </div>
                     </div>
                 </div>
@@ -286,100 +221,16 @@
             <div class="container">
                 <header class="section-header">
                     <p class="section-label" data-i18n="projects.label">INGENIERÍA &amp; SISTEMAS</p>
-                    <h2 class="section-title" data-i18n="projects.title">Proyectos &amp; Simuladores de IA</h2>
-                    <p class="section-desc">Arquitecturas verificadas en producción y certámenes nacionales con sandboxes interactivos en vivo.</p>
+                    <h2 class="section-title" data-i18n="projects.title">Catálogo de Proyectos</h2>
+                    <p class="section-desc" data-i18n="projects.desc"></p>
                 </header>
-
-                <!-- Showcase de Sandboxes Interactivos (Estilo Maxime Heckel & Samsy) -->
-                <div class="sandboxes-container reveal">
-                    <!-- Sandbox 1: BloodCare -->
-                    <div class="sandbox-card spot" id="sandboxBloodCare">
-                        <div class="sandbox-header">
-                            <div class="sb-badge"><i class="fa-solid fa-brain"></i> DEEP LEARNING &amp; BIO-IA</div>
-                            <a href="https://github.com/jjho05/BloodCare" target="_blank" rel="noopener noreferrer" class="sb-repo-link" aria-label="Ver BloodCare en GitHub">
-                                <span>Ver Repo</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            </a>
-                        </div>
-                        <h3 class="sb-title">BloodCare — Horizonte Predictivo Bi-LSTM</h3>
-                        <p class="sb-desc">
-                            Red Neuronal Recurrente bidireccional entrenada con función de pérdida <em>Pinball Loss</em> para estimación continua de glucosa con cuantificación de incertidumbre.
-                        </p>
-                        <!-- Simulador Interactivo -->
-                        <div class="interactive-sandbox-frame">
-                            <div class="sb-controls">
-                                <span class="sb-control-lbl"><i class="fa-solid fa-sliders"></i> Horizonte de Inferencia:</span>
-                                <b class="sb-horizon-pill" id="bloodCareHorizonVal">60 min</b>
-                            </div>
-                            <div class="sb-slider-wrap">
-                                <input type="range" id="bloodCareSlider" min="15" max="120" step="15" value="60" aria-label="Horizonte de inferencia en minutos">
-                            </div>
-                            <div class="sb-chart-wrap">
-                                <svg class="sb-svg-chart" id="bloodCareSvg" viewBox="0 0 500 150" preserveAspectRatio="none">
-                                    <defs>
-                                        <linearGradient id="curveGrad" x1="0" y1="0" x2="1" y2="0">
-                                            <stop offset="0%" stop-color="var(--accent)"/>
-                                            <stop offset="100%" stop-color="#38bdf8"/>
-                                        </linearGradient>
-                                        <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
-                                            <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.3"/>
-                                            <stop offset="100%" stop-color="var(--accent)" stop-opacity="0.0"/>
-                                        </linearGradient>
-                                    </defs>
-                                    <!-- Bandas de confianza Pinball Loss -->
-                                    <path id="bloodConfidenceArea" class="chart-area" d="" fill="url(#areaGrad)"></path>
-                                    <!-- Línea de predicción -->
-                                    <path id="bloodPredictionLine" class="chart-line" d="" fill="none" stroke="url(#curveGrad)" stroke-width="2.5"></path>
-                                    <!-- Puntos de muestreo -->
-                                    <g id="bloodPointsGroup"></g>
-                                </svg>
-                            </div>
-                            <div class="sb-telemetry-row">
-                                <span><i class="fa-solid fa-microchip"></i> Loss: <b>0.0142 Pinball</b></span>
-                                <span><i class="fa-solid fa-chart-line"></i> Cobertura: <b>95% Intervalo</b></span>
-                                <span><i class="fa-solid fa-database"></i> Dataset: <b>OhioT1DM</b></span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Sandbox 2: EcoEye -->
-                    <div class="sandbox-card spot" id="sandboxEcoEye">
-                        <div class="sandbox-header">
-                            <div class="sb-badge"><i class="fa-solid fa-tower-broadcast"></i> EDGE AI &amp; RF RADAR</div>
-                            <a href="https://github.com/jjho05/EcoEye" target="_blank" rel="noopener noreferrer" class="sb-repo-link" aria-label="Ver EcoEye en GitHub">
-                                <span>Ver Repo</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            </a>
-                        </div>
-                        <h3 class="sb-title">EcoEye — Visión por WiFi CSI (Zero-Camera)</h3>
-                        <p class="sb-desc">
-                            Monitoreo biométrico y clasificación de posturas humanas a través de perturbaciones de radiofrecuencia (CSI) sin cámaras ópticas. Privacidad absoluta para entornos asistenciales.
-                        </p>
-                        <!-- Simulador Interactivo Radar -->
-                        <div class="interactive-sandbox-frame">
-                            <div class="rf-radar-interactive" id="rfRadarArea">
-                                <canvas id="rfRadarCanvas" width="500" height="150"></canvas>
-                                <div class="rf-radar-overlay">
-                                    <span class="rf-instruction"><i class="fa-solid fa-hand-pointer"></i> Pasa el cursor aquí para perturbar el campo RF</span>
-                                    <div class="rf-classification-badge">
-                                        <span class="rf-badge-label">CLASIFICADOR EN VIVO:</span>
-                                        <span class="rf-badge-status" id="rfStatusText">ESPECTRO ESTABLE (SIN MOVIMIENTO)</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sb-telemetry-row">
-                                <span><i class="fa-solid fa-wave-square"></i> Frecuencia: <b>5.8 GHz OFDM</b></span>
-                                <span><i class="fa-solid fa-shield-halved"></i> Privacidad: <b>100% Cero Video</b></span>
-                                <span><i class="fa-solid fa-bolt"></i> Inferencia: <b>Edge TensorFlow.js</b></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="filter-row">
                     <div class="filter-bar" id="projectFilters" role="group" aria-label="Filtros">
                         <button class="filter-btn active" data-filter="all" data-i18n="projects.filters.all">Todos</button>
-                        <button class="filter-btn" data-filter="ai" data-i18n="projects.filters.ai">IA & Agentes</button>
-                        <button class="filter-btn" data-filter="deeplearning" data-i18n="projects.filters.deeplearning">Deep Learning & Salud</button>
-                        <button class="filter-btn" data-filter="fullstack" data-i18n="projects.filters.fullstack">Full-Stack & Sistemas</button>
+                        <button class="filter-btn" data-filter="ai" data-i18n="projects.filters.ai">IA &amp; Agentes</button>
+                        <button class="filter-btn" data-filter="deeplearning" data-i18n="projects.filters.deeplearning">Deep Learning &amp; Salud</button>
+                        <button class="filter-btn" data-filter="fullstack" data-i18n="projects.filters.fullstack">Full-Stack &amp; Sistemas</button>
                         <button class="filter-btn" data-filter="hackathon" data-i18n="projects.filters.hackathon">Hackathons</button>
                     </div>
                     <p class="filter-count"><span data-i18n="projects.shown">mostrando</span> <b id="projShown">14</b> / <span id="projTotal">14</span></p>
@@ -436,35 +287,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Floating Cyberpunk Neural HUD Controller -->
-        <aside class="neural-hud-dock" id="neuralHudDock" aria-label="Controlador 3D Neuronal">
-            <button class="hud-toggle-btn" id="hudToggleBtn" aria-label="Abrir panel 3D">
-                <i class="fa-solid fa-atom"></i>
-                <span class="hud-btn-lbl">3D CORE</span>
-            </button>
-            <div class="hud-panel" id="hudPanel">
-                <div class="hud-panel-head">
-                    <span class="hud-tag"><i class="fa-solid fa-atom"></i> NEURAL 3D CORE</span>
-                    <button class="hud-close" id="hudCloseBtn" aria-label="Cerrar panel">✕</button>
-                </div>
-                <div class="hud-controls-list">
-                    <button class="hud-action-btn" id="hudPulseBtn">
-                        <i class="fa-solid fa-bolt"></i> Disparar Onda de Pulso
-                    </button>
-                    <button class="hud-action-btn" id="hudSpeedBtn">
-                        <i class="fa-solid fa-forward-fast"></i> Alternar Velocidad (Warp)
-                    </button>
-                </div>
-                <div class="hud-stats-bar">
-                    <span>170 NODOS</span>
-                    <span>•</span>
-                    <span>260 SINAPSIS</span>
-                    <span>•</span>
-                    <span class="hud-fps-label">60 FPS</span>
-                </div>
-            </div>
-        </aside>
     </main>
 
     <footer class="footer">
