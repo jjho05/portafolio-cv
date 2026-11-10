@@ -968,11 +968,64 @@ html.swarm-active {
   scroll-behavior: auto !important;
 }
 
+html:has(swarm-rebuild) .scroll-nav,
+html.swarm-active .scroll-nav {
+  display: none !important;
+}
+
 html:has(swarm-rebuild) .reveal,
 html.swarm-active .reveal {
   opacity: 1 !important;
   transform: none !important;
   transition: none !important;
+}
+
+/* ---------- Navegación Rápida de Scroll (Subir / Bajar) ---------- */
+.scroll-nav {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px;
+  background: rgba(18, 18, 24, 0.82);
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: opacity 0.3s, transform 0.3s var(--ease);
+}
+html[data-theme="light"] .scroll-nav {
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-nav-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: var(--text-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+.scroll-nav-btn:hover:not(:disabled) {
+  background: var(--card-hover);
+  color: var(--accent);
+  transform: scale(1.08);
+}
+.scroll-nav-btn:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+  transform: none;
 }
 
 /* ---------- Responsive ---------- */
@@ -1009,6 +1062,7 @@ html.swarm-active .reveal {
 }
 
 @media (max-width: 860px) {
+  .scroll-nav { bottom: 18px; right: 18px; }
   .featured-grid { grid-template-columns: 1fr; }
   .hero { min-height: auto; justify-content: flex-start; padding-top: 96px; padding-bottom: 2.5rem; }
   .hero-inner { padding-bottom: 2rem; }

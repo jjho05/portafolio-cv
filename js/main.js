@@ -234,6 +234,44 @@
   }
   init3DMagneticTilt();
 
+  /* ---------- Navegación Rápida de Scroll (Subir / Bajar) ---------- */
+  function initScrollNav() {
+    const upBtn = $('#scrollUpBtn');
+    const downBtn = $('#scrollDownBtn');
+    if (!upBtn && !downBtn) return;
+
+    function updateNavState() {
+      const y = window.scrollY;
+      const max = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
+      if (upBtn) upBtn.disabled = y <= 40;
+      if (downBtn) downBtn.disabled = y >= max - 40;
+    }
+
+    if (upBtn) {
+      upBtn.addEventListener('click', () => {
+        if (typeof window.playClickSound === 'function') window.playClickSound(640, 0.04);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    if (downBtn) {
+      downBtn.addEventListener('click', () => {
+        if (typeof window.playClickSound === 'function') window.playClickSound(520, 0.04);
+        const contactSec = document.getElementById('contact');
+        if (contactSec) {
+          contactSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateNavState, { passive: true });
+    window.addEventListener('resize', updateNavState);
+    updateNavState();
+  }
+  initScrollNav();
+
   /* ---------- Idioma inicial en <html lang> ---------- */
   if (window.i18n) document.documentElement.lang = window.i18n.currentLang;
 
