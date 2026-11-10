@@ -559,6 +559,48 @@
     if (shown) shown.textContent = String(PROJECTS.length);
   }
 
+  const FEATURED_IDS = ['apyo4all', 'ecoeye', 'bloodcare'];
+  const FEATURED_META = {
+    'apyo4all': { icon: 'fa-solid fa-trophy', badgeClass: 'gold', badgeText: '1er Lugar Hackatón Anáhuac' },
+    'ecoeye': { icon: 'fa-solid fa-tower-broadcast', badgeClass: 'cyan', badgeText: 'Finalista Regional · HackaTec' },
+    'bloodcare': { icon: 'fa-solid fa-brain', badgeClass: 'violet', badgeText: 'Deep Learning & Bi-LSTM' },
+  };
+
+  function renderFeaturedProjects() {
+    const el = $('#featuredProjects');
+    if (!el) return;
+    const featured = PROJECTS.filter((p) => FEATURED_IDS.includes(p.id));
+    el.innerHTML = featured.map((p) => {
+      const meta = FEATURED_META[p.id] || { icon: 'fa-solid fa-star', badgeClass: 'gold', badgeText: 'Destacado' };
+      return h`
+        <article class="feat-card spot reveal">
+          <a class="feat-card-inner" href="${p.url}" target="_blank" rel="noopener noreferrer">
+            <div class="feat-card-header">
+              <span class="feat-badge ${meta.badgeClass}">
+                <i class="${meta.icon}" aria-hidden="true"></i> ${meta.badgeText}
+              </span>
+              <span class="feat-year">2026</span>
+            </div>
+            <div class="feat-card-body">
+              <h3 class="feat-title" data-i18n="projects.items.${p.id}.title"></h3>
+              <span class="feat-role" data-i18n="projects.items.${p.id}.role"></span>
+              <p class="feat-desc" data-i18n="projects.items.${p.id}.desc"></p>
+              <div class="feat-tags">
+                ${p.tags.map((t) => `<span class="tag">${t}</span>`).join('')}
+              </div>
+            </div>
+            <div class="feat-card-footer">
+              <span class="feat-pill" data-i18n="projects.items.${p.id}.pill"></span>
+              <span class="feat-link-btn">
+                <span>Ver Código</span>
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+        </article>`;
+    }).join('');
+  }
+
   function renderLab() {
     const el = $('#labGrid');
     if (!el) return;
@@ -646,6 +688,7 @@
   renderExperience();
   renderCertifications();
   renderCourses();
+  renderFeaturedProjects();
   renderProjects();
   renderLab();
   renderStack();

@@ -683,6 +683,148 @@ html[data-theme="light"] .vignette::after {
 }
 
 /* ---------- Proyectos ---------- */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2.8rem;
+}
+
+.feat-card {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s,
+              background-color 0.3s,
+              box-shadow 0.4s;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+}
+.feat-card:hover {
+  border-color: var(--line-2);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.45);
+}
+html[data-theme="light"] .feat-card:hover {
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.08);
+}
+
+.feat-card-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 1.5rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.feat-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.1rem;
+}
+.feat-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  letter-spacing: 0.03em;
+}
+.feat-badge.gold {
+  color: #eab308;
+  background: rgba(234, 179, 8, 0.12);
+  border: 1px solid rgba(234, 179, 8, 0.32);
+}
+.feat-badge.cyan {
+  color: #06b6d4;
+  background: rgba(6, 182, 212, 0.12);
+  border: 1px solid rgba(6, 182, 212, 0.32);
+}
+.feat-badge.violet {
+  color: #a855f7;
+  background: rgba(168, 85, 247, 0.12);
+  border: 1px solid rgba(168, 85, 247, 0.32);
+}
+.feat-year {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-3);
+}
+
+.feat-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.feat-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  margin-bottom: 0.35rem;
+  color: var(--text-1);
+}
+.feat-role {
+  font-family: var(--font-mono);
+  font-size: 0.73rem;
+  color: var(--accent);
+  margin-bottom: 0.8rem;
+  display: block;
+}
+.feat-desc {
+  font-size: 0.88rem;
+  color: var(--text-2);
+  line-height: 1.55;
+  margin-bottom: 1.1rem;
+  text-wrap: pretty;
+  flex: 1;
+}
+.feat-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.feat-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+.feat-pill {
+  color: var(--text-3);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.feat-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent);
+  font-weight: 600;
+  transition: transform 0.25s var(--ease);
+}
+.feat-card:hover .feat-link-btn {
+  transform: translateX(3px);
+}
+
 .filter-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 0.5rem; }
 .filter-bar { display: flex; flex-wrap: wrap; gap: 0.45rem; }
 .filter-btn {
@@ -859,6 +1001,7 @@ html.swarm-active .reveal {
 
   .split { grid-template-columns: 1fr; gap: 2rem; }
   .sticky { position: static; }
+  .featured-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
   .stats { grid-template-columns: repeat(2, 1fr); }
   .stat:nth-child(3) { padding-left: 0; border-left: 0; }
   .stat:nth-child(n + 3) { border-top: 1px solid var(--line); }
@@ -866,6 +1009,7 @@ html.swarm-active .reveal {
 }
 
 @media (max-width: 860px) {
+  .featured-grid { grid-template-columns: 1fr; }
   .hero { min-height: auto; justify-content: flex-start; padding-top: 96px; padding-bottom: 2.5rem; }
   .hero-inner { padding-bottom: 2rem; }
   .hero-name { font-size: clamp(2.8rem, 12.5vw, 4.6rem); margin-bottom: 0.8rem; }

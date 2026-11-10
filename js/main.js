@@ -208,6 +208,32 @@
     });
   }
 
+  /* ---------- Física 3D e Inclinación Magnética en Tarjetas (Estilo Robin Mastromarino / Rauno) ---------- */
+  function init3DMagneticTilt() {
+    if (reduceMotion || !finePointer) return;
+
+    document.addEventListener('pointermove', (e) => {
+      const card = e.target.closest && e.target.closest('.feat-card, .about-card, .cert-card, .lab-card');
+      if (!card) return;
+      const r = card.getBoundingClientRect();
+      const px = (e.clientX - r.left) / r.width - 0.5;
+      const py = (e.clientY - r.top) / r.height - 0.5;
+      // Inclinación suave con perspectiva limpia
+      const rotX = -py * 5.5;
+      const rotY = px * 5.5;
+      card.style.transform = `perspective(900px) rotateX(${rotX.toFixed(2)}deg) rotateY(${rotY.toFixed(2)}deg) translateY(-4px)`;
+    }, { passive: true });
+
+    document.addEventListener('pointerout', (e) => {
+      const card = e.target.closest && e.target.closest('.feat-card, .about-card, .cert-card, .lab-card');
+      if (!card) return;
+      if (!card.contains(e.relatedTarget)) {
+        card.style.transform = '';
+      }
+    }, { passive: true });
+  }
+  init3DMagneticTilt();
+
   /* ---------- Idioma inicial en <html lang> ---------- */
   if (window.i18n) document.documentElement.lang = window.i18n.currentLang;
 

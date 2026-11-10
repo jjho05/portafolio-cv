@@ -256,7 +256,7 @@
     }
   }
 
-  /* ---------- Interacción ---------- */
+  /* ---------- Interacción & Dinámica de Scroll (Inercia & Secciones) ---------- */
   const mouse = { x: 0, y: 0, tx: 0, ty: 0 };
   window.addEventListener('pointermove', (e) => {
     mouse.tx = (e.clientX / window.innerWidth - 0.5) * 2;
@@ -264,17 +264,21 @@
   }, { passive: true });
 
   let scrollY = 0;
-  window.addEventListener('scroll', () => { scrollY = window.scrollY; }, { passive: true });
+  let lastScrollY = 0;
+  let scrollVelocity = 0;
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    const delta = y - lastScrollY;
+    lastScrollY = y;
+    scrollY = y;
+    // Inercia rotacional fluida tipo WebGL
+    scrollVelocity += delta * 0.0022;
+    scrollVelocity = Math.max(-0.35, Math.min(0.35, scrollVelocity));
+  }, { passive: true });
 
-  // Pulso de energía y control de velocidad Warp (usado por HUD y terminal)
+  // Pulso de energía (usado por clics y eventos interactivos)
   let boost = 0;
-  let warpSpeed = 1;
   window.boost3DScene = function (intensity = 1.2) { boost = Math.max(boost, intensity); };
-  window.toggle3DWarpSpeed = function () {
-    warpSpeed = warpSpeed === 1 ? 3.2 : 1;
-    return warpSpeed > 1;
-  };
-  window.get3DWarpSpeed = function () { return warpSpeed; };
 
   /* ---------- Loop ---------- */
   const clock = new THREE.Clock();
@@ -289,9 +293,14 @@
     mouse.y += (mouse.ty - mouse.y) * 0.05;
     boost *= 0.93;
 
-    const spin = (0.12 * warpSpeed) + boost * 1.1;
+    // Inercia rotacional física derivada del scroll
+    group.rotation.x += scrollVelocity * 0.8;
+    group.rotation.y += scrollVelocity * 0.4;
+    scrollVelocity *= 0.88;
+
+    const spin = 0.12 + Math.abs(scrollVelocity) * 0.5 + boost * 1.1;
     group.rotation.y += dt * spin;
-    group.rotation.x = Math.sin(t * 0.25) * 0.12 + mouse.y * 0.18;
+    group.rotation.x = Math.sin(t * 0.25) * 0.12 + mouse.y * 0.18 + (scrollVelocity * 0.2);
     group.rotation.z = mouse.x * 0.06;
     core.rotation.y -= dt * 0.35;
     core.rotation.x += dt * 0.2;
@@ -303,12 +312,24 @@
     const breathe = 1 + Math.sin(t * 0.9) * 0.012 + boost * 0.06;
     nodes.scale.setScalar(breathe);
 
-    // Posición con parallax y desplazamiento por scroll (la esfera se aleja y se desvanece)
-    const prog = Math.min(scrollY / (window.innerHeight * 0.9), 1);
-    group.position.x = baseX - mouse.x * 0.25 - prog * (isMobile() ? 0 : 1.2);
-    group.position.y = -mouse.y * 0.15 + prog * 0.8;
-    camera.position.z = 11 + prog * 3;
-    canvas.style.opacity = String(1 - prog * 0.78);
+    // Posición con parallax y desplazamiento reactivo por scroll
+    const maxScroll = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
+    const scrollProg = Math.min(scrollY / maxScroll, 1);
+    const heroProg = Math.min(scrollY / (window.innerHeight * 0.8), 1);
+
+    const targetBaseX = isMobile() ? 0 : (baseX - heroProg * 0.7 + Math.sin(scrollProg * Math.PI * 2) * 0.4);
+    const targetBaseY = -mouse.y * 0.15 + (heroProg * 0.5) + Math.cos(scrollProg * Math.PI) * 0.3;
+
+    group.position.x += (targetBaseX - mouse.x * 0.25 - group.position.x) * 0.06;
+    group.position.y += (targetBaseY - group.position.y) * 0.06;
+
+    // Cámara con profundidad orgánica
+    const targetCamZ = 11 + heroProg * 2.2 + Math.sin(scrollProg * Math.PI) * 1.8;
+    camera.position.z += (targetCamZ - camera.position.z) * 0.06;
+
+    // Opacidad presente y elegante (se mantiene viva entre 0.38 y 1.0)
+    const targetOpacity = Math.max(0.38, 1 - heroProg * 0.58 + Math.sin(scrollProg * Math.PI) * 0.15);
+    canvas.style.opacity = String(targetOpacity.toFixed(3));
 
     applyPalette(false);
     updatePulses(dt);
