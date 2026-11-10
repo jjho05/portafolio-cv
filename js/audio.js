@@ -67,6 +67,9 @@
     } catch (e) {}
   }
 
+  // Exportar globalmente para interactivos de la terminal y el HUD
+  window.playClickSound = playClickSound;
+
   function updateButtonUI() {
     if (!soundBtn) return;
     const icon = soundBtn.querySelector('i');

@@ -266,9 +266,15 @@
   let scrollY = 0;
   window.addEventListener('scroll', () => { scrollY = window.scrollY; }, { passive: true });
 
-  // Pulso de energía (usado por el audio / clics)
+  // Pulso de energía y control de velocidad Warp (usado por HUD y terminal)
   let boost = 0;
-  window.boost3DScene = function () { boost = 1; };
+  let warpSpeed = 1;
+  window.boost3DScene = function (intensity = 1.2) { boost = Math.max(boost, intensity); };
+  window.toggle3DWarpSpeed = function () {
+    warpSpeed = warpSpeed === 1 ? 3.2 : 1;
+    return warpSpeed > 1;
+  };
+  window.get3DWarpSpeed = function () { return warpSpeed; };
 
   /* ---------- Loop ---------- */
   const clock = new THREE.Clock();
@@ -283,7 +289,7 @@
     mouse.y += (mouse.ty - mouse.y) * 0.05;
     boost *= 0.93;
 
-    const spin = 0.12 + boost * 0.9;
+    const spin = (0.12 * warpSpeed) + boost * 1.1;
     group.rotation.y += dt * spin;
     group.rotation.x = Math.sin(t * 0.25) * 0.12 + mouse.y * 0.18;
     group.rotation.z = mouse.x * 0.06;
