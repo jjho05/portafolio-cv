@@ -51,7 +51,30 @@
 </head>
 
 <body>
-    <canvas id="gl" aria-hidden="true"></canvas>
+    <!-- Canvas WebGL de fondo en Shadow DOM (red neuronal interactiva aislada de extensiones DOM) -->
+    <div id="gl-host" aria-hidden="true">
+        <template shadowrootmode="open">
+            <style>
+                :host {
+                    position: fixed;
+                    inset: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    z-index: 0;
+                    pointer-events: none;
+                    overflow: hidden;
+                    display: block;
+                }
+                canvas {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    pointer-events: none;
+                }
+            </style>
+            <canvas id="gl"></canvas>
+        </template>
+    </div>
     <div class="vignette" aria-hidden="true"></div>
     <div class="cursor" id="cursor" aria-hidden="true"></div>
     <div class="progress" aria-hidden="true"><div class="progress-bar" id="progressBar"></div></div>

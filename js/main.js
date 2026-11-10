@@ -279,6 +279,7 @@
   function initSwarmCompatibility() {
     function enableSwarmMode() {
       document.documentElement.classList.add('swarm-active');
+      if (document.body) document.body.classList.add('swarm-active');
       $$('.reveal').forEach((el) => {
         el.classList.add('in');
         $$('[data-count]', el).forEach((num) => {
@@ -289,7 +290,13 @@
 
     function disableSwarmMode() {
       document.documentElement.classList.remove('swarm-active');
+      if (document.body) document.body.classList.remove('swarm-active');
     }
+
+    // Gancho global unhide de Swarm Rebuild
+    window.__swarmUnhide = function () {
+      enableSwarmMode();
+    };
 
     // Observar inyección y remoción de <swarm-rebuild> en el DOM
     const observer = new MutationObserver((mutations) => {

@@ -154,6 +154,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .container { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 1.5rem; }
 
 /* ---------- Capas: canvas 3D detrás, contenido encima ---------- */
+#gl-host,
 #gl {
   position: fixed;
   inset: 0;
@@ -161,6 +162,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   height: 100vh;
   z-index: 0;
   pointer-events: none;
+  overflow: hidden;
+  display: block;
 }
 
 .vignette {
@@ -964,17 +967,27 @@ a.p-row:hover .p-arrow { color: var(--accent); transform: translate(3px, -3px); 
 
 /* ---------- Compatibilidad Swarm Rebuild (Extension) ---------- */
 html:has(swarm-rebuild),
-html.swarm-active {
+html.swarm-active,
+body.swarm-active {
   scroll-behavior: auto !important;
 }
 
 html:has(swarm-rebuild) .scroll-nav,
-html.swarm-active .scroll-nav {
+html.swarm-active .scroll-nav,
+body.swarm-active .scroll-nav {
   display: none !important;
 }
 
+/* Blindaje contra MEDIA_ONLY_CSS de Swarm Rebuild u otras extensiones */
+html:has(swarm-rebuild) body *,
+html.swarm-active body *,
+body.swarm-active * {
+  visibility: visible !important;
+}
+
 html:has(swarm-rebuild) .reveal,
-html.swarm-active .reveal {
+html.swarm-active .reveal,
+body.swarm-active .reveal {
   opacity: 1 !important;
   transform: none !important;
   transition: none !important;

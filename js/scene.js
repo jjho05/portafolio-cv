@@ -8,7 +8,18 @@
 (function () {
   'use strict';
 
-  const canvas = document.getElementById('gl');
+  const host = document.getElementById('gl-host');
+  let canvas;
+  if (host) {
+    if (!host.shadowRoot) {
+      const shadow = host.attachShadow({ mode: 'open' });
+      shadow.innerHTML = '<style>:host{position:fixed;inset:0;width:100vw;height:100vh;z-index:0;pointer-events:none;overflow:hidden;display:block;}canvas{width:100%;height:100%;display:block;pointer-events:none;}</style><canvas id="gl"></canvas>';
+    }
+    canvas = host.shadowRoot.getElementById('gl') || host.shadowRoot.querySelector('canvas');
+  } else {
+    canvas = document.getElementById('gl');
+  }
+
   if (!canvas || typeof THREE === 'undefined') {
     if (canvas) canvas.style.display = 'none';
     return;
