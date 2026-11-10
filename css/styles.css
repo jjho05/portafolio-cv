@@ -826,17 +826,6 @@ html.swarm-active {
   scroll-behavior: auto !important;
 }
 
-html:has(swarm-rebuild) #gl,
-html:has(swarm-rebuild) .vignette,
-html:has(swarm-rebuild) .cursor,
-html:has(swarm-rebuild) .progress,
-html.swarm-active #gl,
-html.swarm-active .vignette,
-html.swarm-active .cursor,
-html.swarm-active .progress {
-  display: none !important;
-}
-
 html:has(swarm-rebuild) .reveal,
 html.swarm-active .reveal {
   opacity: 1 !important;

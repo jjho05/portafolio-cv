@@ -231,13 +231,13 @@
     const observer = new MutationObserver((mutations) => {
       for (const m of mutations) {
         for (const node of m.addedNodes) {
-          if (node.nodeType === 1 && (node.nodeName.toLowerCase() === 'swarm-rebuild' || node.hasAttribute?.('data-swarm'))) {
+          if (node.nodeType === 1 && node.nodeName.toLowerCase() === 'swarm-rebuild') {
             enableSwarmMode();
             return;
           }
         }
         for (const node of m.removedNodes) {
-          if (node.nodeType === 1 && (node.nodeName.toLowerCase() === 'swarm-rebuild' || node.hasAttribute?.('data-swarm'))) {
+          if (node.nodeType === 1 && node.nodeName.toLowerCase() === 'swarm-rebuild') {
             disableSwarmMode();
             return;
           }
@@ -246,7 +246,7 @@
     });
     observer.observe(document.documentElement, { childList: true });
 
-    if (document.querySelector('swarm-rebuild') || window.__swarmRebuild) {
+    if (document.querySelector('swarm-rebuild')) {
       enableSwarmMode();
     }
   }
