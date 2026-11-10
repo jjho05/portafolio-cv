@@ -820,6 +820,30 @@ a.p-row:hover .p-arrow { color: var(--accent); transform: translate(3px, -3px); 
 .js .hero .reveal,
 .js .reveal.in { opacity: 1; transform: none; }
 
+/* ---------- Compatibilidad Swarm Rebuild (Extension) ---------- */
+html:has(swarm-rebuild),
+html.swarm-active {
+  scroll-behavior: auto !important;
+}
+
+html:has(swarm-rebuild) #gl,
+html:has(swarm-rebuild) .vignette,
+html:has(swarm-rebuild) .cursor,
+html:has(swarm-rebuild) .progress,
+html.swarm-active #gl,
+html.swarm-active .vignette,
+html.swarm-active .cursor,
+html.swarm-active .progress {
+  display: none !important;
+}
+
+html:has(swarm-rebuild) .reveal,
+html.swarm-active .reveal {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 1000px) {
   .nav { display: flex; justify-content: space-between; align-items: center; }

@@ -210,4 +210,45 @@
 
   /* ---------- Idioma inicial en <html lang> ---------- */
   if (window.i18n) document.documentElement.lang = window.i18n.currentLang;
+
+  /* ---------- Soporte / Compatibilidad con Swarm Rebuild ---------- */
+  function initSwarmCompatibility() {
+    function enableSwarmMode() {
+      document.documentElement.classList.add('swarm-active');
+      $$('.reveal').forEach((el) => {
+        el.classList.add('in');
+        $$('[data-count]', el).forEach((num) => {
+          if (num.dataset.count) num.textContent = num.dataset.count;
+        });
+      });
+    }
+
+    function disableSwarmMode() {
+      document.documentElement.classList.remove('swarm-active');
+    }
+
+    // Observar inyección y remoción de <swarm-rebuild> en el DOM
+    const observer = new MutationObserver((mutations) => {
+      for (const m of mutations) {
+        for (const node of m.addedNodes) {
+          if (node.nodeType === 1 && (node.nodeName.toLowerCase() === 'swarm-rebuild' || node.hasAttribute?.('data-swarm'))) {
+            enableSwarmMode();
+            return;
+          }
+        }
+        for (const node of m.removedNodes) {
+          if (node.nodeType === 1 && (node.nodeName.toLowerCase() === 'swarm-rebuild' || node.hasAttribute?.('data-swarm'))) {
+            disableSwarmMode();
+            return;
+          }
+        }
+      }
+    });
+    observer.observe(document.documentElement, { childList: true });
+
+    if (document.querySelector('swarm-rebuild') || window.__swarmRebuild) {
+      enableSwarmMode();
+    }
+  }
+  initSwarmCompatibility();
 })();
